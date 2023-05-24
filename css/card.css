@@ -30,7 +30,7 @@
   width: 30px;
   height: 57px;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: calc(100% - 25px);
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
@@ -96,13 +96,13 @@
   transition: 0.5s;
 }
 .card:hover {
-  -webkit-backdrop-filter: blur(0px);
-          backdrop-filter: blur(0px);
   /* 邊框 設定 */
   border: 5px solid #fcc661;
   /* 色塊投影 */
 }
 .card:active {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px rgb(122, 203, 221);

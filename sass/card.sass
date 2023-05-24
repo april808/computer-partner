@@ -69,7 +69,7 @@ $stroke-line: 38px
       width: 30px
       height: 57px
       position: absolute
-      top: 10px
+      top: 0
       right: calc(100% - 25px)
       transform: scale(.5)
 
@@ -120,14 +120,14 @@ $stroke-line: 38px
   border-radius: 20px
   transition: .5s
   &:hover
-    backdrop-filter: blur(0px)
     /* 邊框 設定
     border: 5px solid $color_secondary-light
     /* 色塊投影
     // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
   &:active
-      transition: .3s
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
+    backdrop-filter: blur(2px)
+    transition: .3s
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
 
 .card-container
   padding: 0 30px

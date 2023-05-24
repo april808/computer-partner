@@ -51,9 +51,7 @@ $stroke-line: 38px
 .about
   /* 自動編排 */
   +flexCenter
-  min-height: 500px
-  max-height: 900px
-  padding: 250px  0
+  min-height: 900px
   h2
     margin-bottom: 35px
 .out-bxshin
@@ -79,10 +77,9 @@ $stroke-line: 38px
   overflow: hidden
 .method-grid
   padding: 50px 100px
-  min-height: 600px
-  // max-height: 900px
+  min-height: 900px
   display: grid
-  // grid-template: repeat(5, 1fr) / repeat(6, 1fr)
+  grid-template: repeat(5, 1fr) / repeat(6, 1fr)
   gap: 20px
 .method-block
   position: relative
@@ -119,7 +116,7 @@ $stroke-line: 38px
 
 
 // 方法一的位置
-// 表單卡片
+// 表單卡片-樣式
 .form-card
   width: 470px
   height: 284px
@@ -138,9 +135,7 @@ $stroke-line: 38px
     justify-content: end
     align-items: end
 
-    /* margin-top: auto;
     padding-bottom: 26px
-    // background-color: #faa
 
     img
       width: 350px
@@ -159,7 +154,6 @@ $stroke-line: 38px
     height: 70px
 
     border-radius: 0px 20px 20px 0px
-    // box-shadow: 0 0px 5px 0px $color_shadow
     background-color: $color_primary_add1
     color: $color_white
     border: 0
@@ -178,18 +172,17 @@ $stroke-line: 38px
     &.prev
         order: -1
         align-self: center
-        left: 25px
+        left: calc(25px - 30px)
 
     &.next
         order: 1
         align-self: center
-        right: calc(25px - 5px)
+        right: calc(25px - 30px)
 
 // 方法二的位置
 .question-2
   .method-input
     grid-area: 2/1/5/7
-    // background-color: #8ee
     gap: 100px
 
   .card
@@ -205,7 +198,6 @@ $stroke-line: 38px
         top: 0
         transform: translate(20px,20px) scale(1.5)
       & .method-input_img
-        // border: 5px solid green
     & .txt
       background: $txt_bgset
 
@@ -364,6 +356,8 @@ input[type="radio"]:checked + label
     justify-content: center
   .method-input
     grid-area: 3/1/6/7
+    background-color: $color_primary_add1
+    outline: 100px solid $color_primary_add1
   .about-dec
     width: 870px
     background-color: $color_white
@@ -375,17 +369,8 @@ input[type="radio"]:checked + label
 // 首頁 下一層->結尾，跳轉按鈕
 .question-final
   background-color: $color_primary_add1
-  position: relative
-  &::before
-    content: ''
-    display: block
-    background-color: $color_primary_add1
-    width: calc(100%)
-    height: 50%
-    +abCenter(50%,-10%)
-    z-index: -1
   .final-group
-    // grid-area: 2/3/4/5
+    grid-area: 2/3/4/5
     +flexCenter
     flex-direction: column
     // fle+flexCenterx-direction: column
@@ -404,6 +389,3 @@ input[type="radio"]:checked + label
   /* white */
   opacity: 0.4
   transform: rotate(-15deg) translate(-250%,-20%)
-
-
-

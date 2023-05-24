@@ -21,6 +21,38 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
   <!-- rSlider 套件 -->
   <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
+  <!-- swiperjs  套件  -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    .swiper {
+      width: 470px;
+      height: 284px;
+    }
+    .swiper-slide{
+      /* pointer-events: none; */
+      transition: .5s;
+      border: 0px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(122, 203, 221, 1);
+    }
+    .swiper-slide-active{
+      transition: .5s;
+      border: 5px solid rgba(122, 203, 221, 1);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px rgba(122, 203, 221, 1);
+      /* pointer-events: auto; */
+    }
+    .swiper-slide > .btn-group{
+      /* pointer-events: auto; */
+    }
+  </style>
 </head>
 
 <body>
@@ -148,44 +180,206 @@
             <div class="method-input">
               <div class="form-card-out">
                 <div class="form-card-inner">
-                  <div class="card form-card">
-                    <div class="txt">
-                      <div class="card-container">
-                        <p>您是否打算在客廳使用電腦作為娛樂中心？</p>
-                      </div>
-                    </div>
-                    <div class="btn-group">
-                      <div class="card-container">
-                        <input type="radio" name="use_form" id="option1" value="是">
-                        <label for="option1">
-                          <div class="btn-switch">
-                            <div class="bg-circle">
-                              <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                  stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                            <span>是</span>
+                  <!-- swiper 套件範圍 -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                      <!-- 問題1 -->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是否打算在電腦上完成大量辦公室工作？</p>
                           </div>
-                        </label>
-
-                        <input type="radio" name="use_form" id="option2" value="否">
-                        <label for="option2">
-                          <div class="btn-switch">
-                            <div class="bg-circle">
-                              <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                  stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                            <span>否</span>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input type="radio" name="use_form" id="option1" value="是">
+                            <label for="option1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>是</span>
+                              </div>
+                            </label>
+    
+                            <input type="radio" name="use_form" id="option2" value="否">
+                            <label for="option2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>否</span>
+                              </div>
+                            </label>
                           </div>
-                        </label>
+                        </div>
                       </div>
-                    </div>
+                      <!-- 問題2 -->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是否喜歡游戲併計劃將大部分電腦時間花在玩最新最好的遊戲上？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input type="radio" name="use_form" id="option1" value="是">
+                            <label for="option1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>是</span>
+                              </div>
+                            </label>
+    
+                            <input type="radio" name="use_form" id="option2" value="否">
+                            <label for="option2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題3 -->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是藝術家還是音樂家？您希望使用電腦來創建圖像、音樂或視頻嗎？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input type="radio" name="use_form" id="option1" value="是">
+                            <label for="option1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>是</span>
+                              </div>
+                            </label>
+    
+                            <input type="radio" name="use_form" id="option2" value="否">
+                            <label for="option2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題4 -->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您的電腦會被家庭中的每個人使用嗎？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input type="radio" name="use_form" id="option1" value="是">
+                            <label for="option1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>是</span>
+                              </div>
+                            </label>
+    
+                            <input type="radio" name="use_form" id="option2" value="否">
+                            <label for="option2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題5 -->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是否打算在客廳使用電腦作為娛樂中心？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input type="radio" name="use_form" id="option1" value="是">
+                            <label for="option1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>是</span>
+                              </div>
+                            </label>
+    
+                            <input type="radio" name="use_form" id="option2" value="否">
+                            <label for="option2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
+                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                <span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
                   </div>
+                </div>
                 </div>
                 <button class="control-btn prev"><i class="fa-solid fa-angle-left"></i></button>
                 <button class="control-btn next"><i class="fa-solid fa-angle-right"></i></button>
@@ -215,7 +409,7 @@
                     </svg>
                   </div>
                   <div class="method-input_img">
-                    <img src="./images/method/method_2_pc.png" alt="">
+                    <img src="./images/method/method_2_pc.png" alt="桌機選項">
                   </div>
                 </div>
 
@@ -240,7 +434,7 @@
                     </svg>
                   </div>
                   <div class="method-input_img">
-                    <img src="./images/method/method_2_laptop.png" alt="">
+                    <img src="./images/method/method_2_laptop.png" alt="筆電選項">
                   </div>
                 </div>
 
@@ -664,6 +858,16 @@
       };
       window.onload = init;
     })();
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
   </script>
 </body>
 
