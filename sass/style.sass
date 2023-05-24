@@ -34,6 +34,7 @@ $color_white: rgba(#fff,.8)
     padding: 0
 
 html,body
+  //  CSS平滑滾動效果(錨點)
   scroll-behavior: smooth
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -48,7 +49,8 @@ body
   font-family: 'Noto Sans TC', sans-serif
   font-weight: 400
   font-size: 18px
-  letter-spacing: 3px
+  letter-spacing: 2px
+  line-height: 180%
   color: $color_dark-add1
 button,input
   font-family: 'Noto Sans TC'
@@ -66,15 +68,17 @@ h2,.h2
 
 h3,.h3
   font-size: 28px
+  font-weight: bold
 
 h4,.h4
   font-size: 24px
+  font-weight: bold
 
 h5,.h5
   font-size: 20px
   font-weight: bold
 
-.btn-fz
+.body-bold
   font-size: 18px
   font-weight: bold
 
@@ -83,7 +87,6 @@ h5,.h5
 
 .caption-bold
   font-size: 14px
-  // font-style: italic
   font-weight: bold
 
 p
@@ -106,6 +109,8 @@ button
   +bdrs(100px)
   padding: 5px 2px
   margin-top: 6px
+  /* 是否可以選取或直接全選 | 不選取*/
+  user-select: none
 
 mark
   background-color: $color_white
@@ -117,12 +122,15 @@ mark
 
 table
   border-collapse: collapse
-  // border: 2px solid rgb(23, 81, 189)
 td
   vertical-align: middle
   text-align: center
-  // text-align: justify
   font-size: 18px
+
+
+//備註文字大小
+sub
+  font-size: 14px
 
 // 區塊間距----------------------------
 section
@@ -133,8 +141,6 @@ section
     margin-bottom: 250px
   &.best-advice
     margin-bottom: 250px
-
-  span
 
 .cpout-container,container
   z-index: 1
@@ -149,8 +155,15 @@ section
   +flexCenter
   +size(110px)
   +bdrs
-  /* white */
   overflow: hidden
   background: $color_white
   img
     height: auto
+
+
+// 讓滑鼠可以穿越上方元素，點擊到子層的內容
+
+
+//穿透的 div ( pointer-events ) -> 裝飾的層級不影響滑鼠 
+img[alt*="背景"]
+  pointer-events: none

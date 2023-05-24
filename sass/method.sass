@@ -51,7 +51,9 @@ $stroke-line: 38px
 .about
   /* 自動編排 */
   +flexCenter
-  min-height: 900px
+  min-height: 500px
+  max-height: 900px
+  padding: 250px  0
   h2
     margin-bottom: 35px
 .out-bxshin
@@ -77,9 +79,10 @@ $stroke-line: 38px
   overflow: hidden
 .method-grid
   padding: 50px 100px
-  min-height: 900px
+  min-height: 600px
+  // max-height: 900px
   display: grid
-  grid-template: repeat(5, 1fr) / repeat(6, 1fr)
+  // grid-template: repeat(5, 1fr) / repeat(6, 1fr)
   gap: 20px
 .method-block
   position: relative
@@ -361,8 +364,6 @@ input[type="radio"]:checked + label
     justify-content: center
   .method-input
     grid-area: 3/1/6/7
-    background-color: $color_primary_add1
-    outline: 100px solid $color_primary_add1
   .about-dec
     width: 870px
     background-color: $color_white
@@ -374,8 +375,17 @@ input[type="radio"]:checked + label
 // 首頁 下一層->結尾，跳轉按鈕
 .question-final
   background-color: $color_primary_add1
+  position: relative
+  &::before
+    content: ''
+    display: block
+    background-color: $color_primary_add1
+    width: calc(100%)
+    height: 50%
+    +abCenter(50%,-10%)
+    z-index: -1
   .final-group
-    grid-area: 2/3/4/5
+    // grid-area: 2/3/4/5
     +flexCenter
     flex-direction: column
     // fle+flexCenterx-direction: column
@@ -394,3 +404,6 @@ input[type="radio"]:checked + label
   /* white */
   opacity: 0.4
   transform: rotate(-15deg) translate(-250%,-20%)
+
+
+

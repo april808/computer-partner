@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>常見問題</title>
+  <title>文章頁</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/card.css">
   <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/cus-table.css">
+  <link rel="stylesheet" href="./css/article.css">
   <link rel="stylesheet" href="./css/problems.css">
   <!--  文字連結 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +21,6 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
   <!-- rSlider 套件 -->
   <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
-  <style>
-  </style>
 </head>
 
 <body>
@@ -48,93 +46,71 @@
         </div>
       </header>
     </div>
-    <section class="common-problem">
-      <!-- 常見問題 -->
+    <section class="article">
+      <!-- 文章標題 -->
       <div class="title-item">
         <h2 class="svg-check">
-          <span>常見問題</span>
+          <span>文章</span>
         </h2>
       </div>
-      <!-- 分類標籤按鈕  -->
-      <div class="tab-sort">
-        <div class="inner-container">
-          <input type="radio" name="tab" id="test-photo1" hidden checked>
-          <input type="radio" name="tab" id="test-photo2" hidden>
-          <input type="radio" name="tab" id="test-photo3" hidden>
-          <input type="radio" name="tab" id="test-photo4" hidden>
-          <div class="tab-sort-nav">
-
-            <label for="test-photo1">
-              <div class="tab-btn">
-                <span>全部</span>
+      <div class="inner-container">
+        <div class="article-out">
+          <!-- 分類標籤按鈕  -->
+          <div class="tab-sort card">
+            <div class="inner-container">
+              <input type="radio" name="tab" id="test-photo1" hidden checked>
+              <input type="radio" name="tab" id="test-photo2" hidden>
+              <input type="radio" name="tab" id="test-photo3" hidden>
+              <input type="radio" name="tab" id="test-photo4" hidden>
+              <div class="tab-sort-nav fxdc">
+                <label for="test-photo1">
+                  <div class="tab-btn">
+                    <span>全部</span>
+                  </div>
+                </label>
+                <label for="test-photo2">
+                  <div class="tab-btn">
+                    <span>熱門文章</span>
+                  </div>
+                </label>
+                <label for="test-photo3">
+                  <div class="tab-btn">
+                    <span>最新文章</span>
+                  </div>
+                </label>
+                <label for="test-photo4">
+                  <div class="tab-btn">
+                    <span>建議閱讀</span>
+                  </div>
+                </label>
+                <div class="search">
+                  <input type="search" name="搜尋" id="search" placeholder="搜尋文章">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
               </div>
-            </label>
-            <label for="test-photo2">
-              <div class="tab-btn">
-                <span>熱門文章</span>
-              </div>
-            </label>
-            <label for="test-photo3">
-              <div class="tab-btn">
-                <span>最新文章</span>
-              </div>
-            </label>
-            <label for="test-photo4">
-              <div class="tab-btn">
-                <span>建議閱讀</span>
-              </div>
-            </label>
-            <div class="search">
-              <input type="search" name="搜尋" id="search" placeholder="搜尋文章">
-              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
+
+          <div class="main-article">
+            <!-- 文章清單 -->
+            <div class="problem-card-list">
+              <div class="problem-card">
+                <a href="#">
+                  <h3>如何選擇最適合您需求的電腦</h3>
+                </a>
+                <p>
+                  獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>
+                  然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+                </p>
+                <a href="#" class="bottom-link turn-next-btn">閱讀更多</a>
+              </div>
+            </div>
+  
+          </div>
+
+
         </div>
-      </div>
-      <div class="inner-container">
-        <!-- 文章清單 -->
-        <div class="problem-card-list">
-          <div class="problem-card">
-            <a href="#">
-              <h3>如何選擇最適合您需求的電腦</h3>
-            </a>
-            <p>
-              獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>
-              然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
-            </p>
-            <a href="#" class="bottom-link turn-next-btn">閱讀更多</a>
-          </div>
-          <div class="problem-card">
-            <a href="#">
-              <h3>如何選擇最適合您需求的電腦</h3>
-            </a>
-            <p>
-              獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>
-              然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
-            </p>
-            <a href="#" class="bottom-link turn-next-btn">閱讀更多</a>
-          </div>
-          <div class="problem-card">
-            <a href="#">
-              <h3>如何選擇最適合您需求的電腦</h3>
-            </a>
-            <p>
-              獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>
-              然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
-            </p>
-            <a href="#" class="bottom-link turn-next-btn">閱讀更多</a>
-          </div>
-          <div class="problem-card">
-            <a href="#">
-              <h3>如何選擇最適合您需求的電腦</h3>
-            </a>
-            <p>
-              獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>
-              然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
-            </p>
-            <a href="#" class="bottom-link turn-next-btn">閱讀更多</a>
-          </div>
-        </div>
+
       </div>
     </section>
     <!-- 頁尾 -->

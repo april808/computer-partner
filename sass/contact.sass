@@ -66,7 +66,6 @@ $stroke-line: 38px
   align-items: start
 
 .user-block,.group-block
-  // background-color: #fff
   width: 560px
 
 section.contact-us
@@ -75,7 +74,6 @@ section.contact-us
   display: flex
   align-items: center
   padding: 20px 0
-  // margin-right: 20px
   .avatars
     flex-shrink: 0
     margin: 30px 60px
@@ -111,16 +109,11 @@ form
 
 section.contact-us
 .mails
-  h5
-    font-size: 26px
-    font-weight: bold
+  .h3
     color: $color_primary_minus1
     margin-bottom: 30px
 
   lable
-    // margin-top: 10px
-    font-size: 18px
-    font-weight: bold
     color: $color_dark-add1
 
 // 表單主體
@@ -179,14 +172,14 @@ section.contact-us
     transition: border-color 0.5s ease
     background: rgba(255, 255, 255, 0.1)
     border-radius: 0.3em
-    border: none
+    // border: none
     border: 1px solid rgba(255, 255, 255, 0.3)
     padding: 0.5em 1em
     line-height: 20px
     margin: 10px 0
     outline: 3px solid transparent
     font-size: 18px
-    transition: .3s
+    transition: color .3s, background-color .3s
     &::placeholder
         color: rgba(0, 0, 0, 0.3)
     &:focus

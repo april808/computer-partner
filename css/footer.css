@@ -1,14 +1,20 @@
 @charset "UTF-8";
-.dark-logo {
-  width: 60px;
-  height: 60px;
+@media (min-width: 1224px) {
+  footer.svg-bg .dark-logo {
+    background-image: url(../images/logo/logo_dark.png) no-repeat;
+  }
 }
-
-footer {
-  position: relative;
-  z-index: 1;
+footer.svg-bg {
+  color: rgb(242, 159, 5);
+  background-color: transparent;
+  border: 1px solid #000;
 }
-footer .svg-fromTo-bg {
+footer.svg-bg .dark-logo {
+  background-image: url(../images/svg/svg-check.svg) no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+}
+footer.svg-bg .svg-fromTo-bg {
   z-index: -6;
   position: absolute;
   bottom: 0;
@@ -22,16 +28,32 @@ footer .svg-fromTo-bg {
       -ms-flex-align: center;
           align-items: center;
 }
-footer .svg-fromTo-bg svg {
+footer.svg-bg .svg-fromTo-bg svg {
   min-width: 100vw;
 }
-footer .svg-fromTo-bg svg path {
+footer.svg-bg .svg-fromTo-bg svg path {
   fill: rgb(70, 64, 116);
 }
 
 footer {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: rgb(242, 159, 5);
   background-color: rgb(70, 64, 116);
+}
+footer .dark-logo {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1/1;
 }
 footer a {
   color: rgba(255, 255, 255, 0.8);

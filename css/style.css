@@ -26,7 +26,8 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  line-height: 180%;
   color: rgb(70, 64, 116);
 }
 
@@ -52,10 +53,12 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 28px;
+  font-weight: bold;
 }
 
 h4, .h4 {
   font-size: 24px;
+  font-weight: bold;
 }
 
 h5, .h5 {
@@ -63,7 +66,7 @@ h5, .h5 {
   font-weight: bold;
 }
 
-.btn-fz {
+.body-bold {
   font-size: 18px;
   font-weight: bold;
 }
@@ -102,6 +105,11 @@ button {
   border-radius: 100px;
   padding: 5px 2px;
   margin-top: 6px;
+  /* 是否可以選取或直接全選 | 不選取*/
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 mark {
@@ -124,6 +132,10 @@ td {
   font-size: 18px;
 }
 
+sub {
+  font-size: 14px;
+}
+
 section .title-item {
   margin-top: 80px;
   margin-bottom: 60px;
@@ -134,6 +146,7 @@ section.cus-table-out {
 section.best-advice {
   margin-bottom: 250px;
 }
+
 .cpout-container, container {
   z-index: 1;
   /* 半透明線性漸層 */
@@ -158,10 +171,13 @@ section.best-advice {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  /* white */
   overflow: hidden;
   background: rgba(255, 255, 255, 0.8);
 }
 .avatars img {
   height: auto;
+}
+
+img[alt*=背景] {
+  pointer-events: none;
 }

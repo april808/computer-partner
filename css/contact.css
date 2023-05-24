@@ -68,15 +68,11 @@ form textarea {
   resize: vertical;
 }
 
-.mails h5 {
-  font-size: 26px;
-  font-weight: bold;
+.mails .h3 {
   color: rgb(205, 235, 242);
   margin-bottom: 30px;
 }
 .mails lable {
-  font-size: 18px;
-  font-weight: bold;
   color: rgb(70, 64, 116);
 }
 
@@ -162,15 +158,14 @@ section.contact-us input, section.contact-us textarea {
   transition: border-color 0.5s ease;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.3em;
-  border: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.5em 1em;
   line-height: 20px;
   margin: 10px 0;
   outline: 3px solid transparent;
   font-size: 18px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
 }
 section.contact-us input::-webkit-input-placeholder, section.contact-us textarea::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);

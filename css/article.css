@@ -1,0 +1,27 @@
+.article-out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.article-out .tab-sort-nav.fxdc {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.tab-sort.card {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 0;
+  margin: 0;
+}
+.tab-sort.card:hover {
+  border-color: rgb(122, 203, 221);
+}
+.tab-sort.card .inner-container {
+  padding: 0;
+}
+.tab-sort.card .search {
+  padding-left: 0;
+}

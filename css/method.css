@@ -11,7 +11,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 900px;
+  min-height: 500px;
+  max-height: 900px;
+  padding: 250px 0;
 }
 .about h2 {
   margin-bottom: 35px;
@@ -56,12 +58,9 @@
 
 .method-grid {
   padding: 50px 100px;
-  min-height: 900px;
+  min-height: 600px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
-      grid-template: repeat(5, 1fr)/repeat(6, 1fr);
   gap: 20px;
 }
 
@@ -487,8 +486,6 @@ input[type=radio]:checked + label .btn-switch {
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-area: 3/1/6/7;
-  background-color: rgb(122, 203, 221);
-  outline: 100px solid rgb(122, 203, 221);
 }
 .question-5 .about-dec {
   width: 870px;
@@ -510,13 +507,22 @@ input[type=radio]:checked + label .btn-switch {
 
 .question-final {
   background-color: rgb(122, 203, 221);
+  position: relative;
+}
+.question-final::before {
+  content: "";
+  display: block;
+  background-color: rgb(122, 203, 221);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: -10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }
 .question-final .final-group {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: 2/3/4/5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
