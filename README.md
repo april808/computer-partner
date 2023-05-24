@@ -12,7 +12,7 @@ JS套件使用:
 - 預算範圍Slider: [rslider-js](https://www.cssscript.com/animated-customizable-range-slider-pure-javascript-rslider-js/)
   - 記得修改火狐關於:active反應時的事件。
 - 問卷卡片滑動: [Swiper - The Most Modern Mobile Touch Slider](https://swiperjs.com/)
-  - 滑到第2層之後都不能點擊。
+  - 滑到第2層之後都不能`transform`。
 
 選擇商品前的流程參考:
 - [保費試算 | Finfo保險資訊站](https://finfo.tw/assortments/new?env=finfo-web)
