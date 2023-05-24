@@ -2,6 +2,8 @@
 
 主題: 選配你的電腦夥伴
 
+預覽:
+[computer-partner 你的電腦夥伴](https://april808.github.io/computer-partner/)
 
 字體套用:
 - 中：Noto+Sans+TC(思源黑體)
