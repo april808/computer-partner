@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/card.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/cus-table.css">
+  <link rel="stylesheet" href="./css/contact.css">
+  <!-- <link rel="stylesheet" href="./css/grid.css"> -->
+  <!--  文字連結 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+  <!-- rSlider 套件 -->
+  <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
+</head>
+
+<body>
+  <div class="cpout-container">
+    <div class="inner-container">
+      <header class="top-navbar otherpage">
+        <div class="navbar-wrap">
+          <h1 class="logo">
+            <a href="./index.html">
+              <img src="./images/logo/logo_long.png" alt="電腦夥伴 | Computer Partner">
+            </a>
+          </h1>
+          <nav class="navigation">
+            <ul>
+              <li><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a></li>
+              <li><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a>
+              </li>
+              <li><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a></li>
+              <li><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a></li>
+              <li><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <section class="contact-us inner-container">
+      <!-- 聯絡我們 -->
+      <div class="title-item">
+        <h2 class="svg-check">
+          <span>聯絡我們</span>
+        </h2>
+      </div>
+      <!-- 信件容器 限制最大寬度-->
+      <div class="mails">
+        <!-- 左邊表單-->
+        <div class="mailbody bxsh-first">
+          <form enctype="text/plain" accept-charset="utf-8">
+            <div class="user-block">
+              <div class="avatars">
+                <img src="./images/avatars/Avatars-final.png" alt="Avatars">
+              </div>
+              <div class="group">
+                <h5>Dear User</h5>
+                <!-- 寄件者姓名-->
+                <div class="group">
+                  <lable for="nameText">Name</lable>
+                  <input id="nameText" type="text" name="name" value="" placeholder="姓名(name)" required>
+                </div>
+                <!-- required 必填欄位 ，placeholder 預設內容-->
+                <!-- 寄件者email-->
+                <div class="group">
+                  <lable for="emailText">Email</lable>
+                  <input id="emailText" type="email" name="Email" value="" placeholder="Email" required>
+                </div>
+              </div>
+            </div>
+            <!-- 郵件主旨-->
+            <div class="group-block">
+              <div class="group">
+                <lable for="subText">標題</lable>
+                <input id="subText" type="text" name="Subject" value="" aria-invalid="false" placeholder="主旨(subject)"
+                  required>
+              </div>
+              <!-- 郵件內容-->
+              <div class="group">
+                <lable for="bodyText">郵件內容</lable>
+                <textarea id="bodyText" name="your-message" cols="40"s="10" aria-required="true"
+                  aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
+              </div>
+            </div>
+          </form>
+          <!-- 右邊LOGO-->
+          <div class="right">
+            <div class="dark-logo">
+              <img src="./images/svg/logo.svg" alt="dark-logo">
+            </div>
+            <div class="group">
+              <p>如果您對有任何疑問，請聯繫我們！</p>
+              <p>服務時間:</p><p>06:00~24:00</p>
+            </div>
+          </div>
+        </div>
+        <!-- 傳送按鈕-->
+        <div class="form-submit">
+          <a class="turn-next-btn final h5">送出</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+      <div class="footer-wrap">
+        <div class="inner-container">
+          <div class="top">
+            <div class="dark-logo"><img src="./images/logo/logo_light.png" alt="logo_light"></div>
+            <div class="right">
+              <ul>
+                <span>電腦夥伴 | Computer Partner</span>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">與我們聯繫</a></li>
+                <li><a href="#">常見問題</a></li>
+                <!-- <li><a href="#">注意事項</a></li> -->
+              </ul>
+              <ul>
+                <span>免責聲明</span>
+                <div class="disclaimer">
+                  <li>* 產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
+                </div>
+                <span>關注我們</span>
+                <div class="icon-link">
+                  <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="inner-container">
+            本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

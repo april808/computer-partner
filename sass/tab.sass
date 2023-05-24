@@ -1,0 +1,152 @@
+$color_primary: rgba(160, 227, 242, 1)
+$color_secondary: rgba(242, 159, 5, 1)
+$color_red: rgba(242, 68, 5, 1)
+$color_info: rgba(201, 189, 242, 1)
+$color_dark: rgba(96, 90, 140, 1)
+
+$color_primary_minus1: rgba(205, 235, 242, 1)
+$color_primary_add1: rgba(122, 203, 221, 1)
+
+$color_secondary-light: lighten($color_secondary,20)
+
+$color_dark-add1: rgba(70, 64, 116, 1)
+
+$color_bg: #f5f5f5
+$color_white: rgba(#fff,.8)
+$color_black: #000
+$color_black_20: rgba(0,0,0,.2)
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin bdrs($r:50%)
+  border-radius: $r
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin abCenter($l:50%,$t:$l)
+  position: absolute
+  left: $l
+  top: $t
+  transform: translate(-50%,-50%)
+
+/* Tab頁籤
+.tab-container
+  /* 自動編排 */
+  display: flex
+  justify-content: start
+  flex-direction: column
+  max-width: 700px
+  gap: 20px
+
+.tab-nav
+  display: flex
+  justify-content: center
+  gap: 20px
+  font-size: 16px
+  .tab-btn
+    cursor: pointer
+    transition: .5s
+    +bdrs(20px)
+    +size(100px,96px)
+    box-sizing: border-box
+    background: rgba(255, 255, 255, 0.3)
+    /* 主色 */
+    border: 1.8px solid #A0E3F2
+    /* 毛玻璃 */
+    backdrop-filter: blur(10px)
+    /* 自動編排 */
+    +flexCenter
+    flex-direction: column
+    gap: 10px
+    padding: 10px 10px
+    & div
+      flex-grow: 1
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-direction: column
+      span
+        line-height: 18px
+    & span
+    & svg
+      +size(40px,40px)
+      transform: scale(1.1)
+      path
+        fill: $color_dark-add1
+        fill-opacity: 1
+
+.tab-content
+  max-width: 760px
+  /* white */
+  background-color: rgba(255, 255, 255, 0.7)
+  +bdrs(20px)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  overflow: hidden
+  display: none
+  padding: 50px
+
+  .tab-content-group
+    min-width: 60%
+    & .txt
+      // padding-left: 50px
+      // padding-right: 50px
+      display: flex
+      flex-direction: column
+      gap: 20px
+
+  .tab-content-img
+    // padding: 50px
+    padding-left: 30px
+    overflow: hidden
+    min-width: calc(40% - 30px)
+    // display: none
+    img
+      height: 100%
+// button.tab-content
+//   background-color: $color_primary_add1
+//   color: #fff
+//   +bdrs(100px)
+//   padding: 5px 2px
+//   margin-top: 6px
+//   width: 100px
+//   border: 0
+//   font-size: 18px
+//   // display: none
+//   transition: .5s
+//   cursor: pointer
+
+//   &:hover
+//     background-color: $color_secondary
+
+.custom-ani
+  animation: ani 1s 0s 1
+
+#test-photo1:checked ~ .tab-content-photo1,
+#test-photo2:checked ~ .tab-content-photo2,
+#test-photo3:checked ~ .tab-content-photo3,
+#test-photo4:checked ~ .tab-content-photo4,
+#test-photo5:checked ~ .tab-content-photo5
+  display: flex
+  animation: ani 1s 0s 1
+
+#test-photo1:checked ~ .tab-nav label[for="test-photo1"] .tab-btn,
+#test-photo2:checked ~ .tab-nav label[for="test-photo2"] .tab-btn,
+#test-photo3:checked ~ .tab-nav label[for="test-photo3"] .tab-btn,
+#test-photo4:checked ~ .tab-nav label[for="test-photo4"] .tab-btn,
+#test-photo5:checked ~ .tab-nav label[for="test-photo5"] .tab-btn
+  background-color: rgba(255, 255, 255, 0.7)
+  transform: scale(1.2)
+  z-index: 99
+
+@keyframes ani
+  0%
+    opacity: 0
+    transform: translateY(30px)
+
+  100%
+    opacity: 1
+    transform: translateY(0px)

@@ -1,0 +1,205 @@
+$color_primary: rgba(160, 227, 242, 1)
+$color_secondary: rgba(242, 159, 5, 1)
+$color_red: rgba(242, 68, 5, 1)
+$color_info: rgba(201, 189, 242, 1)
+$color_dark: rgba(96, 90, 140, 1)
+
+$color_primary_minus1: rgba(205, 235, 242, 1)
+$color_primary_add1: rgba(122, 203, 221, 1)
+
+$color_secondary-light: lighten($color_secondary,20)
+
+$color_dark-add1: rgba(70, 64, 116, 1)
+
+$color_bg: #f5f5f5
+$color_white: rgba(#fff,.8)
+$color_black: #000
+$color_black_20: rgba(0,0,0,.2)
+$color_font_s: rgba(0, 0, 0, .6)
+
+$fontsize_Small_a: 14px
+$font_color_a: #62A2B1
+
+// 文字描述背景
+$txt_bgset: linear-gradient(180deg, rgba($color_primary_minus1, 0.7) -100%, transparent 100%), rgba($color_primary_minus1, 0)
+
+// 首頁錯位單位
+$move-left: 144px
+$left-navbar: 220px
+
+//外陰影 
+$first-page-bxsh: 0px 4px 30px rgba(0, 0, 0, .1)
+
+//打勾長度
+$stroke-line: 38px
+
+//凹陷陰影
+@mixin Asbxsh
+  background-color: $color_white
+  +bdrs(30px)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2)
+  backdrop-filter: blur(10px)
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin bdrs($r:50%)
+  border-radius: $r
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin abCenter($l:50%,$t:$l)
+  position: absolute
+  left: $l
+  top: $t
+  transform: translate(-50%,-50%)
+
+.group
+  // outline: 1px solid gold
+.row
+  display: flex
+  justify-content: center
+  align-items: start
+
+.user-block,.group-block
+  // background-color: #fff
+  width: 560px
+
+section.contact-us
+  --pdd: 50px
+.user-block
+  display: flex
+  align-items: center
+  padding: 20px 0
+  // margin-right: 20px
+  .avatars
+    flex-shrink: 0
+    margin: 30px 60px
+  > .group
+    flex-shrink: 1
+    width: 100%
+    > .group:first-of-type
+      margin-bottom: 20px
+    input
+      width: calc( 100% - 58px)
+
+.group-block
+  padding-top: 20px
+  padding-left: 20px
+  border-top: 1px solid $color_dark-add1
+  padding-bottom: 20px
+  .group
+    margin-right: 20px
+    padding-right: 40px
+    margin-bottom: 20px
+
+form
+  input,textarea
+    display: block
+    width: 100%
+  input#subText,textarea
+    width: calc(100% - 18px)
+  textarea
+    height: 10em
+    // width: 100%
+    resize: vertical
+    // margin-bottom: 40px
+
+section.contact-us
+.mails
+  h5
+    font-size: 26px
+    font-weight: bold
+    color: $color_primary_minus1
+    margin-bottom: 30px
+
+  lable
+    // margin-top: 10px
+    font-size: 18px
+    font-weight: bold
+    color: $color_dark-add1
+
+// 表單主體
+section.contact-us
+  .mails
+    min-width: 780px
+    max-width: 900px
+    margin-bottom: 80px
+    margin-left: auto
+    margin-right: auto
+    .mailbody
+      margin-left: auto
+      margin-right: auto
+      width: 100%
+      display: flex
+      border-radius: 20px
+      flex-shrink: 1
+      color: #39393A
+      background-color: $color_primary_add1
+      padding: 0 0 0px var(--pdd)
+    .right
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      align-self: flex-start
+      padding: 40px var(--pdd) 40px 40px
+      margin-left: auto
+      width: 20%
+      gap: 20px
+      background-color: $color_primary_minus1
+      border-radius: 0px 20px 0px 50px
+      > .group
+        padding: 20px 0
+        p
+          text-align: center
+        p:nth-child(2)
+          margin-top: 20px
+
+// 預設按鈕表單樣式
+section.contact-us
+  .form-submit
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 20px
+    padding: 0 20px
+    .turn-next-btn
+      padding: 10px 40px
+
+  .active-ani
+    animation: button-active 1.5s 1 normal ease-in-out 0.1s
+
+  input,textarea
+    appearance: none
+    transition: border-color 0.5s ease
+    background: rgba(255, 255, 255, 0.1)
+    border-radius: 0.3em
+    border: none
+    border: 1px solid rgba(255, 255, 255, 0.3)
+    padding: 0.5em 1em
+    line-height: 20px
+    margin: 10px 0
+    outline: 3px solid transparent
+    font-size: 18px
+    transition: .3s
+    &::placeholder
+        color: rgba(0, 0, 0, 0.3)
+    &:focus
+      outline: 3px solid $color_secondary-light
+      background-color: rgba($color_white,.8)
+      &::placeholder
+        color: rgba($color_red,.6)
+      i
+        color: $color_secondary-light
+
+@keyframes button-active
+  0%
+    transform: translate3d(0, 7px, 0)
+
+  100%
+    transform: translate3d(0, 0, 0)

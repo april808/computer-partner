@@ -1,0 +1,167 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  content: "";
+}
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --top-nav-height: 73px;
+  --first-page-height: 900px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: rgb(70, 64, 116);
+}
+
+button, input {
+  font-family: "Noto Sans TC";
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2, .h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h3, .h3 {
+  font-size: 28px;
+}
+
+h4, .h4 {
+  font-size: 24px;
+}
+
+h5, .h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-fz {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.caption-regular {
+  font-size: 14px;
+}
+
+.caption-bold {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  line-height: 180%;
+  text-align: justify;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+input {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-radius: 100px;
+  padding: 5px 2px;
+  margin-top: 6px;
+}
+
+mark {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #ffa700;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 0 5px;
+  -webkit-text-decoration: underline double currentcolor auto;
+          text-decoration: underline double currentcolor auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+}
+
+section .title-item {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+section.cus-table-out {
+  margin-bottom: 250px;
+}
+section.best-advice {
+  margin-bottom: 250px;
+}
+.cpout-container, container {
+  z-index: 1;
+  /* 半透明線性漸層 */
+  background: linear-gradient(214.44deg, rgba(122, 203, 221, 0.5) -16.93%, rgba(160, 227, 242, 0.5) 26.21%, rgba(255, 204, 111, 0.5) 104.89%), #FFFFFF;
+}
+
+.inner-container {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.avatars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  /* white */
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+}
+.avatars img {
+  height: auto;
+}

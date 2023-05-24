@@ -1,0 +1,357 @@
+@charset "UTF-8";
+/* 導覽列top .navigation---------------------- */
+header {
+  /* 自動編排 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header.top-navbar {
+  height: var(--top-nav-height);
+}
+header.top-navbar .navbar-wrap h1.logo {
+  min-width: 208px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+header.top-navbar .navbar-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header.top-navbar .navbar-wrap .navigation {
+  width: 100%;
+  padding-left: 6%;
+}
+header.top-navbar .navbar-wrap .navigation ul {
+  /* 自動編排 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  gap: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header.top-navbar .navbar-wrap a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 導覽列 (header) nav 連結樣式 */
+header.otherpage {
+  margin-bottom: 70px;
+}
+
+header .navbar-wrap ul > li {
+  font-size: 18px;
+  line-height: 18px;
+}
+header .navbar-wrap ul > li a {
+  color: rgb(70, 64, 116);
+  white-space: nowrap;
+  font-weight: 500;
+  /* 自動編排 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 25px;
+  gap: 8px;
+}
+header .navbar-wrap ul > li a:hover {
+  color: rgb(242, 159, 5);
+  cursor: pointer;
+}
+header .navbar-wrap ul > li a i {
+  padding: 5px;
+}
+
+.section-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: calc(100% - 300px);
+}
+
+/* 導覽列left .navigation---------------------- */
+.section-wrap .left-navbar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 300px;
+  background-color: rgb(70, 64, 116);
+  z-index: 1;
+}
+.section-wrap .left-navbar header.sticky {
+  position: sticky;
+  top: 50%;
+  -webkit-transform: translateX(1em) translateY(calc(-50% - 15px));
+          transform: translateX(1em) translateY(calc(-50% - 15px));
+}
+.section-wrap .left-navbar header .navbar-wrap {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  margin-right: 10px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+.section-wrap .left-navbar header .navbar-wrap .logo img {
+  width: 50px;
+}
+.section-wrap .left-navbar header .navbar-wrap li a {
+  width: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.section-wrap .left-navbar header .navbar-wrap a:hover {
+  color: rgb(242, 159, 5);
+}
+
+.first-page {
+  height: var(--first-page-height);
+  width: calc(100% + 155px - 30px);
+  margin-left: calc( 30px - 155px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 120px;
+  padding-right: 120px;
+  background-color: #fff;
+  border-radius: 0 0 0 80px;
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.first-page {
+  position: relative;
+}
+.first-page * {
+  z-index: 3;
+}
+.first-page .cover {
+  position: relative;
+  height: calc(var(--first-page-height) - var(--top-nav-height) - (50px*2));
+  padding-top: 50px;
+  /* grid */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+      grid-template: repeat(8, 1fr)/repeat(6, 1fr);
+  gap: 20px;
+}
+.first-page .banner {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 8;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: 1/3/9/6;
+  height: 100%;
+  aspect-ratio: 1/1.2;
+  overflow: hidden;
+}
+.first-page .banner ul {
+  z-index: -1;
+  display: block;
+  max-height: 90%;
+  aspect-ratio: 1/1.2;
+  background-color: white;
+  border-bottom: 155px solid #fcc661;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 500px 500px 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.first-page .banner ul li {
+  -webkit-transform: translate(5%, 45%) scale(1.2);
+          transform: translate(5%, 45%) scale(1.2);
+}
+.first-page .banner ul li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.first-page .dec-door {
+  position: relative;
+  z-index: 9;
+}
+.first-page .dec-door::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 4px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 500px 500px 0 0;
+}
+
+.first-page .cover .slogan {
+  width: 50px;
+  position: absolute;
+  left: 10%;
+  margin-top: 8%;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  color: rgb(70, 64, 116);
+}
+.first-page .cover .slogan p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 20px;
+  white-space: nowrap;
+}
+.first-page .cover .slogan p + p {
+  margin-left: 20px;
+}
+.first-page .cover .slogan p:first-of-type {
+  position: relative;
+  z-index: 1;
+}
+.first-page .cover .slogan p:first-of-type::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 150px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-text {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: sideways-right;
+  white-space: nowrap;
+  color: rgb(242, 159, 5);
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.scroll-text .arrow-down-long {
+  margin-top: 20px;
+  background-color: currentColor;
+  width: 3px;
+  height: 150px;
+  position: relative;
+  border-radius: 10px;
+}
+.scroll-text .arrow-down-long::before {
+  content: "";
+  width: inherit;
+  height: 13px;
+  border-radius: inherit;
+  background-color: inherit;
+  position: absolute;
+  bottom: -1.5px;
+}
+.scroll-text .arrow-down-long::after {
+  content: "";
+  width: inherit;
+  height: 13px;
+  border-radius: inherit;
+  background-color: inherit;
+  position: absolute;
+  bottom: -1.5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 3.6px;
+}
+.scroll-text .arrow-down-long::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 3.6px;
+}
+
+.first-page svg {
+  z-index: 1;
+}
+.first-page svg.bg_curve {
+  width: 2027.12px;
+  height: 928.3px;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  opacity: 0.5;
+}
+.first-page svg.bg_curve {
+  /* 角度漸層 */
+  background-image: conic-gradient(from 215.28deg at 52.22% 50%, #A0E3F2 0deg, #FFCC6F 360deg);
+  background-position: center;
+  background-size: 100% 130%;
+}
+.first-page svg.bg_curve {
+  -webkit-clip-path: url(#clipPath-curve);
+  clip-path: url(#clipPath-curve);
+}
+.first-page svg.bg_blobs_1 {
+  position: absolute;
+  bottom: 0;
+}
+.first-page svg.bg_blobs_2 {
+  position: absolute;
+  right: 94px;
+  bottom: -60px;
+}

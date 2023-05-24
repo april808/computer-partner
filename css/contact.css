@@ -1,0 +1,233 @@
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.user-block, .group-block {
+  width: 560px;
+}
+
+section.contact-us {
+  --pdd: 50px;
+}
+
+.user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+.user-block .avatars {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 30px 60px;
+}
+.user-block > .group {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 100%;
+}
+.user-block > .group > .group:first-of-type {
+  margin-bottom: 20px;
+}
+.user-block > .group input {
+  width: calc(100% - 58px);
+}
+
+.group-block {
+  padding-top: 20px;
+  padding-left: 20px;
+  border-top: 1px solid rgb(70, 64, 116);
+  padding-bottom: 20px;
+}
+.group-block .group {
+  margin-right: 20px;
+  padding-right: 40px;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  display: block;
+  width: 100%;
+}
+form input#subText, form textarea {
+  width: calc(100% - 18px);
+}
+form textarea {
+  height: 10em;
+  resize: vertical;
+}
+
+.mails h5 {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(205, 235, 242);
+  margin-bottom: 30px;
+}
+.mails lable {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(70, 64, 116);
+}
+
+section.contact-us .mails {
+  min-width: 780px;
+  max-width: 900px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.contact-us .mails .mailbody {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  color: #39393A;
+  background-color: rgb(122, 203, 221);
+  padding: 0 0 0px var(--pdd);
+}
+section.contact-us .mails .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 40px var(--pdd) 40px 40px;
+  margin-left: auto;
+  width: 20%;
+  gap: 20px;
+  background-color: rgb(205, 235, 242);
+  border-radius: 0px 20px 0px 50px;
+}
+section.contact-us .mails .right > .group {
+  padding: 20px 0;
+}
+section.contact-us .mails .right > .group p {
+  text-align: center;
+}
+section.contact-us .mails .right > .group p:nth-child(2) {
+  margin-top: 20px;
+}
+
+section.contact-us .form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+  padding: 0 20px;
+}
+section.contact-us .form-submit .turn-next-btn {
+  padding: 10px 40px;
+}
+section.contact-us .active-ani {
+  -webkit-animation: button-active 1.5s 1 normal ease-in-out 0.1s;
+          animation: button-active 1.5s 1 normal ease-in-out 0.1s;
+}
+section.contact-us input, section.contact-us textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: border-color 0.5s ease;
+  transition: border-color 0.5s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.3em;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5em 1em;
+  line-height: 20px;
+  margin: 10px 0;
+  outline: 3px solid transparent;
+  font-size: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+section.contact-us input::-webkit-input-placeholder, section.contact-us textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+section.contact-us input::-moz-placeholder, section.contact-us textarea::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+section.contact-us input:-ms-input-placeholder, section.contact-us textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+section.contact-us input::-ms-input-placeholder, section.contact-us textarea::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+section.contact-us input::placeholder, section.contact-us textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+section.contact-us input:focus, section.contact-us textarea:focus {
+  outline: 3px solid #fcc661;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+section.contact-us input:focus::-webkit-input-placeholder, section.contact-us textarea:focus::-webkit-input-placeholder {
+  color: rgba(242, 68, 5, 0.6);
+}
+section.contact-us input:focus::-moz-placeholder, section.contact-us textarea:focus::-moz-placeholder {
+  color: rgba(242, 68, 5, 0.6);
+}
+section.contact-us input:focus:-ms-input-placeholder, section.contact-us textarea:focus:-ms-input-placeholder {
+  color: rgba(242, 68, 5, 0.6);
+}
+section.contact-us input:focus::-ms-input-placeholder, section.contact-us textarea:focus::-ms-input-placeholder {
+  color: rgba(242, 68, 5, 0.6);
+}
+section.contact-us input:focus::placeholder, section.contact-us textarea:focus::placeholder {
+  color: rgba(242, 68, 5, 0.6);
+}
+section.contact-us input:focus i, section.contact-us textarea:focus i {
+  color: #fcc661;
+}
+
+@-webkit-keyframes button-active {
+  0% {
+    -webkit-transform: translate3d(0, 7px, 0);
+            transform: translate3d(0, 7px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes button-active {
+  0% {
+    -webkit-transform: translate3d(0, 7px, 0);
+            transform: translate3d(0, 7px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
