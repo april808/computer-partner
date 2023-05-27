@@ -19,7 +19,7 @@
     rel="stylesheet">
   <!-- font-awesome -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
-  <!-- rSlider 套件 -->
+  <!-- rSlider 套件 CSS-->
   <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
   <!-- swiperjs  套件  -->
   <!-- Link Swiper's CSS -->
@@ -41,7 +41,7 @@
     .swiper-slide {
       pointer-events: none;
       transition: .5s;
-      border: 0px;
+      outline: 0px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(122, 203, 221, 1);
     }
 
@@ -51,9 +51,9 @@
 
     .swiper-slide-active {
       transition: .5s;
-      border: 5px solid rgba(122, 203, 221, 1);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px rgba(122, 203, 221, 1);
-      /* pointer-events: auto; */
+      outline: 5px solid rgba(122, 203, 221, 1);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px rgba(122, 203, 221, 1);
+      pointer-events: auto;
     }
   </style>
 </head>
@@ -195,7 +195,7 @@
                         </div>
                         <div class="btn-group">
                           <div class="card-container">
-                            <input type="radio" name="use_form1" id="radio1-1" value="是">
+                            <input type="radio" required name="use_form1" id="radio1-1" value="是">
                             <label for="radio1-1">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -209,7 +209,7 @@
                               </div>
                             </label>
 
-                            <input type="radio" name="use_form1" id="radio1-2" value="否">
+                            <input type="radio" required name="use_form1" id="radio1-2" value="否">
                             <label for="radio1-2">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -234,7 +234,7 @@
                         </div>
                         <div class="btn-group">
                           <div class="card-container">
-                            <input type="radio" name="use_form2" id="radio2-1" value="是">
+                            <input type="radio" required name="use_form2" id="radio2-1" value="是">
                             <label for="radio2-1">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -248,7 +248,7 @@
                               </div>
                             </label>
 
-                            <input type="radio" name="use_form2" id="radio2-2" value="否">
+                            <input type="radio" required name="use_form2" id="radio2-2" value="否">
                             <label for="radio2-2">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -273,7 +273,7 @@
                         </div>
                         <div class="btn-group">
                           <div class="card-container">
-                            <input type="radio" name="use_form3" id="radio3-1" value="是">
+                            <input type="radio" required name="use_form3" id="radio3-1" value="是">
                             <label for="radio3-1">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -287,7 +287,7 @@
                               </div>
                             </label>
 
-                            <input type="radio" name="use_form3" id="radio3-2" value="否">
+                            <input type="radio" required name="use_form3" id="radio3-2" value="否">
                             <label for="radio3-2">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -312,7 +312,7 @@
                         </div>
                         <div class="btn-group">
                           <div class="card-container">
-                            <input type="radio" name="use_form4" id="radio4-1" value="是">
+                            <input type="radio" required name="use_form4" id="radio4-1" value="是">
                             <label for="radio4-1">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -326,7 +326,7 @@
                               </div>
                             </label>
 
-                            <input type="radio" name="use_form4" id="radio4-2" value="否">
+                            <input type="radio" required name="use_form4" id="radio4-2" value="否">
                             <label for="radio4-2">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -351,7 +351,7 @@
                         </div>
                         <div class="btn-group">
                           <div class="card-container">
-                            <input type="radio" name="use_form5" id="radio5-1" value="是">
+                            <input type="radio" required name="use_form5" id="radio5-1" value="是">
                             <label for="radio5-1">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -365,7 +365,7 @@
                               </div>
                             </label>
 
-                            <input type="radio" name="use_form5" id="radio5-2" value="否">
+                            <input type="radio" required name="use_form5" id="radio5-2" value="否">
                             <label for="radio5-2">
                               <div class="btn-switch">
                                 <div class="bg-circle">
@@ -383,9 +383,10 @@
                       </div>
                     </div>
                   </div>
+                  <div class="swiper-button-next control-btn next"></div>
+                  <div class="swiper-button-prev control-btn prev"></div>
+                  <div class="swiper-pagination"></div>
                 </div>
-                <button class="control-btn prev"><i class="fa-solid fa-angle-left"></i></button>
-                <button class="control-btn next"><i class="fa-solid fa-angle-right"></i></button>
               </div>
             </div>
             <div class="method-1-bg">
@@ -839,9 +840,7 @@
     </div>
 
   </div>
-
-
-
+  <!-- rSlider 套件 JS -->
   <script src="./range-slider-master/js/rSlider.min.js"></script>
   <script>
     (function () {
@@ -867,10 +866,88 @@
 
   <!-- Initialize Swiper -->
   <script>
+    var all_answer = false;
+
     var swiper = new Swiper(".mySwiper", {
       effect: "cards",
       grabCursor: true,
+      runCallbacks: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        disabledClass: 'disabled_swiper_button'
+      }
     });
+
+    //  陣列回答的紀錄------------------------------------
+
+    //表單項目 use_form1~5 | 是與否 radio5-2 ; ID命名規則，需要抓到 use_form1~5 個回答
+    var form_arry = new Array(swiper.slides.length)
+    var txt_array = document.querySelector('#array') //回答印出的地方
+    txt_array.textContent = form_arry
+
+    var form = document.getElementById("answer");// form 表單
+    function getRadio1_5() {
+      //-- submit 監聽事件綁定在 form 表單上-- // change 監聽事件綁定在 form 表單上
+      form.addEventListener('change', function (e) {
+        if (swiper.realIndex == 4) { // 結束監聽事件
+          console.log("All positions are filled.");
+          all_answer == true;
+          txt_array.style.backgroundColor = "green";
+          return;
+        } else {
+
+          console.log(swiper.realIndex, "value", e.target.name);
+          // swiper.slides.length
+
+          if (form_arry.indexOf(e.target.name) == -1) {
+            swiper.slideTo(swiper.realIndex + 1);
+            form_arry[swiper.realIndex] = e.target.name
+          }
+
+          console.log(form_arry)
+
+
+          // 判斷all_answer 是否為 true // 紀錄未回答用的陣列--------------------------------------
+          let emptyIndex = [];
+          // for (let i = 0; i < swiper.slides.length; i++) {
+
+          //   if (form_arry[i].checked === false) {
+          //     emptyIndex.push(i);
+          //   }
+          // }
+          // console.log(emptyIndex);
+
+          if (swiper.realIndex == swiper.slides.length - 1 && !all_answer) {
+            console.log("Empty positions: ", emptyIndex);
+            swiper.slideTo(emptyIndex[0])
+            txt_array.style.backgroundColor = "red";
+          }
+
+          // 確認印出的值--------------------------------
+          // 將陣列清空
+          let options = [...this.elements]; // form 表單下的所有物件存成陣列
+          txt_array.textContent = "" // 陣列清空
+          // 取出點選的元素
+          let chosedTarget = options.filter((e) => e.checked);
+          // 設定 0 秒後印出選擇的value
+          setTimeout(() => {
+            for (let item of chosedTarget) {
+              txt_array.textContent += item.value + '/';
+            }
+          }, 0)
+
+        }
+
+      });
+    };
+
+    getRadio1_5();
+
   </script>
 </body>
 

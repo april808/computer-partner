@@ -113,20 +113,19 @@ $stroke-line: 38px
   /* 背景色
   background: rgba(255, 255, 255, 0.8)
   /* 色塊投影
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px $color_primary_add1
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px $color_primary_add1
   backdrop-filter: blur(4px)
   /* 邊框 設定
-  border: 5px solid $color_primary_add1
+  outline: 5px solid $color_primary_add1
   border-radius: 20px
   transition: .5s
   &:hover
     /* 邊框 設定
-    border: 5px solid $color_secondary-light
-    /* 色塊投影
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
+    outline: 5px solid $color_secondary-light
   &:active
-    backdrop-filter: blur(2px)
+    backdrop-filter: blur(0px)
     transition: .3s
+    /* 色塊投影
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
 
 .card-container
@@ -161,7 +160,7 @@ input[type="radio"]:checked + label
     color: white
     svg
       stroke-dashoffset: 0px
-      transition: 1s
+      transition: .5s
       & path
         transition: 0s
         stroke: $color_red
@@ -173,7 +172,7 @@ input[type="radio"]:checked + label
   /* 自動編排
   +flexCenter
   // +size(42px)
-  +bdrs(calc(75px / 2))
+  +bdrs(calc(42px / 2))
   transition: .5s
   span
     flex-shrink: 1
@@ -193,11 +192,11 @@ input[type="radio"]:checked + label
     box-sizing: border-box
     & svg
       +abCenter(70%,50%)
-      transition: .5s
+      transition: .3s
       stroke-dasharray: $stroke-line
       stroke-dashoffset: $stroke-line
       & path
-        transition: .5s
+        transition: .3s
         stroke: #F1F1F1
 
 // 跳轉按鈕
@@ -207,7 +206,6 @@ input[type="radio"]:checked + label
   align-self: start
   gap: 10px
   padding: 5px 20px
-
   color: $color_white
   /* 輔助
   background: $color_primary_add1
@@ -215,7 +213,7 @@ input[type="radio"]:checked + label
   border: 0px solid #7ACBDD
 
   /* 色塊投影
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px #7ACBDD
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px #7ACBDD
   backdrop-filter: blur(4px)
   isolation: isolate
   border-radius: 32px
@@ -226,26 +224,14 @@ input[type="radio"]:checked + label
     
   &:active
     transition: .3s
-    // box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 8px 10px 0px #7ACBDD
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
 
 .turn-next-btn.final
   background: #F29F05
-  &:hover
-    background: $color_red
-
-// button.turn-next-btn,.turn-next-btn
-//   background-color: $color_primary_add1
-//   color: #fff
-  
-  
-  
   border: 0
   font-size: 18px
-  // display: none
   transition: .5s
   cursor: pointer
-
   &:hover
     background: $color_red
 
@@ -258,14 +244,11 @@ input[type="radio"]:checked + label
   grid-template-columns: repeat(12, 1fr)
   flex-wrap: wrap
   .product-item
-    // box-sizing: border-box
-    // margin: auto
     min-width: 350px
     grid-column: span 4
     display: flex
     flex-direction: column
     align-content: center
-    // justify-content: center
     .tag
       background-color: $color_red
       color: #fff
@@ -285,7 +268,6 @@ input[type="radio"]:checked + label
     .item-img
       display: flex
       justify-content: center
-      // padding: 10px 50px
       aspect-ratio: 1/1
       
     p

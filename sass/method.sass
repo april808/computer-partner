@@ -77,6 +77,8 @@ $stroke-line: 38px
 // 超出隱藏
 .next-page
   overflow: hidden
+
+
 .method-grid
   padding: 50px 100px
   min-height: 600px
@@ -84,6 +86,11 @@ $stroke-line: 38px
   display: grid
   // grid-template: repeat(5, 1fr) / repeat(6, 1fr)
   gap: 20px
+
+.method-title
+  grid-area: 1/1/2/7
+  // background-color: #afa
+
 .method-block
   position: relative
   & img
@@ -113,9 +120,6 @@ $stroke-line: 38px
       margin-left: 10px
       padding: 0
 
-.method-title
-  grid-area: 1/1/2/7
-  // background-color: #afa
 
 
 // 方法一的位置
@@ -130,7 +134,6 @@ $stroke-line: 38px
 .question-1
   .method-input
     grid-area: 2/1/5/5
-    // background-color: #aaf
 
   .method-1-bg
     grid-area: 3/5/6/7
@@ -155,8 +158,6 @@ $stroke-line: 38px
     font-size: 25px
     width: 25px
     height: 70px
-
-    border-radius: 0px 20px 20px 0px
     background-color: $color_primary_add1
     color: $color_white
     border: 0
@@ -166,7 +167,7 @@ $stroke-line: 38px
     +flexCenter
     cursor: pointer
     &:first-of-type 
-      border-radius: 20px 0px 0px 20px
+      +bdrs(var(--bdrs) 0 0 var(--bdrs))
       
     &:hover
         background-color: $color_white
@@ -176,11 +177,25 @@ $stroke-line: 38px
         order: -1
         align-self: center
         left: calc(25px - 30px)
+        +bdrs( var(--bdrs) 0 0 var(--bdrs))
 
     &.next
         order: 1
         align-self: center
         right: calc(25px - 30px)
+        +bdrs(0 var(--bdrs) var(--bdrs) 0)
+
+// 方法二 和 方法三的卡片樣式
+.question-2,.question-3
+  .card  .btn-switch
+      background-color: transparent
+      +bdrs(var(--bdrs) var(--bdrs)  0 0)
+      & .bg-circle
+        position: absolute
+        left: 0
+        top: 0
+        transform: translate(20px,20px) scale(1.5)
+
 
 // 方法二的位置
 .question-2
@@ -192,15 +207,6 @@ $stroke-line: 38px
     flex: 1
     max-width: 430px
     min-width: 250px
-    & .btn-switch
-      background-color: transparent
-      +bdrs(calc(75px / 5) calc(75px / 5) 0 0)
-      & .bg-circle
-        position: absolute
-        left: 0
-        top: 0
-        transform: translate(20px,20px) scale(1.5)
-      & .method-input_img
     & .txt
       background: $txt_bgset
 
@@ -221,29 +227,19 @@ $stroke-line: 38px
 input[type="radio"]:checked + label
   & .btn-switch
     background: $color_primary_add1
-    // color: $color_secondary-light
     color: $color_white
 .question-3
   .method-input
     grid-area: 2/1/5/7
-    // background-color: #f2f
   .card
     flex: 1
     max-width: calc(100% / 3 )
     & .btn-switch
-      background-color: transparent
-      +bdrs(calc(75px / 5) calc(75px / 5) 0 0)
-      & .bg-circle
-        position: absolute
-        left: 0
-        top: 0
-        transform: translate(20px,20px) scale(1.5)
       & .method-input_img
         +size(300px,300px)
         +flexCenter
         & .logo_system_img
           padding-top: 20px
-          // background-color: blue
           font-size: 150px
     & .txt
       background: $txt_bgset
@@ -382,14 +378,12 @@ input[type="radio"]:checked + label
     +abCenter(50%,-10%)
     z-index: -1
   .final-group
-    // grid-area: 2/3/4/5
     +flexCenter
     flex-direction: column
-    // fle+flexCenterx-direction: column
     gap: 50px
     position: relative
     .turn-next-btn
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px $color_white
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px $color_white
       &:active
         box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_white
 
