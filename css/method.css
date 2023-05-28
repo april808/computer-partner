@@ -176,7 +176,7 @@
   position: relative;
 }
 .form-card-out .control-btn {
-  font-size: 25px;
+  --swiper-navigation-size: 25px;
   width: 25px;
   height: 70px;
   background-color: rgb(122, 203, 221);

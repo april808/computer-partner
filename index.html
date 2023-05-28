@@ -55,10 +55,27 @@
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px rgba(122, 203, 221, 1);
       pointer-events: auto;
     }
+
+    #array {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: gold;
+      opacity: 0;
+    }
+
+    .disabled_swiper_button {
+      opacity: 0;
+      cursor: auto;
+      pointer-events: none;
+    }
   </style>
 </head>
 
 <body>
+  <div id="array">
+    這裡放陣列
+  </div>
   <div class="section-wrap">
     <div class="left-navbar">
       <header class="sticky">
@@ -181,7 +198,7 @@
               </h3>
             </div>
             <div class="method-input">
-              <div class="form-card-out">
+              <div class="form-card-out" id="first-form-card">
                 <div class="form-card-inner">
                   <!-- swiper 套件範圍 -->
                   <div class="swiper mySwiper">
@@ -888,59 +905,75 @@
     //表單項目 use_form1~5 | 是與否 radio5-2 ; ID命名規則，需要抓到 use_form1~5 個回答
     var form_arry = new Array(swiper.slides.length)
     var txt_array = document.querySelector('#array') //回答印出的地方
-    txt_array.textContent = form_arry
+    txt_array.textContent = "init";
 
+    // var form = document.getElementById("first-form-card");// form 表單
     var form = document.getElementById("answer");// form 表單
     function getRadio1_5() {
       //-- submit 監聽事件綁定在 form 表單上-- // change 監聽事件綁定在 form 表單上
       form.addEventListener('change', function (e) {
-        if (swiper.realIndex == 4) { // 結束監聽事件
-          console.log("All positions are filled.");
-          all_answer == true;
-          txt_array.style.backgroundColor = "green";
+        if (swiper.realIndex == swiper.slides.length - 1 && all_answer) { // 結束監聽事件
           return;
         } else {
-
-          console.log(swiper.realIndex, "value", e.target.name);
-          // swiper.slides.length
+          // console.log(swiper.realIndex, "value", e.target.name);
 
           if (form_arry.indexOf(e.target.name) == -1) {
             swiper.slideTo(swiper.realIndex + 1);
-            form_arry[swiper.realIndex] = e.target.name
+            form_arry[swiper.realIndex - 1] = e.target.name
           }
-
-          console.log(form_arry)
-
-
-          // 判斷all_answer 是否為 true // 紀錄未回答用的陣列--------------------------------------
-          let emptyIndex = [];
-          // for (let i = 0; i < swiper.slides.length; i++) {
-
-          //   if (form_arry[i].checked === false) {
-          //     emptyIndex.push(i);
-          //   }
-          // }
-          // console.log(emptyIndex);
+          console.log("form_arry.length:" + form_arry.length)
 
           if (swiper.realIndex == swiper.slides.length - 1 && !all_answer) {
-            console.log("Empty positions: ", emptyIndex);
-            swiper.slideTo(emptyIndex[0])
-            txt_array.style.backgroundColor = "red";
-          }
+            setTimeout(() => {
+              if (!all_answer) {
+                // 判斷all_answer 是否為 true // 紀錄未回答用的陣列--------------------------------------
+                let emptyIndex = [];
 
+                for (let k = 0; k < swiper.slides.length; k++) {
+                  if (form_arry[k]) {
+                    console.log(k + "//true")
+                  } else {
+                    console.log(k + "//false")
+                    emptyIndex.push(k);
+                  }
+                }
+
+                console.log("emptyIndex : " + emptyIndex);
+
+                console.log("Empty positions: ", emptyIndex[0]);
+                txt_array.style.backgroundColor = "red";
+                swiper.slideTo(emptyIndex[0])
+              }
+            }, 1000)
+          }
           // 確認印出的值--------------------------------
           // 將陣列清空
-          let options = [...this.elements]; // form 表單下的所有物件存成陣列
           txt_array.textContent = "" // 陣列清空
+          // form 表單下的所有物件存成陣列
+          let options = [...this.elements];
+
           // 取出點選的元素
-          let chosedTarget = options.filter((e) => e.checked);
+          var chosedTarget = options.filter((e) => e.checked);
           // 設定 0 秒後印出選擇的value
           setTimeout(() => {
             for (let item of chosedTarget) {
               txt_array.textContent += item.value + '/';
+              console.log(txt_array.textContent)
+              console.log("chosedTarget.length:" + chosedTarget.length)
             }
           }, 0)
-
+          if (chosedTarget.length == swiper.slides.length) {
+            all_answer = true
+            console.log("All positions are filled.");
+            txt_array.style.backgroundColor = "green";
+            for (let e = swiper.realIndex; e >= 0; e--) {
+              console.log("e:" + e)
+              console.log("swiper.realIndex--" + swiper.realIndex--)
+              setTimeout(() => {
+                swiper.slideTo(swiper.realIndex--);
+              }, 1000)
+            }
+          }
         }
 
       });
