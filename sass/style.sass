@@ -23,66 +23,82 @@ $color_white: rgba(#fff,.8)
   top: $t
   transform: translate(-50%,-50%)
 
+
+// 文字連結
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap')
+
+// font-awesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+
+
+// 外聯radio btn 樣式 與打勾動畫
+@import url('../css/radio.css')
+
+//- RWD 框架 - 自適應格線系統
+@import url('../grid.css')
+
+
 *
   margin: 0
   padding: 0
-  // outline: 1px solid black
+  // outline: 2px solid #aaf
+  box-sizing: border-box
   content: ''
   &::before,
   &::after
     margin: 0
     padding: 0
 
-html,body
-  scroll-behavior: smooth
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
 :root
   --top-nav-height: 73px
   --first-page-height: 900px
   --bdrs: 20px
+  --bxsh-width: 4px 4px
   // --bxsh-width: 0px 0px
-  --bxsh-width: 6px 8px
+  --card-bd: 3px
+  --innerbdrs: calc(var(--bdrs) - var(--card-bd))
+  --gs-gap: 10px
 
+html
+  font-size: 18px
+  scroll-behavior: smooth
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+@media screen and (max-width: 768px)
+  html
+    font-size: 16px
 
 body
   margin: 0
   padding: 0
   font-family: 'Noto Sans TC', sans-serif
+  // font-family: 'Noto Serif JP', serif
   font-weight: 400
-  font-size: 18px
+  font-size: 1rem
   letter-spacing: 2px
-  line-height: 180%
+  // line-height: 1.8em
   color: $color_dark-add1
 button,input
   font-family: 'Noto Sans TC'
 img
-  vertical-align: middle
+  vertical-align: bottom
   width: 100%
   object-fit: cover
 
 h1
-  margin: 0
-
+  // margin: 0
 h2,.h2
   font-size: 32px
-  font-weight: bold
-
+  
 h3,.h3
   font-size: 28px
-  font-weight: bold
-
 h4,.h4
   font-size: 24px
-  font-weight: bold
-
 h5,.h5
   font-size: 20px
-  font-weight: bold
-
-.body-bold
-  font-size: 18px
+.bold
   font-weight: bold
 
 .caption-regular
@@ -93,8 +109,8 @@ h5,.h5
   font-weight: bold
 
 p
-  font-size: 18px
-  line-height: 180%
+  // font-size: 18px
+  // line-height: 180%
   text-align: justify
 
 ul,li
@@ -143,23 +159,20 @@ section
   &.cus-table-out
     margin-bottom: 250px
   &.best-advice
-    margin-bottom: 250px
+    padding-bottom: 250px
 
-.cpout-container,container
+.out-container
   z-index: 1
   /* 半透明線性漸層 */
   background: linear-gradient(214.44deg, rgba(122, 203, 221, 0.5) -16.93%, rgba(160, 227, 242, 0.5) 26.21%, rgba(255, 204, 111, 0.5) 104.89%), #FFFFFF
-  
-.inner-container
-  padding-left: 120px
-  padding-right: 120px
 
 .avatars
   +flexCenter
   +size(110px)
-  +bdrs
+  +bdrs(60px)
   overflow: hidden
   background: $color_white
+  aspect-ratio: 1/1
   img
     height: auto
 
@@ -169,3 +182,19 @@ section
 //穿透的 div ( pointer-events ) -> 裝飾的層級不影響滑鼠 
 img[alt*="背景"]
   pointer-events: none
+
+
+// JS 控制出現更隱藏-----------------------------
+.hidden
+  pointer-events: none
+  opacity: 0
+  transition: transform 1s,max-height 1s
+  transform: translateY(-2em)
+  max-height: 0px
+
+.auto
+  pointer-events: auto
+  opacity: 1
+  transition: transform 1s, max-height 1s
+  transform: translateY(0em)
+  max-height: 1000px

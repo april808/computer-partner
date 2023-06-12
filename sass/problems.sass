@@ -72,7 +72,8 @@ $stroke-line: 38px
   .tab-btn
     cursor: pointer
     transition: .5s
-    +size(180px,60px)
+    max-width: 100%
+    // +size(180px,60px)
     box-sizing: border-box
     background: $color_white
 
@@ -93,42 +94,45 @@ $stroke-line: 38px
   color: white
 
 /* 導覽列 (header)  搜尋按鈕
+.search
+  max-width: 284px
+  margin-left: auto
+
+  /* 放大鏡icon 定位
+  padding-left: 15px
+  position: relative
+  /* 色塊投影 */
+  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(8px 10px 0px #7ACBDD)
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) 
+  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px #7ACBDD
+
+input
+    width: 100%
+    // height: 40px
+    // width: 366px
+    height: 60px
+
+    filter: drop-shadow(0px 4px 0px #7ACBDD)
+
+    padding: 0 42px
+    border-radius: 6px
+    background-color: $color_bg
+    border: 2px solid #A0E3F2
+    box-sizing: border-box
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, .2)
+    outline: 3px solid transparent
+    font-size: 18px
+    transition: .3s
+
+    &:focus
+        outline: 3px solid $color_secondary-light
+        background-color: $color_white
+        i
+          color: $color_secondary-light
+        &::placeholder
+          color: transparent
+          transition: .3s
 .tab-sort-nav
-  & .search
-    max-width: 284px
-    margin-left: auto
-
-    /* 放大鏡icon 定位
-    padding-left: 15px
-    position: relative
-    /* 色塊投影 */
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(8px 10px 0px #7ACBDD)
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 10px 0px #7ACBDD
-
-    & input[type="search"]
-      width: 100%
-      // height: 40px
-      // width: 366px
-      height: 60px
-
-      filter: drop-shadow(0px 4px 0px #7ACBDD)
-
-      padding: 0 42px
-      border-radius: 6px
-      background-color: $color_bg
-      border: 2px solid #A0E3F2
-      box-sizing: border-box
-      // box-shadow: 0px 4px 4px rgba(0, 0, 0, .2)
-      outline: 3px solid transparent
-      font-size: 18px
-      transition: .3s
-
-      &:focus
-          outline: 3px solid $color_secondary-light
-          background-color: $color_white
-          i
-            color: $color_secondary-light
-
     i
       font-size: 18px
       color: $color_primary_add1
@@ -145,8 +149,6 @@ $stroke-line: 38px
 
 // 文章清單-----------------------------------------
 section.common-problem
-  .inner-container
-    padding: 0 180px
 .problem-card-list
   padding: 60px 0
   display: flex
@@ -155,7 +157,6 @@ section.common-problem
   flex-wrap: wrap
   gap: 20px
 .problem-card
-  min-width: 900px
   max-width: 100%
   padding: 30px
   display: flex
@@ -192,3 +193,12 @@ section.common-problem
     color: $color_white
     &:hover
       // text-decoration: underline
+
+
+// 視窗大於
+@media screen and (min-width: 768px)
+  .tab-btn
+    max-width: 180px
+    min-width: 100px
+    // +size(180px,60px)
+    height: 60px

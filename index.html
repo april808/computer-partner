@@ -1,987 +1,682 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首頁 | 選擇你的電腦夥伴</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/card.css">
-  <link rel="stylesheet" href="./css/method.css">
-  <link rel="stylesheet" href="./css/tab.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <!--  文字連結 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <!-- font-awesome -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
-  <!-- rSlider 套件 CSS-->
-  <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
-  <!-- swiperjs  套件  -->
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
-  <!-- Demo styles -->
-  <style>
-    html,
-    body {
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 | 選擇你的電腦夥伴</title>
+    <link rel="icon" href="./images/logo/logo_light.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cover.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/method.css">
+    <link rel="stylesheet" href="./css/tab.css">
+    <!-- rSlider 套件 CSS-->
+    <link rel="stylesheet" href="https://slawomir-zaziablo.github.io/range-slider/css/rSlider.min.css">
+    <!-- swiperjs  套件 CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- 套件CSS 樣式修改-->
+    <link rel="stylesheet" href="./css/js-plugin.css">
+    <style>
+      html,
+      body {
       position: relative;
-      height: 100%;
-    }
-
-    .swiper {
-      width: 470px;
-      height: 284px;
-    }
-
-    .swiper-slide {
-      pointer-events: none;
-      transition: .5s;
-      outline: 0px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(122, 203, 221, 1);
-    }
-
-    .swiper-slide>.btn-group {
-      pointer-events: auto;
-    }
-
-    .swiper-slide-active {
-      transition: .5s;
-      outline: 5px solid rgba(122, 203, 221, 1);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px rgba(122, 203, 221, 1);
-      pointer-events: auto;
-    }
-
-    #array {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: gold;
-      opacity: 0;
-    }
-
-    .disabled_swiper_button {
-      opacity: 0;
-      cursor: auto;
-      pointer-events: none;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="array">
-    這裡放陣列
-  </div>
-  <div class="section-wrap">
-    <div class="left-navbar">
-      <header class="sticky">
-        <nav class="navbar-wrap">
-          <ul>
-            <li class="logo"><a href="./index.html"><img src="./images/logo/logo_light.png"
-                  alt="電腦夥伴 | Computer Partner"></a>
-            </li>
-            <li><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a></li>
-            <li><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a></li>
-            <li><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a></li>
-            <li><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a></li>
-            <li><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></li>
-          </ul>
-        </nav>
+      }
+      #array{
+        opacity: 0
+      }
+    </style>
+  </head>
+  <body>
+    <div id="array">這裡放陣列</div>
+    <div class="out-container">
+      <input id="menu-switch" type="checkbox" name="">
+      <header class="main-header inner-container">
+        <div class="logo"><a href="./index.html">
+            <picture>
+              <source media="(min-width: 930px)" srcset="./images/logo/logo_long_light.png">
+              <source media="(min-width: 768px)" srcset="./images/logo/logo_e.svg"><img src="./images/logo/logo_e.svg" alt="電腦夥伴 | Computer Partner">
+            </picture></a></div>
+        <label class="hb" for="menu-switch"><span></span><span></span><span></span></label>
+        <nav class="main-nav"><a href="./index.html#form"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></nav>
       </header>
-    </div>
-
-    <div class="cpout-container">
-      <!-- 首頁第一屏->主視覺輪播 -->
+      <!-- 首頁第一屏->主視覺輪播-->
       <div class="first-page bxsh-first">
-        <header class="top-navbar">
-          <div class="navbar-wrap">
-            <h1 class="logo">
-              <a href="#">
-                <img src="./images/logo/logo_long.png" alt="電腦夥伴 | Computer Partner">
-              </a>
-            </h1>
-            <nav class="navigation">
-              <ul>
-                <li><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a></li>
-                <li><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a>
-                </li>
-                <li><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a></li>
-                <li><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a></li>
-                <li><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
         <div class="cover">
           <div class="slogan">
             <p>理想的電腦</p>
-            <p>未來的工作夥伴</p>
+            <p>未來的工作夥伴
+              <div class="bg-content"></div>
+            </p>
           </div>
           <div class="carousel banner dec-door">
             <ul>
-              <li>
-                <img src="./images/banner.png" alt="大圖輪播">
-              </li>
+              <li><img src="./images/banner.png" alt="大圖"></li>
             </ul>
           </div>
           <div class="scroll-text"><span>scroll down</span>
             <div class="arrow-down-long"></div>
           </div>
         </div>
-
-        <svg class="bg_curve" width="1362" height="848" viewbox="0 0 1362 848" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+        <svg class="bg_curve" width="1362" height="848" viewBox="0 0 1362 848" fill="none" xmlns="http://www.w3.org/2000/svg">
           <clippath id="clipPath-curve">
-            <path
-              d="M201.045 798.406C142.797 924.677 -88.9727 950.667 -201.827 911.487L-201.827 0H1825.91C1341.73 6.71653 1359.93 329.11 1247.08 490.307C1134.22 651.504 880.809 650.641 738.831 586.834C596.853 523.027 273.854 640.568 201.045 798.406Z"
-              fill-opacity="0.5"></path>
+            <path d="M201.045 798.406C142.797 924.677 -88.9727 950.667 -201.827 911.487L-201.827 0H1825.91C1341.73 6.71653 1359.93 329.11 1247.08 490.307C1134.22 651.504 880.809 650.641 738.831 586.834C596.853 523.027 273.854 640.568 201.045 798.406Z" fill-opacity="0.5"></path>
           </clippath>
         </svg>
-
-        <svg class="bg_blobs_1" width="405" height="200" viewBox="0 0 405 200" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M206.147 8.89025C225.687 5.69798 245.053 -2.62144 264.364 1.75015C284.763 6.36826 300.347 21.7159 317.245 34.041C338.379 49.4553 362.693 61.6313 376.729 83.7047C392.556 108.594 410.706 139.16 402.01 167.344C393.147 196.069 360.039 210.186 333.402 224.122C311.732 235.459 285.8 231.996 262.759 240.195C242.499 247.403 227.238 265.212 206.147 269.401C183.393 273.919 155.406 279.882 137.561 265.058C118.41 249.149 131.624 213.913 116.009 194.521C100.282 174.99 68.6992 176.066 51.3355 157.974C29.0456 134.748 -8.83567 106.303 2.38795 76.1323C14.4946 43.5878 64.3093 47.5149 96.8919 35.5111C116.428 28.3138 136.194 24.3132 156.422 19.3845C173.089 15.3234 189.216 11.6562 206.147 8.89025Z"
-            fill="url(#paint0_linear_1473_13549)" />
+        <svg class="bg_blobs_1" width="405" height="200" viewBox="0 0 405 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M206.147 8.89025C225.687 5.69798 245.053 -2.62144 264.364 1.75015C284.763 6.36826 300.347 21.7159 317.245 34.041C338.379 49.4553 362.693 61.6313 376.729 83.7047C392.556 108.594 410.706 139.16 402.01 167.344C393.147 196.069 360.039 210.186 333.402 224.122C311.732 235.459 285.8 231.996 262.759 240.195C242.499 247.403 227.238 265.212 206.147 269.401C183.393 273.919 155.406 279.882 137.561 265.058C118.41 249.149 131.624 213.913 116.009 194.521C100.282 174.99 68.6992 176.066 51.3355 157.974C29.0456 134.748 -8.83567 106.303 2.38795 76.1323C14.4946 43.5878 64.3093 47.5149 96.8919 35.5111C116.428 28.3138 136.194 24.3132 156.422 19.3845C173.089 15.3234 189.216 11.6562 206.147 8.89025Z" fill="url(#paint0_linear_1473_13549)"></path>
           <defs>
-            <linearGradient id="paint0_linear_1473_13549" x1="249.07" y1="-68.7918" x2="3.25414" y2="240.828"
-              gradientUnits="userSpaceOnUse">
-              <stop offset="0.0546288" stop-color="#69FF97" />
-              <stop offset="1" stop-color="#00E4FF" />
-            </linearGradient>
+            <lineargradient id="paint0_linear_1473_13549" x1="249.07" y1="-68.7918" x2="3.25414" y2="240.828" gradientUnits="userSpaceOnUse">
+              <stop offset="0.0546288" stop-color="#69FF97"></stop>
+              <stop offset="1" stop-color="#00E4FF"></stop>
+            </lineargradient>
           </defs>
         </svg>
-        <svg class="bg_blobs_2" width="568" height="419" viewBox="0 0 568 419" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M456.923 9.9541C523.92 43.6649 572.485 121.316 567.292 196.136C562.473 265.566 479.403 293.618 433.598 346.016C394.106 391.192 379.789 464.952 321.155 477.702C261.084 490.765 209.547 440.724 159.007 405.726C105.207 368.469 46.1136 334.583 25.0252 272.632C-0.146544 198.687 -18.5413 102.384 37.0765 47.5365C92.0002 -6.62611 182.764 48.1908 259.594 41.3133C328.555 35.1403 395.074 -21.1661 456.923 9.9541Z"
-            fill="url(#paint0_linear_1473_13540)" fill-opacity="0.4" />
+        <svg class="bg_blobs_2" width="568" height="419" viewBox="0 0 568 419" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M456.923 9.9541C523.92 43.6649 572.485 121.316 567.292 196.136C562.473 265.566 479.403 293.618 433.598 346.016C394.106 391.192 379.789 464.952 321.155 477.702C261.084 490.765 209.547 440.724 159.007 405.726C105.207 368.469 46.1136 334.583 25.0252 272.632C-0.146544 198.687 -18.5413 102.384 37.0765 47.5365C92.0002 -6.62611 182.764 48.1908 259.594 41.3133C328.555 35.1403 395.074 -21.1661 456.923 9.9541Z" fill="url(#paint0_linear_1473_13540)" fill-opacity="0.4"></path>
           <defs>
-            <linearGradient id="paint0_linear_1473_13540" x1="207.801" y1="-181.262" x2="290.205" y2="541.164"
-              gradientUnits="userSpaceOnUse">
-              <stop offset="0.0546288" stop-color="#69FF97" />
-              <stop offset="1" stop-color="#00E4FF" />
-            </linearGradient>
+            <lineargradient id="paint0_linear_1473_13540" x1="207.801" y1="-181.262" x2="290.205" y2="541.164" gradientUnits="userSpaceOnUse">
+              <stop offset="0.0546288" stop-color="#69FF97"></stop>
+              <stop offset="1" stop-color="#00E4FF"></stop>
+            </lineargradient>
           </defs>
         </svg>
-
-
-
       </div>
       <section class="next-page">
-        <!-- 首頁 下一層->簡介 -->
-        <div class="about">
-          <div class="out-bxshin">
-            <div class="about-card">
+        <!-- 首頁 下一層->簡介-->
+        <div class="inner-container">
+          <div class="about">
+            <div class="about-card out-bxshin">
               <h2>如何選擇最適合您需求的電腦</h2>
-              <p class="h4">
+              <p>
                 獲得一台新電腦是一種令人興奮的體驗。
-                全新技術的承諾是難以抗拒的。
                 然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。
-                如果您希望在選購電腦時<mark>做出明智的決策</mark>，您來對地方了。
-                以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+                如果您希望在選購電腦時
+                <mark>做出明智的決策</mark>，您來對地方了。
+                 以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
               </p>
+              <div class="final turn-next-btn" id="start_btn">立即開始</div>
             </div>
           </div>
         </div>
-        <!-- 首頁 下一層->開始選項 -->
-        <form action="" id="answer">
-          <div class="method-block question-1 method-grid">
-            <div class="method-title title-item">
-              <h3 class="svg-check">
-                <span>方法1</span>
-                <span>確定您的需求</span>
-              </h3>
+        <!-- 首頁 下一層->開始選項-->
+        <form id="form" action="">
+          <div class="question-1 inner-container">
+            <div class="title-item">
+              <h3 class="svg-check"><span>方法1</span><span>確定您的需求</span></h3>
             </div>
-            <div class="method-input">
-              <div class="form-card-out" id="first-form-card">
-                <div class="form-card-inner">
-                  <!-- swiper 套件範圍 -->
-                  <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <!-- 問題1 -->
-                      <div class="card form-card swiper-slide">
-                        <div class="txt">
-                          <div class="card-container">
-                            <p>您是否打算在電腦上完成大量辦公室工作？</p>
+            <div class="method-grid method-block">
+              <div class="method-input">
+                <div class="form-card-out" id="first-form-card">
+                  <div class="form-card-inner">
+                    <!-- swiper 套件範圍-->
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <!-- 問題1-->
+                        <div class="card form-card swiper-slide">
+                          <div class="txt">
+                            <div class="card-container">
+                              <p>您是否打算在電腦上完成大量辦公室工作？</p>
+                            </div>
+                          </div>
+                          <div class="btn-group">
+                            <div class="card-container">
+                              <input id="radio1-1" type="radio" required="" name="use_form1" value="是">
+                              <label for="radio1-1">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>是</span>
+                                </div>
+                              </label>
+                              <input id="radio1-2" type="radio" required="" name="use_form1" value="否">
+                              <label for="radio1-2">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>否</span>
+                                </div>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                        <div class="btn-group">
-                          <div class="card-container">
-                            <input type="radio" required name="use_form1" id="radio1-1" value="是">
-                            <label for="radio1-1">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
+                        <!-- 問題2-->
+                        <div class="card form-card swiper-slide">
+                          <div class="txt">
+                            <div class="card-container">
+                              <p>您是否喜歡游戲併計劃將大部分電腦時間花在玩最新最好的遊戲上？</p>
+                            </div>
+                          </div>
+                          <div class="btn-group">
+                            <div class="card-container">
+                              <input id="radio2-1" type="radio" required="" name="use_form2" value="是">
+                              <label for="radio2-1">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>是</span>
                                 </div>
-                                <span>是</span>
-                              </div>
-                            </label>
-
-                            <input type="radio" required name="use_form1" id="radio1-2" value="否">
-                            <label for="radio1-2">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
+                              </label>
+                              <input id="radio2-2" type="radio" required="" name="use_form2" value="否">
+                              <label for="radio2-2">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>否</span>
                                 </div>
-                                <span>否</span>
-                              </div>
-                            </label>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <!-- 問題2 -->
-                      <div class="card form-card swiper-slide">
-                        <div class="txt">
-                          <div class="card-container">
-                            <p>您是否喜歡游戲併計劃將大部分電腦時間花在玩最新最好的遊戲上？</p>
+                        <!-- 問題3-->
+                        <div class="card form-card swiper-slide">
+                          <div class="txt">
+                            <div class="card-container">
+                              <p>您是藝術家還是音樂家？您希望使用電腦來創建圖像、音樂或視頻嗎？</p>
+                            </div>
+                          </div>
+                          <div class="btn-group">
+                            <div class="card-container">
+                              <input id="radio3-1" type="radio" required="" name="use_form3" value="是">
+                              <label for="radio3-1">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>是</span>
+                                </div>
+                              </label>
+                              <input id="radio3-2" type="radio" required="" name="use_form3" value="否">
+                              <label for="radio3-2">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>否</span>
+                                </div>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                        <div class="btn-group">
-                          <div class="card-container">
-                            <input type="radio" required name="use_form2" id="radio2-1" value="是">
-                            <label for="radio2-1">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
+                        <!-- 問題4-->
+                        <div class="card form-card swiper-slide">
+                          <div class="txt">
+                            <div class="card-container">
+                              <p>您的電腦會被家庭中的每個人使用嗎？</p>
+                            </div>
+                          </div>
+                          <div class="btn-group">
+                            <div class="card-container">
+                              <input id="radio4-1" type="radio" required="" name="use_form4" value="是">
+                              <label for="radio4-1">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>是</span>
                                 </div>
-                                <span>是</span>
-                              </div>
-                            </label>
-
-                            <input type="radio" required name="use_form2" id="radio2-2" value="否">
-                            <label for="radio2-2">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
+                              </label>
+                              <input id="radio4-2" type="radio" required="" name="use_form4" value="否">
+                              <label for="radio4-2">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>否</span>
                                 </div>
-                                <span>否</span>
-                              </div>
-                            </label>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <!-- 問題3 -->
-                      <div class="card form-card swiper-slide">
-                        <div class="txt">
-                          <div class="card-container">
-                            <p>您是藝術家還是音樂家？您希望使用電腦來創建圖像、音樂或視頻嗎？</p>
+                        <!-- 問題5-->
+                        <div class="card form-card swiper-slide">
+                          <div class="txt">
+                            <div class="card-container">
+                              <p>您是否打算在客廳使用電腦作為娛樂中心？</p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="btn-group">
-                          <div class="card-container">
-                            <input type="radio" required name="use_form3" id="radio3-1" value="是">
-                            <label for="radio3-1">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
+                          <div class="btn-group">
+                            <div class="card-container">
+                              <input id="radio5-1" type="radio" required="" name="use_form5" value="是">
+                              <label for="radio5-1">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>是</span>
                                 </div>
-                                <span>是</span>
-                              </div>
-                            </label>
-
-                            <input type="radio" required name="use_form3" id="radio3-2" value="否">
-                            <label for="radio3-2">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
+                              </label>
+                              <input id="radio5-2" type="radio" required="" name="use_form5" value="否">
+                              <label for="radio5-2">
+                                <div class="btn-switch">
+                                  <div class="bg-circle">
+                                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </div><span>否</span>
                                 </div>
-                                <span>否</span>
-                              </div>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- 問題4 -->
-                      <div class="card form-card swiper-slide">
-                        <div class="txt">
-                          <div class="card-container">
-                            <p>您的電腦會被家庭中的每個人使用嗎？</p>
-                          </div>
-                        </div>
-                        <div class="btn-group">
-                          <div class="card-container">
-                            <input type="radio" required name="use_form4" id="radio4-1" value="是">
-                            <label for="radio4-1">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
-                                </div>
-                                <span>是</span>
-                              </div>
-                            </label>
-
-                            <input type="radio" required name="use_form4" id="radio4-2" value="否">
-                            <label for="radio4-2">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
-                                </div>
-                                <span>否</span>
-                              </div>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- 問題5 -->
-                      <div class="card form-card swiper-slide">
-                        <div class="txt">
-                          <div class="card-container">
-                            <p>您是否打算在客廳使用電腦作為娛樂中心？</p>
-                          </div>
-                        </div>
-                        <div class="btn-group">
-                          <div class="card-container">
-                            <input type="radio" required name="use_form5" id="radio5-1" value="是">
-                            <label for="radio5-1">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
-                                </div>
-                                <span>是</span>
-                              </div>
-                            </label>
-
-                            <input type="radio" required name="use_form5" id="radio5-2" value="否">
-                            <label for="radio5-2">
-                              <div class="btn-switch">
-                                <div class="bg-circle">
-                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405"
-                                      stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-                                  </svg>
-                                </div>
-                                <span>否</span>
-                              </div>
-                            </label>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div class="swiper-button-next control-btn next"></div>
+                    <div class="swiper-button-prev control-btn prev"></div>
+                    <div class="swiper-pagination"></div>
                   </div>
-                  <div class="swiper-button-next control-btn next"></div>
-                  <div class="swiper-button-prev control-btn prev"></div>
-                  <div class="swiper-pagination"></div>
                 </div>
               </div>
+              <div id="q1_alert"></div>
             </div>
-            <div class="method-1-bg">
-              <img src="./images/method/method_1_bg.png" alt="方法一背景圖">
-            </div>
+            <div class="method-1-bg"><img src="./images/method/method_1_bg.png" alt="方法一背景圖"></div>
           </div>
-          <div class="method-block question-2 method-grid">
-            <div class="method-title title-item">
-              <h3 class="svg-check">
-                <span>方法2</span>
-                <span>筆記型電腦 vs. 桌上型電腦</span>
-              </h3>
+          <div class="question-2 inner-container">
+            <div class="title-item">
+              <h3 class="svg-check"><span>方法2</span><span>筆記型電腦 vs. 桌上型電腦</span></h3>
             </div>
-            <div class="method-input">
-
-              <input type="radio" name="use_place" id="option3" value="PC">
-              <label for="option3" class="card">
-
-                <div class="btn-switch">
-                  <div class="bg-circle">
-                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+            <div class="method-block method-grid">
+              <div class="method-input">
+                <input id="option3" type="radio" name="use_place" value="PC">
+                <label class="card" for="option3">
+                  <div class="btn-switch bg-0 lg">
+                    <div class="bg-circle">
+                      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="method-input_img"><img src="./images/method/method_2_pc.png" alt="桌機選項"></div>
                   </div>
-                  <div class="method-input_img">
-                    <img src="./images/method/method_2_pc.png" alt="桌機選項">
-                  </div>
-                </div>
-
-                <div class="txt">
-                  <div class="card-container">
-                    <div class="txt-group">
-                      <p class="h5">桌上型電腦</p>
-                      <p>桌上型電腦功能強大，能處理複雜任務。處理性能出色但價格較高，需要更多工作空間。</p>
+                  <div class="txt">
+                    <div class="card-container">
+                      <div class="txt-group">
+                        <div class="h5">桌上型電腦</div>
+                        <p>桌上型電腦功能強大，能處理複雜任務。處理性能出色但價格較高，需要更多工作空間。</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </label>
-
-              <input type="radio" name="use_place" id="option4" value="laptop">
-              <label for="option4" class="card">
-
-                <div class="btn-switch">
-                  <div class="bg-circle">
-                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                </label>
+                <input id="option4" type="radio" name="use_place" value="laptop">
+                <label class="card" for="option4">
+                  <div class="btn-switch bg-0 lg">
+                    <div class="bg-circle">
+                      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="method-input_img"><img src="./images/method/method_2_laptop.png" alt="筆電選項"></div>
                   </div>
-                  <div class="method-input_img">
-                    <img src="./images/method/method_2_laptop.png" alt="筆電選項">
-                  </div>
-                </div>
-
-                <div class="txt">
-                  <div class="card-container">
-                    <div class="txt-group">
-                      <p class="h5">筆記型電腦</p>
-                      <p>筆記型電腦適合學生和辦公室工作人員使用，移動方便。遊戲性能較差，功能有限，需注意電池壽命對移動性的影響。</p>
+                  <div class="txt">
+                    <div class="card-container">
+                      <div class="txt-group">
+                        <div class="h5">筆記型電腦</div>
+                        <p>筆記型電腦適合學生和辦公室工作人員使用，移動方便。遊戲性能較差，功能有限，需注意電池壽命對移動性的影響。</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </label>
+                </label>
+              </div>
             </div>
-            <div class="method-2-blob1">
-              <img src="./images/method/method_2_blob1.png" alt="方法二背景blob1">
-            </div>
-            <div class="method-2-blob2">
-              <img src="./images/method/method_2_blob2.png" alt="方法二背景blob2">
-            </div>
+            <div class="method-2-blob1"><img src="./images/method/method_2_blob1.png" alt="方法二背景blob1"></div>
+            <div class="method-2-blob2"><img src="./images/method/method_2_blob2.png" alt="方法二背景blob2"></div>
           </div>
-          <div class="method-block question-3 method-grid">
-            <div class="method-title title-item">
-              <h3 class="svg-check">
-                <span>方法3</span>
-                <span>選擇適合的操作系統</span>
-              </h3>
+          <div class="question-3 inner-container">
+            <div class="title-item">
+              <h3 class="svg-check"><span>方法3</span><span>選擇適合的操作系統</span></h3>
             </div>
-            <div class="method-input">
-
-              <input type="radio" name="use_system" id="option5" value="PC">
-              <label for="option5" class="card">
-
-                <div class="btn-switch">
-                  <div class="bg-circle">
-                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+            <div class="method-block method-grid">
+              <div class="method-input">
+                <input id="radio7-1" type="radio" name="use_system" value="Windows">
+                <label class="card" for="radio7-1">
+                  <div class="btn-switch bg-0 lg">
+                    <div class="bg-circle">
+                      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="method-input_img"><i class="fa-brands fa-windows logo_system_img"></i></div>
                   </div>
-                  <div class="method-input_img">
-                    <i class="fa-brands fa-windows logo_system_img"></i>
-
-                  </div>
-                </div>
-
-                <div class="txt">
-                  <div class="card-container">
-                    <div class="txt-group">
-                      <p class="h5">Windows</p>
-                      <ul>
-                        <li>市佔率高：Windows 是廣泛使用的操作系統之一，適用於家庭和商業環境。</li>
-                        <li>軟體支援豐富：擁有大量應用程式和遊戲選擇的軟體生態系統。</li>
-                        <li>使用者友好：提供直覺的介面和易於上手的操作方式，適合初學者和普通用戶。</li>
-                      </ul>
+                  <div class="txt bgset">
+                    <div class="card-container">
+                      <div class="txt-group">
+                        <div class="h5">Windows</div>
+                        <ul>
+                          <li>市佔率高：Windows 是廣泛使用的操作系統之一，適用於家庭和商業環境。</li>
+                          <li>軟體支援豐富：擁有大量應用程式和遊戲選擇的軟體生態系統。</li>
+                          <li>使用者友好：提供直覺的介面和易於上手的操作方式，適合初學者和普通用戶。</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </label>
-
-
-              <input type="radio" name="use_system" id="option6" value="PC">
-              <label for="option6" class="card">
-
-                <div class="btn-switch">
-                  <div class="bg-circle">
-                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                </label>
+                <input id="radio7-2" type="radio" name="use_system" value="Mac OS">
+                <label class="card" for="radio7-2">
+                  <div class="btn-switch bg-0 lg">
+                    <div class="bg-circle">
+                      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="method-input_img"><i class="fa-brands fa-apple logo_system_img"></i></div>
                   </div>
-                  <div class="method-input_img">
-
-                    <i class="fa-brands fa-apple logo_system_img"></i>
-
-                  </div>
-                </div>
-
-                <div class="txt">
-                  <div class="card-container">
-                    <div class="txt-group">
-                      <p class="h5">Mac OS</p>
-                      <ul>
-                        <li>整合性和優質硬體：MacOS 僅在 Apple 自家硬體上運行，確保穩定性和效能。</li>
-                        <li>優質的用戶體驗：注重直覺且美觀的介面設計，流暢的操作和強大的內建軟體。</li>
-                        <li>對創意和多媒體工作的支援：在設計、多媒體和創意領域廣受歡迎，提供專業級軟體和工具。</li>
-                      </ul>
+                  <div class="txt bgset">
+                    <div class="card-container">
+                      <div class="txt-group">
+                        <div class="h5">Mac OS</div>
+                        <ul>
+                          <li>整合性和優質硬體：MacOS 僅在 Apple 自家硬體上運行，確保穩定性和效能。</li>
+                          <li>優質的用戶體驗：注重直覺且美觀的介面設計，流暢的操作和強大的內建軟體。</li>
+                          <li>對創意和多媒體工作的支援：在設計、多媒體和創意領域廣受歡迎，提供專業級軟體和工具。</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </label>
-
-              <input type="radio" name="use_system" id="option7" value="PC">
-              <label for="option7" class="card">
-
-                <div class="btn-switch">
-                  <div class="bg-circle">
-                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                </label>
+                <input id="radio7-3" type="radio" name="use_system" value="Linux">
+                <label class="card" for="radio7-3">
+                  <div class="btn-switch bg-0 lg">
+                    <div class="bg-circle">
+                      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="method-input_img"><i class="fa-brands fa-linux logo_system_img"></i></div>
                   </div>
-                  <div class="method-input_img">
-                    <i class="fa-brands fa-linux logo_system_img"></i>
-
-                  </div>
-                </div>
-
-                <div class="txt">
-                  <div class="card-container">
-                    <div class="txt-group">
-                      <p class="h5">Linux</p>
-                      <ul>
-                        <li>開放原始碼和自由性：自由修改和分發的開放原始碼操作系統。</li>
-                        <li>多樣性和靈活性：提供眾多發行版，每個都有獨特的特點和用途，適合各種需求。</li>
-                        <li>安全性和穩定性：以開放原始碼的監控和全球開發者社群的支援聞名。</li>
-                      </ul>
+                  <div class="txt bgset">
+                    <div class="card-container">
+                      <div class="txt-group">
+                        <div class="h5">Linux</div>
+                        <ul>
+                          <li>開放原始碼和自由性：自由修改和分發的開放原始碼操作系統。</li>
+                          <li>多樣性和靈活性：提供眾多發行版，每個都有獨特的特點和用途，適合各種需求。</li>
+                          <li>安全性和穩定性：以開放原始碼的監控和全球開發者社群的支援聞名。</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </label>
+                </label>
+              </div>
             </div>
-            <div class="method-3-blob">
-              <img src="./images/method/method_3_blob.png" alt="方法二背景blob1">
-            </div>
-            <div class="method-3-bg">
-              <img src="./images/method/method_3_bg.png" alt="方法二背景">
-            </div>
+            <div class="method-3-blob"><img src="./images/method/method_3_blob.png" alt="方法二背景blob1"></div>
+            <div class="method-3-bg"><img src="./images/method/method_3_bg.png" alt="方法二背景"></div>
           </div>
-          <div class="method-block question-4 method-grid">
-            <div class="method-title title-item">
-              <h3 class="svg-check">
-                <span>方法4</span>
-                <span>檢查你的預算</span>
-              </h3>
+          <div class="question-4 inner-container">
+            <div class="title-item">
+              <h3 class="svg-check"><span>方法4</span><span>檢查你的預算</span></h3>
             </div>
             <div class="method-input">
               <div class="card form-range">
                 <div class="btn-group">
                   <div class="card-container">
-                    <div class="container">
-                      <div class="slider-container">
-                        <input type="text" id="slider" class="slider">
-                      </div>
+                    <div class="slider-container">
+                      <input class="slider" id="rangeSlider" type="text" value="預算" name="use_range">
                     </div>
                   </div>
                 </div>
                 <div class="txt">
                   <div class="card-container">
-                    <!-- <div class="h5">
-                    <span>✱ 預算單位 : </span><br><span>萬元</span>
-
-                  </div> -->
-                    <p>筆記型電腦的價格範圍在台幣可以從幾千元到數十萬元不等，具體價格取決於品牌、規格和功能。
-                      較基本的筆記型電腦通常在幾千元到一萬多元之間，而高階筆記型電腦則可以達到數十萬元。</p>
+                    <p>
+                      筆記型電腦的價格範圍在台幣可以從幾千元到數十萬元不等，具體價格取決於品牌、規格和功能。
+                      較基本的筆記型電腦通常在幾千元到一萬多元之間，而高階筆記型電腦則可以達到數十萬元。
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="method-4-blob" id="blob">
-              <img src="./images/method/method_4_blob.png" alt="方法四背景圖">
-            </div>
+            <div class="method-4-blob"><img src="./images/method/method_4_blob.png" alt="方法四背景圖"></div>
           </div>
         </form>
-        <!-- 首頁 下一層->介紹電腦和結論 -->
-        <div class="method-block question-5 method-grid">
-          <div class="svg-fromTo-bg">
-            <svg width="1692" height="1420" viewBox="0 0 1692 1420" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M0.509563 905.682C123.569 923.921 303.576 886.018 354.332 767.996C428.555 595.407 757.823 466.883 902.557 536.653C1047.29 606.423 1305.62 607.366 1420.67 431.105C1448.03 389.192 1467.83 337.312 1488.76 282.477C1526.19 184.412 1567.23 76.8957 1661.53 0.0273438L1691.71 0.0273466L1691.71 1419.08L0.509521 1419.08L0.509563 905.682Z"
-                fill="#464074" />
-            </svg>
-          </div>
-          <div class="method-title title-item">
-            <h3 class="svg-check">
-              <span>方法5</span>
-              <span>研究電腦的基本規格</span>
-            </h3>
-          </div>
-          <div class="method-about">
-            <div class="about-dec">
-              <p class="h4">
-                在進行產品比較時，了解基本規格將非常有幫助。這樣您可以清楚知道產品的核心特點，並進行有效比較。諸如處理器、內存、儲存空間、顯示屏和連接埠等基本規格都是關鍵因素。通過這樣的了解，您可以做出明智的選擇，確保滿足您的需求，並找到最符合預算的產品。
-              </p>
+        <!-- 首頁 下一層->介紹電腦和結論-->
+        <div class="question-5">
+          <div class="svg-fromTo-bg"><img src="./images/method/method_fromTo-bg.svg" alt="方法五-介紹電腦和結論背景"></div>
+          <div class="inner-container">
+            <div class="title-item">
+              <h3 class="svg-check"><span>方法5</span><span>研究電腦的基本規格</span></h3>
             </div>
-          </div>
-          <div class="method-input">
-            <!-- Tab頁籤 -->
-            <div class="tab-container">
-
-              <input type="radio" name="tab" id="test-photo1" hidden>
-              <input type="radio" name="tab" id="test-photo2" hidden>
-              <input type="radio" name="tab" id="test-photo3" hidden checked>
-              <input type="radio" name="tab" id="test-photo4" hidden>
-              <input type="radio" name="tab" id="test-photo5" hidden>
-
-              <div class="tab-nav">
-                <label for="test-photo1">
-                  <div class="tab-btn">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M3.6632 20.4366H21.337C22.5584 20.4366 23.4741 20.1357 24.0842 19.5327C24.6955 18.9298 25 18.0259 25 16.8211V8.33891C25 7.13411 24.6955 6.23022 24.0842 5.62723C23.4741 5.02424 22.5584 4.72333 21.337 4.72333H3.6632C2.44217 4.72333 1.52631 5.02424 0.915861 5.62723C0.305288 6.23022 0 7.13411 0 8.33891V16.8211C0 18.0259 0.305288 18.9298 0.915861 19.5327C1.52631 20.1357 2.44217 20.4366 3.6632 20.4366ZM3.68654 18.559C3.10321 18.559 2.656 18.405 2.34491 18.0981C2.03382 17.7913 1.87828 17.334 1.87828 16.7275V8.43251C1.87828 7.82597 2.03382 7.36867 2.34491 7.06185C2.656 6.75502 3.10321 6.60104 3.68654 6.60104H21.3145C21.889 6.60104 22.3345 6.75502 22.6496 7.06185C22.9647 7.36867 23.1223 7.82597 23.1223 8.43251V16.7275C23.1223 17.334 22.9647 17.7913 22.6496 18.0981C22.3345 18.405 21.889 18.559 21.3145 18.559H3.68654ZM4.02487 3.12523H5.90303V1.14214C5.90303 0.861375 5.8156 0.63389 5.64063 0.45856C5.46565 0.284416 5.23809 0.196777 4.95815 0.196777C4.6781 0.196777 4.45265 0.284416 4.28147 0.45856C4.1104 0.63389 4.02487 0.861375 4.02487 1.14214V3.12523ZM7.79303 3.12523H9.67166V1.14214C9.67166 0.861375 9.584 0.63389 9.40867 0.45856C9.23334 0.284416 9.00589 0.196777 8.72631 0.196777C8.44626 0.196777 8.22069 0.284416 8.04963 0.45856C7.87856 0.63389 7.79303 0.861375 7.79303 1.14214V3.12523ZM11.5612 3.12523H13.4389V1.14214C13.4389 0.861375 13.3524 0.63389 13.1771 0.45856C13.0017 0.284416 12.7743 0.196777 12.4947 0.196777C12.2139 0.196777 11.9889 0.284416 11.8183 0.45856C11.6465 0.63389 11.5612 0.861375 11.5612 1.14214V3.12523ZM15.3296 3.12523H17.2073V1.14214C17.2073 0.861375 17.122 0.63389 16.9514 0.45856C16.7796 0.284416 16.5545 0.196777 16.2738 0.196777C15.9942 0.196777 15.7667 0.284416 15.5914 0.45856C15.4173 0.63389 15.3296 0.861375 15.3296 1.14214V3.12523ZM19.098 3.12523H20.9757V1.14214C20.9757 0.861375 20.8904 0.63389 20.7186 0.45856C20.548 0.284416 20.3229 0.196777 20.0422 0.196777C19.7626 0.196777 19.5351 0.284416 19.3598 0.45856C19.1845 0.63389 19.098 0.861375 19.098 1.14214V3.12523ZM4.02487 22.0359V24.019C4.02487 24.2986 4.1104 24.5261 4.28147 24.7014C4.45265 24.8767 4.6781 24.9632 4.95815 24.9632C5.23809 24.9632 5.46565 24.8767 5.64063 24.7014C5.8156 24.5261 5.90303 24.2986 5.90303 24.019V22.0359H4.02487ZM7.79303 22.0359V24.019C7.79303 24.2986 7.87856 24.5261 8.04963 24.7014C8.22069 24.8767 8.44626 24.9632 8.72631 24.9632C9.00589 24.9632 9.23334 24.8767 9.40867 24.7014C9.584 24.5261 9.67166 24.2986 9.67166 24.019V22.0359H7.79303ZM11.5612 22.0359V24.019C11.5612 24.2986 11.6465 24.5261 11.8183 24.7014C11.9889 24.8767 12.2139 24.9632 12.4947 24.9632C12.7743 24.9632 13.0017 24.8767 13.1771 24.7014C13.3524 24.5261 13.4389 24.2986 13.4389 24.019V22.0359H11.5612ZM15.3296 22.0359V24.019C15.3296 24.2986 15.4173 24.5261 15.5914 24.7014C15.7667 24.8767 15.9942 24.9632 16.2738 24.9632C16.5545 24.9632 16.7796 24.8767 16.9514 24.7014C17.122 24.5261 17.2073 24.2986 17.2073 24.019V22.0359H15.3296ZM19.098 22.0359V24.019C19.098 24.2986 19.1845 24.5261 19.3598 24.7014C19.5351 24.8767 19.7626 24.9632 20.0422 24.9632C20.3229 24.9632 20.548 24.8767 20.7186 24.7014C20.8904 24.5261 20.9757 24.2986 20.9757 24.019V22.0359H19.098Z"
-                        fill="white" fill-opacity="0.8" />
-                    </svg>
-                    <span>記憶體</span>
-
-                  </div>
-                </label>
-                <label for="test-photo2">
-                  <div class="tab-btn">
-
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.4375 6.18924C5.13672 6.18924 4.89062 6.44036 4.89062 6.74728V12.3974C5.06494 12.352 5.24951 12.3276 5.4375 12.3276H18.5625C18.7505 12.3276 18.935 12.352 19.1093 12.3974V6.74728C19.1093 6.44036 18.8633 6.18924 18.5625 6.18924H5.4375ZM4.89062 14.5598V17.908C4.89062 18.2149 5.13672 18.466 5.4375 18.466H18.5625C18.8633 18.466 19.1093 18.2149 19.1093 17.908V14.5598C19.1093 14.2528 18.8633 14.0017 18.5625 14.0017H5.4375C5.13672 14.0017 4.89062 14.2528 4.89062 14.5598ZM3.25 14.5598V6.74728C3.25 5.51611 4.23096 4.51514 5.4375 4.51514H18.5625C19.769 4.51514 20.75 5.51611 20.75 6.74728V14.5598V17.908C20.75 19.1391 19.769 20.1401 18.5625 20.1401H5.4375C4.23096 20.1401 3.25 19.1391 3.25 17.908V14.5598ZM12.8203 16.2339C12.8203 16.0119 12.9067 15.799 13.0606 15.642C13.2144 15.485 13.423 15.3968 13.6406 15.3968C13.8582 15.3968 14.0668 15.485 14.2207 15.642C14.3745 15.799 14.4609 16.0119 14.4609 16.2339C14.4609 16.4559 14.3745 16.6688 14.2207 16.8257C14.0668 16.9827 13.8582 17.0709 13.6406 17.0709C13.423 17.0709 13.2144 16.9827 13.0606 16.8257C12.9067 16.6688 12.8203 16.4559 12.8203 16.2339ZM16.9218 15.3968C17.1394 15.3968 17.3481 15.485 17.5019 15.642C17.6557 15.799 17.7422 16.0119 17.7422 16.2339C17.7422 16.4559 17.6557 16.6688 17.5019 16.8257C17.3481 16.9827 17.1394 17.0709 16.9218 17.0709C16.7043 17.0709 16.4956 16.9827 16.3418 16.8257C16.188 16.6688 16.1015 16.4559 16.1015 16.2339C16.1015 16.0119 16.188 15.799 16.3418 15.642C16.4956 15.485 16.7043 15.3968 16.9218 15.3968Z"
-                        fill="white" fill-opacity="0.8" />
-                    </svg>
-                    <span>硬碟</span>
-
-                  </div>
-                </label>
-                <label for="test-photo3">
-                  <div class="tab-btn">
-
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M6.76683 22.0296H18.463C19.6647 22.0296 20.5665 21.7332 21.1685 21.1394C21.7694 20.5455 22.0704 19.6588 22.0704 18.4793V6.68051C22.0704 5.50098 21.7694 4.61197 21.1685 4.01462C20.5665 3.41728 19.6647 3.1186 18.463 3.1186H6.76683C5.56397 3.1186 4.66212 3.41494 4.06127 4.00878C3.45925 4.60263 3.15942 5.49281 3.15942 6.68051V18.4793C3.15942 19.6588 3.45925 20.5455 4.06127 21.1394C4.66212 21.7332 5.56397 22.0296 6.76683 22.0296ZM6.79017 20.1804C6.21499 20.1804 5.77515 20.0287 5.46831 19.7265C5.16147 19.4232 5.00862 18.974 5.00862 18.3766V6.78317C5.00862 6.18583 5.16147 5.73433 5.46831 5.42749C5.77515 5.12182 6.21499 4.96897 6.79017 4.96897H18.4279C18.995 4.96897 19.4348 5.12182 19.7498 5.42749C20.0637 5.73433 20.22 6.18583 20.22 6.78317V18.3766C20.22 18.974 20.0637 19.4232 19.7498 19.7265C19.4348 20.0287 18.995 20.1804 18.4279 20.1804H6.79017ZM8.85756 17.721H16.3711C16.8086 17.721 17.1493 17.5973 17.3943 17.3476C17.6393 17.0991 17.7618 16.7596 17.7618 16.3314V8.8284C17.7618 8.39205 17.6393 8.05137 17.3943 7.80636C17.1493 7.56136 16.8086 7.43885 16.3711 7.43885H8.85756C8.42122 7.43885 8.08053 7.56136 7.83553 7.80636C7.59052 8.05137 7.46802 8.39205 7.46802 8.8284V16.3314C7.46802 16.7596 7.59052 17.0991 7.83553 17.3476C8.08053 17.5973 8.42122 17.721 8.85756 17.721ZM9.47824 16.2159C9.14106 16.2159 8.97306 16.0514 8.97306 15.7224V9.43742C8.97306 9.10841 9.14106 8.9439 9.47824 8.9439H15.7516C16.0887 8.9439 16.2567 9.10841 16.2567 9.43742V15.7224C16.2567 16.0514 16.0887 16.2159 15.7516 16.2159H9.47824ZM7.88103 4.96897H9.73141V1.12005C9.73141 0.843544 9.64507 0.621864 9.4724 0.452694C9.29973 0.28469 9.07572 0.200684 8.80038 0.200684C8.52504 0.200684 8.3022 0.28469 8.1342 0.452694C7.96503 0.621864 7.88103 0.843544 7.88103 1.12005V4.96897ZM11.6844 4.96897H13.5337V1.12005C13.5337 0.843544 13.4497 0.621864 13.2805 0.452694C13.1125 0.28469 12.8908 0.200684 12.6143 0.200684C12.339 0.200684 12.115 0.28469 11.9423 0.452694C11.7696 0.621864 11.6844 0.843544 11.6844 1.12005V4.96897ZM15.4984 4.96897H17.3476V1.12005C17.3476 0.843544 17.2624 0.621864 17.0898 0.452694C16.9171 0.28469 16.6931 0.200684 16.4177 0.200684C16.1412 0.200684 15.9196 0.28469 15.7516 0.452694C15.5824 0.621864 15.4984 0.843544 15.4984 1.12005V4.96897ZM20.22 7.82972V9.67892H24.0689C24.3454 9.67892 24.5694 9.59257 24.7409 9.4199C24.9136 9.24839 25 9.0244 25 8.74789C25 8.47255 24.9136 8.2509 24.7409 8.08173C24.5694 7.91373 24.3454 7.82972 24.0689 7.82972H20.22ZM20.22 11.632V13.4824H24.0689C24.3454 13.4824 24.5694 13.3972 24.7409 13.2292C24.9136 13.0612 25 12.8383 25 12.563C25 12.2865 24.9136 12.0625 24.7409 11.891C24.5694 11.7183 24.3454 11.632 24.0689 11.632H20.22ZM20.22 15.4471V17.2963H24.0689C24.3454 17.2963 24.5694 17.2099 24.7409 17.0373C24.9136 16.8658 25 16.6417 25 16.3652C25 16.0899 24.9136 15.8682 24.7409 15.6991C24.5694 15.5311 24.3454 15.4471 24.0689 15.4471H20.22ZM17.3709 20.1804H15.5217V24.0409C15.5217 24.3163 15.6081 24.538 15.7796 24.7071C15.9522 24.8751 16.1762 24.9591 16.4516 24.9591C16.7281 24.9591 16.9497 24.8751 17.1189 24.7071C17.2869 24.538 17.3709 24.3163 17.3709 24.0409V20.1804ZM13.5337 20.1804H11.6844V24.0409C11.6844 24.3163 11.7696 24.538 11.9423 24.7071C12.115 24.8751 12.339 24.9591 12.6143 24.9591C12.8908 24.9591 13.1125 24.8751 13.2805 24.7071C13.4497 24.538 13.5337 24.3163 13.5337 24.0409V20.1804ZM9.73141 20.1804H7.88103V24.0409C7.88103 24.3163 7.96503 24.538 8.1342 24.7071C8.3022 24.8751 8.52504 24.9591 8.80038 24.9591C9.07572 24.9591 9.29973 24.8751 9.4724 24.7071C9.64507 24.538 9.73141 24.3163 9.73141 24.0409V20.1804ZM5.00862 17.3079V15.4576H0.918192C0.642852 15.4576 0.421181 15.5427 0.25201 15.7107C0.084006 15.8787 0 16.1016 0 16.3769C0 16.6534 0.084006 16.8774 0.25201 17.0489C0.421181 17.2216 0.642852 17.3079 0.918192 17.3079H5.00862ZM5.00862 13.4928V11.6436H0.918192C0.642852 11.6436 0.421181 11.73 0.25201 11.9026C0.084006 12.0742 0 12.2981 0 12.5747C0 12.85 0.084006 13.0717 0.25201 13.2409C0.421181 13.4089 0.642852 13.4928 0.918192 13.4928H5.00862ZM5.00862 9.6906V7.84022H0.918192C0.642852 7.84022 0.421181 7.92537 0.25201 8.09337C0.084006 8.26254 0 8.48423 0 8.75957C0 9.03608 0.084006 9.26007 0.25201 9.43158C0.421181 9.60425 0.642852 9.6906 0.918192 9.6906H5.00862Z"
-                        fill="white" fill-opacity="0.8" />
-                    </svg>
-                    <div>
-                      <span>中央</span><span>處理器</span>
+            <div class="method-about">
+              <div class="about-card out-bxshin">
+                <p>在進行產品比較時，了解基本規格將非常有幫助。這樣您可以清楚知道產品的核心特點，並進行有效比較。諸如處理器、內存、儲存空間、顯示屏和連接埠等基本規格都是關鍵因素。通過這樣的了解，您可以做出明智的選擇，確保滿足您的需求，並找到最符合預算的產品。</p>
+              </div>
+            </div>
+            <div class="method-input">
+              <!-- Tab頁籤-->
+              <div class="tab-container">
+                <input id="test-photo1" type="radio" name="tab" hidden="">
+                <input id="test-photo2" type="radio" name="tab" hidden="">
+                <input id="test-photo3" type="radio" name="tab" hidden="" checked="">
+                <input id="test-photo4" type="radio" name="tab" hidden="">
+                <input id="test-photo5" type="radio" name="tab" hidden="">
+                <div class="tab-nav">
+                  <label for="test-photo1">
+                    <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/memorychip.svg" alt="記憶體 icon"><span>記憶體</span></div>
+                  </label>
+                  <label for="test-photo2">
+                    <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/hdd.svg" alt="硬碟 icon"><span>硬碟</span></div>
+                  </label>
+                  <label for="test-photo3">
+                    <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/cpu.svg" alt="CPU icon"><span>中央</span><span>處理器</span></div>
+                  </label>
+                  <label for="test-photo4">
+                    <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/gpu.svg" alt="GPU icon"><span>顯示卡</span></div>
+                  </label>
+                  <label for="test-photo5">
+                    <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/tv.svg" alt="TV icon"><span>螢幕</span></div>
+                  </label>
+                </div>
+                <div class="tab-content tab-content-photo1 bxsh-first">
+                  <div class="tab-content-group">
+                    <div class="txt">
+                      <h4>記憶體（RAM）</h4>
+                      <p>
+                        RAM/內存 – 這是程序用來保存臨時信息的專用存儲器。如果您沒有足夠的 RAM，您會發現程序運行緩慢甚至崩潰。8 GB 是 RAM
+                        的一個很好的基準數字，儘管遊戲玩家和圖形設計師會希望至少是它的兩倍。
+                      </p><a class="turn-next-btn" href="#">閱讀更多</a>
                     </div>
-
                   </div>
-                </label>
-                <label for="test-photo4">
-                  <div class="tab-btn">
-
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M6.4823 21.2338H18.0403C19.2278 21.2338 20.1189 20.941 20.7138 20.3542C21.3076 19.7673 21.605 18.8911 21.605 17.7255V6.06611C21.605 4.90052 21.3076 4.02201 20.7138 3.43172C20.1189 2.84143 19.2278 2.54628 18.0403 2.54628H6.4823C5.29365 2.54628 4.40245 2.83912 3.8087 3.42595C3.2138 4.01279 2.9175 4.89245 2.9175 6.06611V17.7255C2.9175 18.8911 3.2138 19.7673 3.8087 20.3542C4.40245 20.941 5.29365 21.2338 6.4823 21.2338ZM6.50536 19.4065C5.93698 19.4065 5.50234 19.2566 5.19912 18.958C4.8959 18.6582 4.74486 18.2143 4.74486 17.624V6.16757C4.74486 5.57728 4.8959 5.13111 5.19912 4.8279C5.50234 4.52584 5.93698 4.3748 6.50536 4.3748H18.0056C18.566 4.3748 19.0006 4.52584 19.3119 4.8279C19.622 5.13111 19.7765 5.57728 19.7765 6.16757V17.624C19.7765 18.2143 19.622 18.6582 19.3119 18.958C19.0006 19.2566 18.566 19.4065 18.0056 19.4065H6.50536ZM7.58333 4.3748H9.41185V0.571347C9.41185 0.298107 9.32653 0.0790468 9.1559 -0.0881254C8.98527 -0.254145 8.76391 -0.337158 8.49182 -0.337158C8.21974 -0.337158 7.99953 -0.254145 7.83351 -0.0881254C7.66634 0.0790468 7.58333 0.298107 7.58333 0.571347V4.3748ZM11.3418 4.3748H13.1692V0.571347C13.1692 0.298107 13.0862 0.0790468 12.919 -0.0881254C12.753 -0.254145 12.5339 -0.337158 12.2607 -0.337158C11.9886 -0.337158 11.7673 -0.254145 11.5966 -0.0881254C11.426 0.0790468 11.3418 0.298107 11.3418 0.571347V4.3748ZM15.1107 4.3748H16.9381V0.571347C16.9381 0.298107 16.8539 0.0790468 16.6833 -0.0881254C16.5126 -0.254145 16.2913 -0.337158 16.0192 -0.337158C15.746 -0.337158 15.5269 -0.254145 15.3609 -0.0881254C15.1937 0.0790468 15.1107 0.298107 15.1107 0.571347V4.3748ZM19.7765 7.20175V9.0291H23.58C23.8532 9.0291 24.0746 8.94377 24.2441 8.77314C24.4147 8.60366 24.5 8.38232 24.5 8.10908C24.5 7.83699 24.4147 7.61795 24.2441 7.45078C24.0746 7.28476 23.8532 7.20175 23.58 7.20175H19.7765ZM19.7765 10.9591V12.7876H23.58C23.8532 12.7876 24.0746 12.7034 24.2441 12.5374C24.4147 12.3714 24.5 12.1512 24.5 11.8791C24.5 11.6058 24.4147 11.3845 24.2441 11.215C24.0746 11.0444 23.8532 10.9591 23.58 10.9591H19.7765ZM19.7765 14.7291V16.5565H23.58C23.8532 16.5565 24.0746 16.4712 24.2441 16.3005C24.4147 16.131 24.5 15.9097 24.5 15.6364C24.5 15.3643 24.4147 15.1453 24.2441 14.9781C24.0746 14.8121 23.8532 14.7291 23.58 14.7291H19.7765ZM16.9611 19.4065H15.1337V23.2214C15.1337 23.4935 15.2191 23.7126 15.3886 23.8798C15.5592 24.0458 15.7805 24.1288 16.0526 24.1288C16.3259 24.1288 16.5449 24.0458 16.7121 23.8798C16.8781 23.7126 16.9611 23.4935 16.9611 23.2214V19.4065ZM13.1692 19.4065H11.3418V23.2214C11.3418 23.4935 11.426 23.7126 11.5966 23.8798C11.7673 24.0458 11.9886 24.1288 12.2607 24.1288C12.5339 24.1288 12.753 24.0458 12.919 23.8798C13.0862 23.7126 13.1692 23.4935 13.1692 23.2214V19.4065ZM9.41185 19.4065H7.58333V23.2214C7.58333 23.4935 7.66634 23.7126 7.83351 23.8798C7.99953 24.0458 8.21974 24.1288 8.49182 24.1288C8.76391 24.1288 8.98527 24.0458 9.1559 23.8798C9.32653 23.7126 9.41185 23.4935 9.41185 23.2214V19.4065ZM4.74486 16.568V14.7395H0.702755C0.430667 14.7395 0.211615 14.8236 0.044443 14.9896C-0.121576 15.1557 -0.20459 15.3759 -0.20459 15.648C-0.20459 15.9212 -0.121576 16.1426 0.044443 16.312C0.211615 16.4827 0.430667 16.568 0.702755 16.568H4.74486ZM4.74486 12.798V10.9706H0.702755C0.430667 10.9706 0.211615 11.0559 0.044443 11.2266C-0.121576 11.396 -0.20459 11.6174 -0.20459 11.8906C-0.20459 12.1627 -0.121576 12.3818 0.044443 12.549C0.211615 12.715 0.430667 12.798 0.702755 12.798H4.74486ZM4.74486 9.04064V7.21213H0.702755C0.430667 7.21213 0.211615 7.29627 0.044443 7.46229C-0.121576 7.62946 -0.20459 7.84853 -0.20459 8.12062C-0.20459 8.39386 -0.121576 8.6152 0.044443 8.78468C0.211615 8.95531 0.430667 9.04064 0.702755 9.04064H4.74486Z"
-                        fill="white" fill-opacity="0.8" />
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M7.71199 8.55652C7.15326 8.55652 6.6808 8.65961 6.30922 8.88209C5.91401 9.11653 5.72453 9.50004 5.72453 9.98999V13.5463C5.72453 14.0127 5.89805 14.3871 6.25894 14.6354C6.60672 14.8748 7.1038 14.9797 7.71988 14.9797C8.2977 14.9797 8.78256 14.8799 9.15931 14.6636C9.56868 14.4259 9.77043 14.0407 9.77043 13.5463V12.8569C9.77043 12.386 9.66408 12 9.39942 11.7574C9.14042 11.5199 8.74577 11.4235 8.26406 11.4235H7.65678C7.53277 11.4235 7.42834 11.4846 7.36729 11.5907C7.31565 11.6804 7.30188 11.7898 7.30188 11.8935C7.30188 11.9971 7.31565 12.1065 7.36729 12.1962C7.42834 12.3023 7.53277 12.3634 7.65678 12.3634H8.26406C8.39276 12.3634 8.48764 12.3757 8.55422 12.3949C8.62107 12.4141 8.64593 12.4364 8.65422 12.4467L8.65802 12.4511C8.70052 12.5008 8.74515 12.6186 8.74515 12.8569V13.6246C8.74515 13.6932 8.72883 13.7443 8.70205 13.7852C8.67463 13.8271 8.62873 13.8698 8.55261 13.9086C8.39465 13.9891 8.13267 14.0397 7.74354 14.0397C7.35714 14.0397 7.09733 13.9891 6.94085 13.9088C6.86549 13.8702 6.81998 13.8276 6.79274 13.7857C6.76609 13.7447 6.7498 13.6934 6.7498 13.6246V9.91166C6.7498 9.84104 6.76583 9.78847 6.79154 9.74698C6.81755 9.70499 6.86035 9.66333 6.93047 9.62561C7.07661 9.54698 7.32111 9.4965 7.68833 9.4965C8.05554 9.4965 8.30005 9.54698 8.44619 9.62561C8.5163 9.66333 8.5591 9.70499 8.58512 9.74698C8.61083 9.78847 8.62685 9.84104 8.62685 9.91166V10.4208C8.62685 10.5512 8.69109 10.6609 8.80461 10.7257C8.90169 10.7811 9.0219 10.7968 9.13949 10.7968C9.25708 10.7968 9.3773 10.7811 9.47438 10.7257C9.5879 10.6609 9.65213 10.5512 9.65213 10.4208V9.98999C9.65213 9.52604 9.48513 9.15186 9.13389 8.90245C8.79484 8.6617 8.31052 8.55652 7.71199 8.55652ZM12.1805 8.55652C11.6423 8.55652 11.1886 8.6598 10.8365 8.88473C10.4577 9.12115 10.2797 9.50463 10.2797 9.98999V14.5254C10.2797 14.6558 10.344 14.7655 10.4575 14.8303C10.5546 14.8857 10.6748 14.9014 10.7924 14.9014C10.91 14.9014 11.0302 14.8857 11.1273 14.8303C11.2408 14.7655 11.305 14.6558 11.305 14.5254V12.6063C11.3602 12.6469 11.4277 12.6689 11.5022 12.6689H12.1883C12.7262 12.6689 13.1794 12.5684 13.5313 12.3492L13.5333 12.3479C13.9109 12.1064 14.089 11.7213 14.089 11.2355V9.98999C14.089 9.50345 13.9075 9.12014 13.5238 8.88433C13.1717 8.65968 12.7183 8.55652 12.1805 8.55652ZM11.5022 11.729C11.4277 11.729 11.3602 11.751 11.305 11.7916V9.91166C11.305 9.77859 11.3562 9.69043 11.4741 9.62329C11.6084 9.54678 11.8353 9.4965 12.1805 9.4965C12.5284 9.4965 12.7575 9.54681 12.8933 9.6236C13.0126 9.69106 13.0638 9.7793 13.0638 9.91166V11.3138C13.0638 11.4469 13.0126 11.535 12.8947 11.6022C12.7604 11.6787 12.5335 11.729 12.1883 11.729H11.5022ZM15.0298 8.63485C14.9143 8.63485 14.7953 8.65062 14.6989 8.70704C14.5864 8.77296 14.525 8.88284 14.525 9.01084V13.5463C14.525 14.0127 14.6986 14.3871 15.0594 14.6354C15.4072 14.8748 15.9043 14.9797 16.5204 14.9797C17.0982 14.9797 17.5831 14.8799 17.9598 14.6636C18.3692 14.4259 18.5709 14.0407 18.5709 13.5463V9.01084C18.5709 8.88043 18.5067 8.77078 18.3932 8.70595C18.2961 8.65051 18.1759 8.63485 18.0583 8.63485C17.9407 8.63485 17.8205 8.65051 17.7234 8.70595C17.6099 8.77078 17.5457 8.88043 17.5457 9.01084V13.6246C17.5457 13.6932 17.5293 13.7443 17.5026 13.7852C17.4751 13.8271 17.4292 13.8698 17.3531 13.9086C17.1952 13.9891 16.9332 14.0397 16.544 14.0397C16.1577 14.0397 15.8978 13.9891 15.7414 13.9088C15.666 13.8702 15.6205 13.8276 15.5932 13.7857C15.5666 13.7447 15.5503 13.6931 15.5503 13.6243L15.5424 9.01084C15.5424 8.88043 15.4782 8.77078 15.3647 8.70595C15.2676 8.65051 15.1474 8.63485 15.0298 8.63485Z"
-                        fill="white" fill-opacity="0.8" />
-                    </svg>
-                    <span>顯示卡</span>
-
+                  <div class="tab-content-img"><img src="./images/question-5/liam-briese-lYxQ5F9xBDM-unsplash.jpg" alt="RAM"></div>
+                </div>
+                <div class="tab-content tab-content-photo2 bxsh-first">
+                  <div class="tab-content-group">
+                    <div class="txt">
+                      <h4>硬碟驅動器（HDD或SSD）</h4>
+                      <p>硬碟 - 這是您計算機的存儲空間。存儲以千兆字節 (GB) 為單位。您的所有文檔、程序、照片、視頻和音樂都將使用此空間。一般來說，存儲空間越多越好，儘管普通用戶可以輕鬆使用 500 GB。</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                    </div>
                   </div>
-                </label>
-                <label for="test-photo5">
-                  <div class="tab-btn">
-
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.53831 22.3154H17.4617C17.6859 22.3154 17.8756 22.238 18.0305 22.0823C18.1856 21.9276 18.2631 21.7417 18.2631 21.5237C18.2631 21.2997 18.1856 21.1078 18.0305 20.95C17.8756 20.7913 17.6859 20.7129 17.4617 20.7129H7.53831C7.3207 20.7129 7.13272 20.7913 6.97438 20.95C6.81605 21.1078 6.73698 21.2997 6.73698 21.5237C6.73698 21.7417 6.81605 21.9276 6.97438 22.0823C7.13272 22.238 7.3207 22.3154 7.53831 22.3154ZM2.69044 18.9708H22.3195C23.1637 18.9708 23.797 18.7639 24.2191 18.3479C24.6412 17.932 24.8523 17.293 24.8523 16.429V5.09021C24.8523 4.22618 24.6412 3.5862 24.2191 3.17127C23.797 2.75533 23.1637 2.54736 22.3195 2.54736H2.69044C1.84621 2.54736 1.21136 2.75533 0.785876 3.17127C0.360496 3.5862 0.147705 4.22618 0.147705 5.09021V16.429C0.147705 17.293 0.360496 17.932 0.785876 18.3479C1.21136 18.7639 1.84621 18.9708 2.69044 18.9708ZM2.72008 17.3784C2.37708 17.3784 2.12813 17.3021 1.9731 17.1503C1.81818 16.9986 1.74062 16.7485 1.74062 16.3989V5.11032C1.74062 4.76672 1.81818 4.51956 1.9731 4.36785C2.12813 4.21614 2.37708 4.14078 2.72008 4.14078H22.2898C22.6262 4.14078 22.8719 4.21614 23.0269 4.36785C23.1819 4.51956 23.2594 4.76672 23.2594 5.11032V16.3989C23.2594 16.7485 23.1819 16.9986 23.0269 17.1503C22.8719 17.3021 22.6262 17.3784 22.2898 17.3784H2.72008Z"
-                        fill="white" fill-opacity="0.8" />
-                    </svg>
-                    <span>螢幕</span>
-
+                  <div class="tab-content-img"><img src="./images/question-5/denny-muller-1qL31aacAPA-unsplash.jpg" alt="硬碟驅動器（HDD或SSD）"></div>
+                </div>
+                <div class="tab-content tab-content-photo3 bxsh-first">
+                  <div class="tab-content-group">
+                    <div class="txt">
+                      <h4>中央處理器（CPU）</h4>
+                      <p>
+                        CPU – 這是計算機的處理器，是讓您的計算機運行的原因。有兩個主要製造商 - 英特爾和 AMD。AMD
+                        通常比英特爾便宜一點，性能相當，但會犧牲一些質量和支持。由於市場變化頻繁，請務必研究您計劃購買的
+                        CPU。
+                      </p><a class="turn-next-btn" href="#">閱讀更多</a>
+                    </div>
                   </div>
-                </label>
-              </div>
-
-              <div class="tab-content tab-content-photo1 bxsh-first">
-                <div class="tab-content-group">
-                  <div class="txt">
-                    <h4>記憶體（RAM）</h4>
-                    <p>RAM/內存 – 這是程序用來保存臨時信息的專用存儲器。如果您沒有足夠的 RAM，您會發現程序運行緩慢甚至崩潰。8 GB 是 RAM
-                      的一個很好的基準數字，儘管遊戲玩家和圖形設計師會希望至少是它的兩倍。
-                    </p>
-                    <a href="#" class="turn-next-btn">閱讀更多</a>
+                  <div class="tab-content-img"><img src="./images/question-5/luan-gjokaj-nsr4hePZGYI-unsplash.jpg" alt="CPU"></div>
+                </div>
+                <div class="tab-content tab-content-photo4 bxsh-first">
+                  <div class="tab-content-group">
+                    <div class="txt">
+                      <h4>顯示卡（GPU）</h4>
+                      <p>顯卡 — 如果您不運行遊戲或進行 3D 開發，您很可能不需要擔心您的顯卡。但是，如果您是遊戲愛好者，那麼顯卡是計算機的重要組成部分。</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                    </div>
                   </div>
+                  <div class="tab-content-img"><img src="./images/question-5/timur-garifov - HlaGdSiC-g-unsplash.jpg" alt="顯示卡（GPU）"></div>
                 </div>
-                <div class="tab-content-img">
-                  <img src="./images/question-5/liam-briese-lYxQ5F9xBDM-unsplash.jpg" alt="RAM">
-                </div>
-              </div>
-
-              <div class="tab-content tab-content-photo2 bxsh-first">
-                <div class="tab-content-group">
-                  <div class="txt">
-                    <h4>硬碟驅動器（HDD或SSD）</h4>
-                    <p>硬碟 - 這是您計算機的存儲空間。存儲以千兆字節 (GB) 為單位。您的所有文檔、程序、照片、視頻和音樂都將使用此空間。一般來說，存儲空間越多越好，儘管普通用戶可以輕鬆使用 500 GB。
-                    </p>
-                    <a href="#" class="turn-next-btn">閱讀更多</a>
+                <div class="tab-content tab-content-photo5 bxsh-first">
+                  <div class="tab-content-group">
+                    <div class="txt">
+                      <h4>顯示器(monitor)</h4>
+                      <p>挑選螢幕尺寸前，請先考慮放置螢幕的桌面大小、視線角度以及眼睛距離螢幕的舒適程度，醫師建議與電腦螢幕距離應把握在45～60公分以上或更遠，且以眼睛平視為基準，向下約10～20度的俯角為彈性幅度，大螢幕不可超過一定範圍，假設眼睛或頭部要特地挪動，螢幕就算太大。</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                    </div>
                   </div>
-                </div>
-                <div class="tab-content-img">
-                  <img src="./images/question-5/denny-muller-1qL31aacAPA-unsplash.jpg" alt="硬碟驅動器（HDD或SSD）">
-                </div>
-              </div>
-              <div class="tab-content tab-content-photo3 bxsh-first">
-                <div class="tab-content-group">
-                  <div class="txt">
-                    <h4>中央處理器（CPU）</h4>
-                    <p>CPU – 這是計算機的處理器，是讓您的計算機運行的原因。有兩個主要製造商 - 英特爾和 AMD。AMD
-                      通常比英特爾便宜一點，性能相當，但會犧牲一些質量和支持。由於市場變化頻繁，請務必研究您計劃購買的
-                      CPU。</p>
-                    <a href="#" class="turn-next-btn">閱讀更多</a>
-                  </div>
-                </div>
-                <div class="tab-content-img">
-                  <img src="./images/question-5/luan-gjokaj-nsr4hePZGYI-unsplash.jpg" alt="CPU">
-                </div>
-              </div>
-
-              <div class="tab-content tab-content-photo4 bxsh-first">
-                <div class="tab-content-group">
-                  <div class="txt">
-                    <h4>顯示卡（GPU）</h4>
-                    <p>顯卡 — 如果您不運行遊戲或進行 3D 開發，您很可能不需要擔心您的顯卡。但是，如果您是遊戲愛好者，那麼顯卡是計算機的重要組成部分。</p>
-                    <a href="#" class="turn-next-btn">閱讀更多</a>
-                  </div>
-                </div>
-                <div class="tab-content-img">
-                  <img src="./images/question-5/timur-garifov - HlaGdSiC-g-unsplash.jpg" alt="顯示卡（GPU）">
-                </div>
-              </div>
-
-              <div class="tab-content tab-content-photo5 bxsh-first">
-                <div class="tab-content-group">
-                  <div class="txt">
-                    <h4>顯示器(monitor)</h4>
-                    <p>
-                      挑選螢幕尺寸前，請先考慮放置螢幕的桌面大小、視線角度以及眼睛距離螢幕的舒適程度，醫師建議與電腦螢幕距離應把握在45～60公分以上或更遠，且以眼睛平視為基準，向下約10～20度的俯角為彈性幅度，大螢幕不可超過一定範圍，假設眼睛或頭部要特地挪動，螢幕就算太大。
-                    </p>
-                    <a href="#" class="turn-next-btn">閱讀更多</a>
-                  </div>
-                </div>
-                <div class="tab-content-img">
-                  <img src="./images/question-5/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="顯示器">
+                  <div class="tab-content-img"><img src="./images/question-5/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="顯示器"></div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- 首頁 下一層->結尾，跳轉按鈕-->
         </div>
-        <!-- 首頁 下一層->結尾，跳轉按鈕 -->
-        <div class="method-block question-final method-grid">
+        <div class="question-final">
           <div class="final-group">
             <div class="exclamation">
               <svg width="78" height="249" viewBox="0 0 78 249" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M77.691 209.398C77.691 230.729 60.3369 248.083 39.0061 248.083C17.6753 248.083 0.321289 230.729 0.321289 209.398C0.321289 188.067 17.6753 170.713 39.0061 170.713C60.3369 170.713 77.691 188.067 77.691 209.398ZM4.79906 12.6852L11.3755 144.214C11.6845 150.39 16.7822 155.239 22.9664 155.239H55.0458C61.2301 155.239 66.3278 150.39 66.6368 144.214L73.2132 12.6852C73.5444 6.05611 68.2596 0.5 61.6223 0.5L16.39 0.5C9.75265 0.5 4.46782 6.05611 4.79906 12.6852Z"
-                  fill="white" fill-opacity="0.8" />
+                <path d="M77.691 209.398C77.691 230.729 60.3369 248.083 39.0061 248.083C17.6753 248.083 0.321289 230.729 0.321289 209.398C0.321289 188.067 17.6753 170.713 39.0061 170.713C60.3369 170.713 77.691 188.067 77.691 209.398ZM4.79906 12.6852L11.3755 144.214C11.6845 150.39 16.7822 155.239 22.9664 155.239H55.0458C61.2301 155.239 66.3278 150.39 66.6368 144.214L73.2132 12.6852C73.5444 6.05611 68.2596 0.5 61.6223 0.5L16.39 0.5C9.75265 0.5 4.46782 6.05611 4.79906 12.6852Z" fill="white" fill-opacity="0.8"></path>
               </svg>
-
             </div>
-            <div class="avatars">
-              <img src="./images/avatars/Avatars-final.png" alt="Avatars">
-            </div>
-            <a href="./custom-setting.html">
-              <button class="turn-next-btn final h3">
-                評估您的需求
-              </button></a>
+            <div class="avatars"><img src="./images/avatars/Avatars-final.png" alt="Avatars"></div>
+            <div class="turn-next-btn final h3" id="end_btn">評估您的需求</div>
           </div>
         </div>
-      </section>
-      <!-- 頁尾 -->
-      <footer>
-        <div class="footer-wrap">
+        <!-- 最佳建議-->
+        <section class="best-advice">
           <div class="inner-container">
-            <div class="top">
-              <a href="./index.html">
-                <div class="dark-logo"><img src="./images/logo/logo_light.png" alt="logo_light"></div>
-              </a>
-              <div class="right">
-                <ul>
-                  <span>電腦夥伴 | Computer Partner</span>
-                  <li><a href="./index.html#answer"><i class="fa-solid fa-check"></i> 如何開始</a></li>
-                  <li><a href="./custom-setting.html"><i class="fa-solid fa-check"></i> 自訂需求</a></li>
-                  <li><a href="./ad-product.html"><i class="fa-solid fa-check"></i> 建議商品</a></li>
-                  <li><a href="./problems.html"><i class="fa-solid fa-check"></i> 常見問題</a></li>
-                  <li><a href="./contact.html"><i class="fa-solid fa-check"></i> 聯絡我們</a></li>
-                  <!-- <li><a href="#">注意事項</a></li> -->
-                </ul>
-                <ul>
-                  <span>免責聲明</span>
-                  <div class="disclaimer">
-                    <li>* 產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
+            <div class="title-item">
+              <h3 class="svg-check"><span>最佳建議</span></h3>
+            </div>
+            <div class="product-list">
+              <div class="product-item card">
+                <div class="tag h5">筆電</div>
+                <div class="item-img"><img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15"></div>
+                <p class="h4">ASUS Vivobook Pro 15</p>
+                <div class="product-item-more turn-next-btn">查看更多</div>
+                <div class="des-table">
+                  <div class="tr">
+                    <div class="td">型號</div>
+                    <div class="td">K6500ZH</div>
                   </div>
-                  <span>關注我們</span>
-                  <div class="icon-link">
-                    <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                  <div class="tr">
+                    <div class="td">處理器</div>
+                    <div class="td">Intel® Core™ i5-12500H</div>
                   </div>
-                </ul>
+                  <div class="tr">
+                    <div class="td">顯示卡</div>
+                    <div class="td">NVIDIA® GeForce® GTX 1650 Max Q</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">記憶體</div>
+                    <div class="td">16GB LPDDR5</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">儲存空間</div>
+                    <div class="td">512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">螢幕</div>
+                    <div class="td">15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">電池</div>
+                    <div class="td">50WHrs，3S1P，3 芯鋰離子電池</div>
+                  </div>
+                </div>
+                <div class="price h2">NT$ 40,900</div>
+              </div>
+              <div class="product-item card">
+                <div class="tag h5">桌機</div>
+                <div class="item-img"><img src="./images/product/S500TD.png" alt="ASUS Vivobook Pro 15"></div>
+                <p class="h4">ASUS Performance Desktop</p>
+                <div class="product-item-more turn-next-btn">查看更多</div>
+                <div class="des-table">
+                  <div class="tr">
+                    <div class="td">型號</div>
+                    <div class="td">S500TD</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">處理器</div>
+                    <div class="td">Intel® Core™ i5-10400</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">顯示卡</div>
+                    <div class="td">NVIDIA® GeForce® GTX 1650 4GB GDDR6</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">記憶體</div>
+                    <div class="td">16GB DDR4 U-DIMM</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">儲存空間</div>
+                    <div class="td">512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">螢幕</div>
+                    <div class="td">15.6吋光影點亮屏幕 (1920x1080 Full HD)</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">電池</div>
+                    <div class="td">90W電源適配器</div>
+                  </div>
+                </div>
+                <div class="price h2">NT $21,990</div>
               </div>
             </div>
           </div>
-          <div class="bottom">
-            <div class="inner-container">
-              本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。
+        </section>
+      </section>
+      <!-- 頁尾-->
+      <footer>
+        <div class="footer-wrap inner-container">
+          <div class="top"><a class="dark-logo" href="./index.html">
+              <picture>
+                <source media="(min-width: 930px)" srcset="./images/logo/logo_long_dark.png"><img src="./images/logo/logo_dark.png" alt="電腦夥伴 | Computer Partner">
+              </picture></a>
+            <div class="right"> 
+              <ul class="txt-link"><span>電腦夥伴 | Computer Partner</span>
+                <li><a href="./index.html#form"><i class="fa-solid fa-check"></i> 如何開始</a></li>
+                <li><a href="./custom-setting.html"><i class="fa-solid fa-check"></i> 自訂需求</a></li>
+                <li><a href="./ad-product.html"><i class="fa-solid fa-check"></i> 建議商品</a></li>
+                <li><a href="./problems.html"><i class="fa-solid fa-check"></i> 常見問題</a></li>
+                <li><a href="./contact.html"><i class="fa-solid fa-check"></i> 聯絡我們</a></li>
+                <!-- <li><a href="#">注意事項</a></li>-->
+              </ul>
+              <ul><span>免責聲明</span>
+                <div class="disclaimer">
+                  <li> <i class="fa-solid fa-star-of-life"></i>產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
+                </div><span>關注我們</span>
+                <div class="icon-link">
+                  <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+              </ul>
             </div>
+          </div>
+          <div class="bottom">
+            <div class="inner-container">本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。</div>
           </div>
         </div>
       </footer>
+      <!-- rSlider 套件 JS-->
     </div>
-
-  </div>
-  <!-- rSlider 套件 JS -->
-  <script src="./range-slider-master/js/rSlider.min.js"></script>
-  <script>
-    (function () {
-      'use strict';
-
-      var init = function () {
-
-        var slider = new rSlider({
-          target: '#slider',
-          values: ['1萬', '2萬', '3萬', '4萬', '5萬', '6萬', '7萬', '8萬', '9萬', '10萬'],
-          range: true,
-          set: ['1萬', '10萬'],
-          onChange: function (vals) {
-            console.log(vals);
-          }
-        });
-      };
-      window.onload = init;
-    })();
-  </script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var all_answer = false;
-
-    var swiper = new Swiper(".mySwiper", {
-      effect: "cards",
-      grabCursor: true,
-      runCallbacks: true,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        disabledClass: 'disabled_swiper_button'
-      }
-    });
-
-    //  陣列回答的紀錄------------------------------------
-
-    //表單項目 use_form1~5 | 是與否 radio5-2 ; ID命名規則，需要抓到 use_form1~5 個回答
-    var form_arry = new Array(swiper.slides.length)
-    var txt_array = document.querySelector('#array') //回答印出的地方
-    txt_array.textContent = "init";
-
-    // var form = document.getElementById("first-form-card");// form 表單
-    var form = document.getElementById("answer");// form 表單
-    function getRadio1_5() {
-      //-- submit 監聽事件綁定在 form 表單上-- // change 監聽事件綁定在 form 表單上
-      form.addEventListener('change', function (e) {
-        if (swiper.realIndex == swiper.slides.length - 1 && all_answer) { // 結束監聽事件
-          return;
-        } else {
-          // console.log(swiper.realIndex, "value", e.target.name);
-
-          if (form_arry.indexOf(e.target.name) == -1) {
-            swiper.slideTo(swiper.realIndex + 1);
-            form_arry[swiper.realIndex - 1] = e.target.name
-          }
-          console.log("form_arry.length:" + form_arry.length)
-
-          if (swiper.realIndex == swiper.slides.length - 1 && !all_answer) {
-            setTimeout(() => {
-              if (!all_answer) {
-                // 判斷all_answer 是否為 true // 紀錄未回答用的陣列--------------------------------------
-                let emptyIndex = [];
-
-                for (let k = 0; k < swiper.slides.length; k++) {
-                  if (form_arry[k]) {
-                    console.log(k + "//true")
-                  } else {
-                    console.log(k + "//false")
-                    emptyIndex.push(k);
-                  }
-                }
-
-                console.log("emptyIndex : " + emptyIndex);
-
-                console.log("Empty positions: ", emptyIndex[0]);
-                txt_array.style.backgroundColor = "red";
-                swiper.slideTo(emptyIndex[0])
-              }
-            }, 1000)
-          }
-          // 確認印出的值--------------------------------
-          // 將陣列清空
-          txt_array.textContent = "" // 陣列清空
-          // form 表單下的所有物件存成陣列
-          let options = [...this.elements];
-
-          // 取出點選的元素
-          var chosedTarget = options.filter((e) => e.checked);
-          // 設定 0 秒後印出選擇的value
-          setTimeout(() => {
-            for (let item of chosedTarget) {
-              txt_array.textContent += item.value + '/';
-              console.log(txt_array.textContent)
-              console.log("chosedTarget.length:" + chosedTarget.length)
-            }
-          }, 0)
-          if (chosedTarget.length == swiper.slides.length) {
-            all_answer = true
-            console.log("All positions are filled.");
-            txt_array.style.backgroundColor = "green";
-            for (let e = swiper.realIndex; e >= 0; e--) {
-              console.log("e:" + e)
-              console.log("swiper.realIndex--" + swiper.realIndex--)
-              setTimeout(() => {
-                swiper.slideTo(swiper.realIndex--);
-              }, 1000)
-            }
-          }
-        }
-
-      });
-    };
-
-    getRadio1_5();
-
-  </script>
-</body>
-
+    <script src="https://slawomir-zaziablo.github.io/range-slider/js/rSlider.min.js"></script>
+    <!-- Swiper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- this webpage JS-->
+    <script src="./js/script.js"></script>
+    <script src="./js/swiper1-5.js"></script>
+    <script>
+      // 載入檔案時去抓SVG檔換色
+      svg_icon('.custom-svg-img','currentColor');
+    </script>
+  </body>
 </html>

@@ -18,8 +18,7 @@
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  width: 180px;
-  height: 60px;
+  max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: rgba(255, 255, 255, 0.8);
@@ -52,17 +51,18 @@
 }
 
 /* 導覽列 (header)  搜尋按鈕 */
-.tab-sort-nav .search {
+.search {
   max-width: 284px;
   margin-left: auto;
   /* 放大鏡icon 定位 */
   padding-left: 15px;
   position: relative;
   /* 色塊投影 */
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(8px 10px 0px #7ACBDD);
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(8px 10px 0px #7ACBDD);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.tab-sort-nav .search input[type=search] {
+
+input {
   width: 100%;
   height: 60px;
   -webkit-filter: drop-shadow(0px 4px 0px #7ACBDD);
@@ -78,14 +78,40 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.tab-sort-nav .search input[type=search]:focus {
+input:focus {
   outline: 3px solid #fcc661;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.tab-sort-nav .search input[type=search]:focus i {
+input:focus i {
   color: #fcc661;
 }
-.tab-sort-nav .search i {
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+input:focus::-ms-input-placeholder {
+  color: transparent;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+input:focus::placeholder {
+  color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tab-sort-nav i {
   font-size: 18px;
   color: rgb(122, 203, 221);
   padding-top: 2px;
@@ -96,10 +122,6 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-section.common-problem .inner-container {
-  padding: 0 180px;
 }
 
 .problem-card-list {
@@ -119,7 +141,6 @@ section.common-problem .inner-container {
 }
 
 .problem-card {
-  min-width: 900px;
   max-width: 100%;
   padding: 30px;
   display: -webkit-box;
@@ -163,4 +184,11 @@ section.common-problem .inner-container {
 .problem-card a.bottom-link {
   margin-left: auto;
   color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 768px) {
+  .tab-btn {
+    max-width: 180px;
+    min-width: 100px;
+    height: 60px;
+  }
 }

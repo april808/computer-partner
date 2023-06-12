@@ -60,20 +60,20 @@ $stroke-line: 38px
 
 .group
   // outline: 1px solid gold
-.row
+.center
   display: flex
   justify-content: center
   align-items: start
-
 .user-block,.group-block
-  width: 560px
+  // width: 560px
 
 section.contact-us
   --pdd: 50px
 .user-block
   display: flex
+  flex-direction: column
   align-items: center
-  padding: 20px 0
+  // padding: 20px 0
   .avatars
     flex-shrink: 0
     margin: 30px 60px
@@ -83,75 +83,67 @@ section.contact-us
     > .group:first-of-type
       margin-bottom: 20px
     input
-      width: calc( 100% - 58px)
+      // width: calc( 100% - 58px)
 
 .group-block
-  padding-top: 20px
+  width: 100%
+  padding-right: 20px
   padding-left: 20px
-  border-top: 1px solid $color_dark-add1
-  padding-bottom: 20px
+  // padding-bottom: 20px
   .group
-    margin-right: 20px
-    padding-right: 40px
+    // margin-left: 20px
+    // margin-right: 20px
     margin-bottom: 20px
 
-form
-  input,textarea
-    display: block
-    width: 100%
-  input#subText,textarea
-    width: calc(100% - 18px)
-  textarea
-    height: 10em
-    // width: 100%
-    resize: vertical
-    // margin-bottom: 40px
 
-section.contact-us
+.border-hr
+  border-top: 1px solid $color_dark-add1
+
+input,textarea
+  display: block
+textarea
+  height: 10em
+  resize: vertical
+
 .mails
   .h3
     color: $color_primary_minus1
-    margin-bottom: 30px
+    margin-top: 30px
 
   lable
     color: $color_dark-add1
 
 // 表單主體
-section.contact-us
-  .mails
-    min-width: 780px
-    max-width: 900px
-    margin-bottom: 80px
-    margin-left: auto
-    margin-right: auto
-    .mailbody
-      margin-left: auto
-      margin-right: auto
-      width: 100%
-      display: flex
-      border-radius: 20px
-      flex-shrink: 1
-      color: #39393A
-      background-color: $color_primary_add1
-      padding: 0 0 0px var(--pdd)
-    .right
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      align-self: flex-start
-      padding: 40px var(--pdd) 40px 40px
-      margin-left: auto
-      width: 20%
-      gap: 20px
-      background-color: $color_primary_minus1
-      border-radius: 0px 20px 0px 50px
-      > .group
-        padding: 20px 0
-        p
-          text-align: center
-        p:nth-child(2)
-          margin-top: 20px
+.mails
+  max-width: 900px
+  margin-bottom: 80px
+  margin-left: auto
+  margin-right: auto
+.mailbody
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  display: flex
+  flex-direction: column
+  border-radius: 20px
+  flex-shrink: 1
+  background-color: $color_primary_add1
+.logo-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  align-self: flex-start
+  padding: 40px var(--pdd) 40px 40px
+  margin-left: auto
+  width: 100%
+  gap: 20px
+  background-color: $color_primary_minus1
+  border-radius: 0px 0px 20px 20px
+  .group
+    padding: 0 0 20px 0
+    p
+      text-align: center
 
 // 預設按鈕表單樣式
 section.contact-us
@@ -164,35 +156,42 @@ section.contact-us
     .turn-next-btn
       padding: 10px 40px
 
-  .active-ani
-    animation: button-active 1.5s 1 normal ease-in-out 0.1s
-
-  input,textarea
-    appearance: none
-    transition: border-color 0.5s ease
-    background: rgba(255, 255, 255, 0.1)
-    border-radius: 0.3em
-    // border: none
-    border: 1px solid rgba(255, 255, 255, 0.3)
-    padding: 0.5em 1em
-    line-height: 20px
-    margin: 10px 0
-    outline: 3px solid transparent
-    font-size: 18px
-    transition: color .3s, background-color .3s
+input,textarea
+  width: 100%
+  appearance: none
+  transition: border-color 0.5s ease
+  background: rgba(255, 255, 255, 0.1)
+  border-radius: 0.3em
+  // border: none
+  border: 1px solid rgba(255, 255, 255, 0.3)
+  padding: 0.5em 1em
+  line-height: 20px
+  margin: 10px 0
+  outline: 3px solid transparent
+  font-size: 18px
+  transition: color .3s, background-color .3s
+  &::placeholder
+      color: rgba(0, 0, 0, 0.3)
+  &:focus
+    outline: 3px solid $color_secondary-light
+    background-color: rgba($color_white,.8)
     &::placeholder
-        color: rgba(0, 0, 0, 0.3)
-    &:focus
-      outline: 3px solid $color_secondary-light
-      background-color: rgba($color_white,.8)
-      &::placeholder
-        color: rgba($color_red,.6)
-      i
-        color: $color_secondary-light
+      color: transparent
+    i
+      color: $color_secondary-light
 
-@keyframes button-active
-  0%
-    transform: translate3d(0, 7px, 0)
+section.contact-us.inner-container
+  // background-color: red
 
-  100%
-    transform: translate3d(0, 0, 0)
+  section.contact-us.inner-container
+    // background-color: gold
+  .mailbody
+    flex-direction: row
+  .user-block
+    flex-direction: row
+  .logo-block
+    width: 25%
+    border-radius: 0px 20px 0px 50px
+    p
+      display: flex
+      flex-direction: column

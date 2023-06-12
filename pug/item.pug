@@ -1,0 +1,103 @@
+doctype html
+html(lang='zh-Hant')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 單一商品頁面
+    link(rel='icon' href='./images/logo/logo_light.png')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/header.css')
+    link(rel='stylesheet' href='./css/footer.css')
+  body
+    .out-container
+      input#menu-switch(type='checkbox' name='')
+      header.main-header.inner-container
+        .logo
+          a(href='./index.html')
+            picture
+              source(media='(min-width: 930px)' srcset='./images/logo/logo_long_light.png')
+              source(media='(min-width: 768px)' srcset='./images/logo/logo_e.svg')
+              img(src='./images/logo/logo_e.svg' alt='電腦夥伴 | Computer Partner')
+        label.hb(for='menu-switch')
+          span
+          span
+          span
+        nav.main-nav
+          a(href='./index.html#answer')
+            i.fa-solid.fa-star-of-life
+            span 如何開始
+          a(href='./custom-setting.html')
+            i.fa-solid.fa-screwdriver-wrench
+            span 自訂需求
+          a(href='./ad-product.html')
+            i.fa-solid.fa-magnifying-glass
+            span 建議商品
+          a(href='./problems.html')
+            i.fa-solid.fa-circle-question
+            span 常見問題
+          a(href='./contact.html')
+            i.fa-solid.fa-envelopes-bulk
+            span 聯絡我們
+      section.inner-container
+        // 單一商品頁面
+        
+      // 頁尾
+      footer
+        .footer-wrap.inner-container
+          .top
+              a.dark-logo(href='./index.html')
+                picture
+                  source(media='(min-width: 930px)' srcset='./images/logo/logo_long_dark.png')
+                  
+                  img(src='./images/logo/logo_dark.png' alt='電腦夥伴 | Computer Partner')
+              .right 
+                ul.txt-link
+                  span 電腦夥伴 | Computer Partner
+                  li
+                    a(href='./index.html#answer')
+                      i.fa-solid.fa-check
+                      |  如何開始
+                  li
+                    a(href='./custom-setting.html')
+                      i.fa-solid.fa-check
+                      |  自訂需求
+                  li
+                    a(href='./ad-product.html')
+                      i.fa-solid.fa-check
+                      |  建議商品
+                  li
+                    a(href='./problems.html')
+                      i.fa-solid.fa-check
+                      |  常見問題
+                  li
+                    a(href='./contact.html')
+                      i.fa-solid.fa-check
+                      |  聯絡我們
+                  // <li><a href="#">注意事項</a></li>
+                ul
+                  span 免責聲明
+                  .disclaimer
+                    li 
+                      i.fa-solid.fa-star-of-life
+                      | 產品照僅供參考，規格與售價依實際經銷商販售為準。
+                  span 關注我們
+                  .icon-link
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-blogger-b
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-facebook-f
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-instagram
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-line
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-youtube
+          .bottom
+            .inner-container
+              | 本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。

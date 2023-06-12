@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.asbxsh {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
 .custom-border {
   position: relative;
 }
@@ -30,6 +39,10 @@ section span.budget-numper::before {
   padding: 0 5px;
 }
 
+.two-wrap.edit-pan {
+  margin-top: 15px;
+}
+
 .edit-pan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,23 +60,22 @@ section span.budget-numper::before {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.edit-pan i:hover {
+.edit-pan:hover i {
   color: rgb(242, 68, 5);
 }
 
 .cus-table {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: repeat(6, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 20px;
 }
-.cus-table .left-cus-table {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1/1/2/2;
+
+.left-cus-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +86,16 @@ section span.budget-numper::before {
       -ms-flex-align: start;
           align-items: start;
 }
-.cus-table .left-cus-table .budget-block {
+
+.right-cus-table {
+  padding: 30px 20px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: 2/1/2/7;
+}
+
+.budget-block {
   position: sticky;
   top: 0;
   display: -webkit-box;
@@ -87,8 +108,10 @@ section span.budget-numper::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 30px 20px;
 }
-.cus-table .left-cus-table .budget-block .budget-group {
+
+.budget-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +124,8 @@ section span.budget-numper::before {
           flex-direction: column;
   padding-top: 20px;
 }
-.cus-table .left-cus-table .budget-block .budget-group .numper-group {
+
+.numper-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,33 +135,13 @@ section span.budget-numper::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
-.cus-table .right-cus-table {
-  padding: 30px 20px;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 5;
-  grid-area: 1/2/2/7;
-  background-color: red;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-.cus-table .right-cus-table .edit-pan {
+.edit-pan {
   width: 140px;
 }
-.cus-table .right-cus-table .two-wrap {
+
+.two-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,18 +149,15 @@ section span.budget-numper::before {
       -ms-flex-pack: start;
           justify-content: start;
 }
-.cus-table .right-cus-table .two-wrap .answer-txt-group {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.cus-table .right-cus-table .row-block {
-  color: rgb(96, 90, 140);
+
+.row-block {
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
 }
-.cus-table .right-cus-table .row-block:last-of-type {
+.row-block:last-of-type {
   border-bottom: 0px;
 }
-.cus-table .right-cus-table .row-block .answer-txt-group {
+
+.answer-txt-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,7 +169,7 @@ section span.budget-numper::before {
       flex-wrap: wrap;
   padding: 15px 0;
 }
-.cus-table .right-cus-table .row-block .answer-txt-group .answer-txt {
+.answer-txt-group .answer-txt {
   /* Auto layout */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,28 +193,25 @@ section span.budget-numper::before {
   border: 3px solid rgb(205, 235, 242);
   border-radius: 15px;
 }
-.cus-table .right-cus-table .row-block .answer-txt-group span {
+.answer-txt-group span {
   padding: 0;
 }
 
-.cus-table .right-cus-table .answer-txt-group.worksoft svg {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.cus-tables .answer-txt-group.worksoft .custom-svg {
   width: 40px;
   height: 40px;
 }
-.cus-table .right-cus-table .answer-txt-group.worksoft .answer-txt {
+.cus-tables .answer-txt {
   width: 120px;
   height: 65px;
   padding: 10px 10px;
   white-space: nowrap;
 }
-.cus-table .right-cus-table .answer-txt-group.worksoft .answer-txt i {
+.cus-tables .answer-txt i {
   font-size: 28px;
 }
 
-.cus-table .right-cus-table .answer-txt-group.pc-part {
+.right-cus-table .answer-txt-group.pc-part {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -225,11 +223,18 @@ section span.budget-numper::before {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.cus-table .right-cus-table .answer-txt-group.pc-part .answer-txt {
-  width: 120px;
-  height: 65px;
+.right-cus-table .answer-txt-group.pc-part .custom-svg {
+  width: 25px;
+  height: 25px;
+}
+.right-cus-table .answer-txt-group.pc-part .answer-txt {
+  width: 100px;
+  height: 90px;
   color: rgba(255, 255, 255, 0.8);
   background: rgb(70, 64, 116);
+}
+.right-cus-table .answer-txt-group.pc-part .answer-txt:has(span + span) {
+  line-height: 0.5;
 }
 
 .item-pc-part {
@@ -275,7 +280,9 @@ section span.budget-numper::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .item-bar-group span sub {
+  display: none;
   color: #AC9CE3;
 }
 
@@ -290,12 +297,63 @@ section span.budget-numper::before {
   border-radius: 10px;
   overflow: hidden;
 }
-.item-bar::after {
-  content: "";
-  display: block;
-  background-color: rgb(242, 159, 5);
-  width: 50%;
+
+.value {
   height: 100%;
+  width: 60%;
+  background-color: rgb(242, 159, 5);
   -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+.value.p10 {
+  width: 10%;
+}
+.value.p20 {
+  width: 20%;
+}
+.value.p30 {
+  width: 30%;
+}
+.value.p40 {
+  width: 40%;
+}
+.value.p50 {
+  width: 50%;
+}
+.value.p60 {
+  width: 60%;
+}
+.value.p70 {
+  width: 70%;
+}
+.value.p80 {
+  width: 80%;
+}
+.value.p90 {
+  width: 90%;
+}
+.value.p100 {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .right-cus-table {
+    padding: 30px 20px;
+  }
+  .left-cus-table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .item-bar-group span sub {
+    display: inline;
+    color: #AC9CE3;
+  }
 }

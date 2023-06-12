@@ -71,49 +71,47 @@ $btn_radius: 4px
 
 
 
-@media (min-width: 576px)
-  footer.svg-bg .dark-logo
-    // background-color: Coral
-
-@media (min-width: 1224px) 
-  footer.svg-bg .dark-logo
-    // background-color: black
-    background-image: url(../images/logo/logo_dark.png) no-repeat
+// @media screen and (max-width: 1023px)
+//   footer .footer-wrap
+//     a
+//       // color: gold
 
 
-
-footer.svg-bg
-  // margin-top: 800px
-  color: $color_secondary
-  background-color: transparent
-  border: 1px solid #000
-  .dark-logo
-    background-image: url(../images/svg/svg-check.svg) no-repeat
-    background-position: center center
-    background-attachment: scroll
-    // border: 1px solid gold
-    
-  & .svg-fromTo-bg
-    z-index: -6
-    position: absolute
-    bottom: 0
-    +flexCenter
-    & svg
-      // transform: scale(1.65)
-      min-width: 100vw
-      // background-color: gold
-    svg path
-      fill: $color_dark-add1
+@media screen and (max-width: 700px)
+  $inner-width: 80vw
+  footer .footer-wrap
+    .top
+      flex-direction: column
+    .right
+        flex-direction: column
+    ul
+      align-items: center
+    a
+      // color: Coral
+    .txt-link li
+      max-width: $inner-width
+      a
+        column-gap: calc(100vw * 0.06)
+        padding-right: calc(100vw * 0.06)
+    .disclaimer li
+      max-width: $inner-width
+    .dark-logo
+      border-bottom: 1px solid $color_border
+      padding: 
+        bottom: 20px
+      margin: 
+        bottom: 20px
 
 footer
   position: relative
   z-index: 1
-  +flexCenter
+  // +flexCenter
   color: $color_secondary
   background-color: $color_dark-add1
   .dark-logo
-    +size(60px)
-    aspect-ratio: 1/1
+    min-height: 60px
+    border-bottom: 0px
+    +flexCenter
   a
     color: rgba(255, 255, 255, .8)
   .icon-link a
@@ -123,58 +121,85 @@ footer
 footer
   display: flex
   justify-content: center
-  & .footer-wrap
-      width: 100%
-      & a:hover
-          text-decoration: underline solid currentcolor
-      & .top
-          // flex-grow: 1
-          display: flex
-          justify-content: space-between
-          padding: 60px 0
-          & .right
-            display: flex
-          & ul
-              display: flex
-              flex-direction: column
-              row-gap: 20px
-              padding: 0px 15px
-              flex-shrink: 1
-              & span
-                  font-weight: bold
-                  margin-bottom: 5px
-          & .icon-link
-              display: flex
-              column-gap: 10px
-              margin-bottom: 10px
-              & li
-                  background-color: rgba(255, 255, 255, .8)
-                  border-radius: $btn_radius
-                  display: flex
-                  justify-content: center
-                  align-items: center
-                  width: 26px
-                  height: 26px
-                  transition: 0.15s ease-in-out
-                  &:hover
-                    background-color: $color_secondary
-          & .disclaimer
-              li
-                  width: 200px
-                  color: rgba(255, 255, 255, .8)
-      & .bottom
-          border-top: 1px solid $color_border
-          margin-top: auto
-          padding: 15px 0
-          font-size: 16px
-          color: rgba(255, 255, 255, .4)
-          line-height: 24px
-          position: relative
-          text-align: center
-          // background-color: $color_secondary
-          a
-            bg
-            color: $color_white
-            padding: 0 5px
-            &[data-google]
-                text-decoration: none
+.footer-wrap
+  $inner-width: 200px
+  width: 100%
+  a
+    transition: color .3s
+
+  .txt-link a
+    display: flex
+    justify-content: space-between
+    align-items: center
+    column-gap: 20px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: -2px
+      display: block
+      height: 1.5px
+      width: 0%
+      background-color: currentcolor
+      transition: width .5s
+    &:hover
+      color: $color_secondary
+      &::before
+        width: 100%
+  & .top
+    display: flex
+    justify-content: space-between
+    padding: 60px 0
+  & .right
+    display: flex
+    row-gap: 20px
+  & ul
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    row-gap: 20px
+    padding: 0px 15px
+    flex-shrink: 1
+    & span
+      font-weight: bold
+      margin-bottom: 5px
+  & .icon-link
+      width: $inner-width
+      display: flex
+      justify-content: space-between
+      column-gap: 10px
+      margin-bottom: 10px
+      & li
+        background-color: rgba(255, 255, 255, .8)
+        border-radius: $btn_radius
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 26px
+        height: 26px
+        transition: 0.15s ease-in-out
+        &:hover
+          background-color: $color_secondary
+  & .disclaimer
+    i
+      font-size: 10px
+      line-height: 100%
+      padding: 0 5px
+    li
+      max-width: $inner-width
+      color: rgba(255, 255, 255, .8)
+  & .bottom
+    border-top: 1px solid $color_border
+    margin-top: auto
+    padding: 15px 0
+    font-size: 16px
+    color: rgba(255, 255, 255, .4)
+    line-height: 24px
+    position: relative
+    text-align: center
+    a
+      bg
+      color: $color_white
+      padding: 0 5px
+      &[data-google]
+          text-decoration: none

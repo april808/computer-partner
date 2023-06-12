@@ -33,94 +33,76 @@ $color_black_20: rgba(0,0,0,.2)
   top: $t
   transform: translate(-50%,-50%)
 
+@media screen and (max-width: 700px)
+  .tab-nav .tab-btn
+    // +size(7rem)
+    // background: red
+
+
+.custom-svg-img
+  +size(25px)
+
 /* Tab頁籤
 .tab-container
+  min-height: 700px
+  margin-top: 5rem
   /* 自動編排 */
   display: flex
   justify-content: start
   flex-direction: column
-  max-width: 700px
+  // max-width: 700px
   gap: 20px
+
+.tab-bg
+  background: rgba(255, 255, 255, 0.3)
+  /* 主色 */
+  border: 1.8px solid #A0E3F2
+  /* 毛玻璃 */
+  backdrop-filter: blur(10px)
 
 .tab-nav
   display: flex
-  justify-content: center
-  gap: 20px
-  font-size: 16px
+  justify-content: space-between
+  align-items: flex-end
   .tab-btn
+    flex: 1
     cursor: pointer
     transition: .5s
-    +bdrs(20px)
-    +size(100px,96px)
+    +bdrs(var(--bdrs))
+    +size(5rem,5rem)
     box-sizing: border-box
-    background: rgba(255, 255, 255, 0.3)
-    /* 主色 */
-    border: 1.8px solid #A0E3F2
-    /* 毛玻璃 */
-    backdrop-filter: blur(10px)
     /* 自動編排 */
     +flexCenter
     flex-direction: column
-    gap: 10px
-    padding: 10px 10px
-    & div
-      flex-grow: 1
-      display: flex
-      justify-content: space-between
-      align-items: center
-      flex-direction: column
-      span
-        line-height: 18px
-    & span
-    & svg
-      +size(40px,40px)
-      transform: scale(1.1)
-      path
-        fill: $color_dark-add1
-        fill-opacity: 1
+    row-gap: .2rem
+    color: $color_dark-add1
+    &:has(span + span)
+      line-height: 0.9
 
 .tab-content
   max-width: 760px
   /* white */
   background-color: rgba(255, 255, 255, 0.7)
+  /* 毛玻璃 */
+  backdrop-filter: blur(10px)
   +bdrs(20px)
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-  overflow: hidden
   display: none
-  padding: 50px
+  padding: 2rem
 
   .tab-content-group
     min-width: 60%
     & .txt
-      // padding-left: 50px
-      // padding-right: 50px
       display: flex
       flex-direction: column
       gap: 20px
 
   .tab-content-img
-    // padding: 50px
     padding-left: 30px
     overflow: hidden
     min-width: calc(40% - 30px)
-    // display: none
     img
       height: 100%
-// button.tab-content
-//   background-color: $color_primary_add1
-//   color: #fff
-//   +bdrs(100px)
-//   padding: 5px 2px
-//   margin-top: 6px
-//   width: 100px
-//   border: 0
-//   font-size: 18px
-//   // display: none
-//   transition: .5s
-//   cursor: pointer
-
-//   &:hover
-//     background-color: $color_secondary
 
 .custom-ani
   animation: ani 1s 0s 1
@@ -141,6 +123,7 @@ $color_black_20: rgba(0,0,0,.2)
   background-color: rgba(255, 255, 255, 0.7)
   transform: scale(1.2)
   z-index: 99
+  color: $color_secondary
 
 @keyframes ani
   0%

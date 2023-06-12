@@ -1,0 +1,290 @@
+html(lang='zh-Hant')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 表單基礎樣式
+    link(rel='icon' href='./images/logo/logo_light.png')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/card.css')
+    link(rel='stylesheet' href='./css/header.css')
+    link(rel='stylesheet' href='./css/footer.css')
+    // rSlider 套件 CSS
+    link(rel='stylesheet' href='https://slawomir-zaziablo.github.io/range-slider/css/rSlider.min.css')
+    // 套件CSS 樣式修改
+    link(rel='stylesheet' href='./css/js-plugin.css')
+    style.
+      .card-container.row{
+        row-gap: 15px
+      }
+  body
+    #array 這裡放陣列
+    .out-container
+      input#menu-switch(type='checkbox' name='')
+      header.main-header.inner-container
+        .logo
+          a(href='./index.html')
+            picture
+              source(media='(min-width: 930px)' srcset='./images/logo/logo_long_light.png')
+              source(media='(min-width: 768px)' srcset='./images/logo/logo_e.svg')
+              img(src='./images/logo/logo_e.svg' alt='電腦夥伴 | Computer Partner')
+        label.hb(for='menu-switch')
+          span
+          span
+          span
+        nav.main-nav
+          a(href='./index.html#answer')
+            i.fa-solid.fa-star-of-life
+            span 如何開始
+          a(href='./custom-setting.html')
+            i.fa-solid.fa-screwdriver-wrench
+            span 自訂需求
+          a(href='./ad-product.html')
+            i.fa-solid.fa-magnifying-glass
+            span 建議商品
+          a(href='./problems.html')
+            i.fa-solid.fa-circle-question
+            span 常見問題
+          a(href='./contact.html')
+            i.fa-solid.fa-envelopes-bulk
+            span 聯絡我們
+      form#form(action="").inner-container
+        .row
+          #start_btn.final.turn-next-btn 立即開始
+        // 問題1
+        .row
+          .txt.card-container
+            p 您是否打算在電腦上完成大量辦公室工作？
+        .btn-group
+          .card-container.row
+            input#radio1-1(type='radio' required='' name='use_form1' value='是')
+            label(for='radio1-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 是
+            input#radio1-2(type='radio' required='' name='use_form1' value='否')
+            label(for='radio1-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 否
+        // 問題2
+        .row
+          .txt.card-container
+              p 您是否喜歡游戲併計劃將大部分電腦時間花在玩最新最好的遊戲上？
+        .btn-group
+          .card-container.row
+            input#radio2-1(type='radio' required='' name='use_form2' value='是')
+            label(for='radio2-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 是
+            input#radio2-2(type='radio' required='' name='use_form2' value='否')
+            label(for='radio2-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 否
+        // 問題3
+        .row
+          .txt.card-container
+              p 您是藝術家還是音樂家？您希望使用電腦來創建圖像、音樂或視頻嗎？
+        .btn-group
+          .card-container.row
+            input#radio3-1(type='radio' required='' name='use_form3' value='是')
+            label(for='radio3-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 是
+            input#radio3-2(type='radio' required='' name='use_form3' value='否')
+            label(for='radio3-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 否
+        // 問題4
+        .row
+          .txt.card-container
+              p 您的電腦會被家庭中的每個人使用嗎？
+        .btn-group
+          .card-container.row
+            input#radio4-1(type='radio' required='' name='use_form4' value='是')
+            label(for='radio4-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 是
+            input#radio4-2(type='radio' required='' name='use_form4' value='否')
+            label(for='radio4-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 否
+        // 問題5
+        .row
+          .txt.card-container
+              p 您是否打算在客廳使用電腦作為娛樂中心？
+        .btn-group
+          .card-container.row
+            input#radio5-1(type='radio' required='' name='use_form5' value='是')
+            label(for='radio5-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 是
+            input#radio5-2(type='radio' required='' name='use_form5' value='否')
+            label(for='radio5-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span 否
+        // .question-2
+        .row
+          .txt.card-container
+            p 筆記型電腦 vs. 桌上型電腦
+        .btn-group
+          .card-container.row
+            input#radio6-1(type='radio' name='use_place' value='PC')
+            label(for='radio6-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                
+                span
+                  | 桌上型電腦
+                  i.fa-solid.fa-computer
+            input#radio6-2(type='radio' name='use_place' value='laptop')
+            label(for='radio6-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                
+                span
+                  | 筆記型電腦
+                  i.fa-solid.fa-laptop
+
+        //- .question-3
+        .row
+          .txt.card-container
+            p 選擇適合的操作系統
+        .btn-group
+          .card-container.row
+            input#radio7-1(type='radio' name='use_system' value='Windows')
+            label(for='radio7-1')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span
+                  | Windows
+                  i.fa-brands.fa-windows.logo_system_img
+            input#radio7-2(type='radio' name='use_system' value='Mac OS')
+            label(for='radio7-2')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span
+                  | Mac OS
+                  i.fa-brands.fa-apple.logo_system_img
+            input#radio7-3(type='radio' name='use_system' value='Linux')
+            label(for='radio7-3')
+              .btn-switch.sm
+                .bg-circle
+                  svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                span
+                  | Linux
+                  .fa-brands.fa-linux.logo_system_img
+        //- .question-4
+        .row
+          .txt.card-container
+            p 檢查你的預算
+        .btn-group.form-range(style='margin-bottom: 20px')
+          .card-container
+            .slider-container
+              input#rangeSlider.slider(type='text' value='預算' name='use_range')
+        .row 
+          #end_btn.final.turn-next-btn 查看報表
+      // 頁尾
+      footer
+        .footer-wrap.inner-container
+          .top
+              a.dark-logo(href='./index.html')
+                picture
+                  source(media='(min-width: 930px)' srcset='./images/logo/logo_long_dark.png')
+                  //- source(media='(min-width: 768px)' srcset='./images/logo/logo_e.svg')
+                  img(src='./images/logo/logo_dark.png' alt='電腦夥伴 | Computer Partner')
+              .right 
+                ul.txt-link
+                  span 電腦夥伴 | Computer Partner
+                  li
+                    a(href='./index.html#answer')
+                      i.fa-solid.fa-check
+                      |  如何開始
+                  li
+                    a(href='./custom-setting.html')
+                      i.fa-solid.fa-check
+                      |  自訂需求
+                  li
+                    a(href='./ad-product.html')
+                      i.fa-solid.fa-check
+                      |  建議商品
+                  li
+                    a(href='./problems.html')
+                      i.fa-solid.fa-check
+                      |  常見問題
+                  li
+                    a(href='./contact.html')
+                      i.fa-solid.fa-check
+                      |  聯絡我們
+                  // <li><a href="#">注意事項</a></li>
+                ul
+                  span 免責聲明
+                  .disclaimer
+                    li 
+                      i.fa-solid.fa-star-of-life
+                      | 產品照僅供參考，規格與售價依實際經銷商販售為準。
+                  span 關注我們
+                  .icon-link
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-blogger-b
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-facebook-f
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-instagram
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-line
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-youtube
+          .bottom
+            .inner-container
+              | 本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。
+    // rSlider 套件 JS
+    script(src='https://slawomir-zaziablo.github.io/range-slider/js/rSlider.min.js')
+    // this webpage JS
+    script(src='./js/script.js')
+    script(src='./js/answer-basic.js')
+    script. 
+      // 載入檔案時去抓SVG檔換色
+      svg_icon('.custom-svg-img','currentColor');

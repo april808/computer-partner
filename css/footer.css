@@ -1,59 +1,58 @@
 @charset "UTF-8";
-@media (min-width: 1224px) {
-  footer.svg-bg .dark-logo {
-    background-image: url(../images/logo/logo_dark.png) no-repeat;
+@media screen and (max-width: 700px) {
+  footer .footer-wrap .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-wrap .right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-wrap ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-wrap .txt-link li {
+    max-width: 80vw;
+  }
+  footer .footer-wrap .txt-link li a {
+    -webkit-column-gap: 6vw;
+       -moz-column-gap: 6vw;
+            column-gap: 6vw;
+    padding-right: 6vw;
+  }
+  footer .footer-wrap .disclaimer li {
+    max-width: 80vw;
+  }
+  footer .footer-wrap .dark-logo {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
-footer.svg-bg {
-  color: rgb(242, 159, 5);
-  background-color: transparent;
-  border: 1px solid #000;
-}
-footer.svg-bg .dark-logo {
-  background-image: url(../images/svg/svg-check.svg) no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-}
-footer.svg-bg .svg-fromTo-bg {
-  z-index: -6;
-  position: absolute;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-footer.svg-bg .svg-fromTo-bg svg {
-  min-width: 100vw;
-}
-footer.svg-bg .svg-fromTo-bg svg path {
-  fill: rgb(70, 64, 116);
-}
-
 footer {
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: rgb(242, 159, 5);
   background-color: rgb(70, 64, 116);
 }
 footer .dark-logo {
-  width: 60px;
-  height: 60px;
-  aspect-ratio: 1/1;
+  min-height: 60px;
+  border-bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer a {
   color: rgba(255, 255, 255, 0.8);
@@ -71,14 +70,47 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer-wrap {
+
+.footer-wrap {
   width: 100%;
 }
-footer .footer-wrap a:hover {
-  -webkit-text-decoration: underline solid currentcolor;
-          text-decoration: underline solid currentcolor;
+.footer-wrap a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
-footer .footer-wrap .top {
+.footer-wrap .txt-link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  position: relative;
+}
+.footer-wrap .txt-link a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  display: block;
+  height: 1.5px;
+  width: 0%;
+  background-color: currentcolor;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+.footer-wrap .txt-link a:hover {
+  color: rgb(242, 159, 5);
+}
+.footer-wrap .txt-link a:hover::before {
+  width: 100%;
+}
+.footer-wrap .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,12 +119,13 @@ footer .footer-wrap .top {
           justify-content: space-between;
   padding: 60px 0;
 }
-footer .footer-wrap .top .right {
+.footer-wrap .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  row-gap: 20px;
 }
-footer .footer-wrap .top ul {
+.footer-wrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,25 +133,32 @@ footer .footer-wrap .top ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   row-gap: 20px;
   padding: 0px 15px;
   -ms-flex-negative: 1;
       flex-shrink: 1;
 }
-footer .footer-wrap .top ul span {
+.footer-wrap ul span {
   font-weight: bold;
   margin-bottom: 5px;
 }
-footer .footer-wrap .top .icon-link {
+.footer-wrap .icon-link {
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
   margin-bottom: 10px;
 }
-footer .footer-wrap .top .icon-link li {
+.footer-wrap .icon-link li {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   display: -webkit-box;
@@ -135,14 +175,19 @@ footer .footer-wrap .top .icon-link li {
   -webkit-transition: 0.15s ease-in-out;
   transition: 0.15s ease-in-out;
 }
-footer .footer-wrap .top .icon-link li:hover {
+.footer-wrap .icon-link li:hover {
   background-color: rgb(242, 159, 5);
 }
-footer .footer-wrap .top .disclaimer li {
-  width: 200px;
+.footer-wrap .disclaimer i {
+  font-size: 10px;
+  line-height: 100%;
+  padding: 0 5px;
+}
+.footer-wrap .disclaimer li {
+  max-width: 200px;
   color: rgba(255, 255, 255, 0.8);
 }
-footer .footer-wrap .bottom {
+.footer-wrap .bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: auto;
   padding: 15px 0;
@@ -152,10 +197,10 @@ footer .footer-wrap .bottom {
   position: relative;
   text-align: center;
 }
-footer .footer-wrap .bottom a {
+.footer-wrap .bottom a {
   color: #fff;
   padding: 0 5px;
 }
-footer .footer-wrap .bottom a[data-google] {
+.footer-wrap .bottom a[data-google] {
   text-decoration: none;
 }

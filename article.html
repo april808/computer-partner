@@ -1,161 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文章頁</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/card.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/article.css">
-  <link rel="stylesheet" href="./css/problems.css">
-  <!--  文字連結 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <!-- font-awesome -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
-  <!-- rSlider 套件 -->
-  <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
-</head>
-
-<body>
-  <div class="cpout-container">
-    <div class="inner-container">
-      <header class="top-navbar otherpage">
-        <div class="navbar-wrap">
-          <h1 class="logo">
-            <a href="./index.html">
-              <img src="./images/logo/logo_long.png" alt="電腦夥伴 | Computer Partner">
-            </a>
-          </h1>
-          <nav class="navigation">
-            <ul>
-              <li><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a></li>
-              <li><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a>
-              </li>
-              <li><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a></li>
-              <li><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a></li>
-              <li><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></li>
-            </ul>
-          </nav>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章頁</title>
+    <link rel="icon" href="./images/logo/logo_light.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/article.css">
+    <link rel="stylesheet" href="./css/problems.css">
+  </head>
+  <body>
+    <div class="out-container">
+      <input id="menu-switch" type="checkbox" name="">
+      <header class="main-header inner-container">
+        <div class="logo"><a href="./index.html">
+            <picture>
+              <source media="(min-width: 930px)" srcset="./images/logo/logo_long_light.png">
+              <source media="(min-width: 768px)" srcset="./images/logo/logo_e.svg"><img src="./images/logo/logo_e.svg" alt="電腦夥伴 | Computer Partner">
+            </picture></a></div>
+        <label class="hb" for="menu-switch"><span></span><span></span><span></span></label>
+        <nav class="main-nav"><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></nav>
       </header>
-    </div>
-    <section class="article">
-      <!-- 文章標題 -->
-      <div class="title-item">
-        <h2 class="svg-check">
-          <span>文章</span>
-        </h2>
-      </div>
-      <div class="inner-container">
-        <div class="article-out">
-          <!-- 分類標籤按鈕  -->
-          <div class="tab-sort card">
-            <div class="inner-container">
-              <input type="radio" name="tab" id="test-photo1" hidden checked>
-              <input type="radio" name="tab" id="test-photo2" hidden>
-              <input type="radio" name="tab" id="test-photo3" hidden>
-              <input type="radio" name="tab" id="test-photo4" hidden>
-              <div class="tab-sort-nav fxdc">
-                <label for="test-photo1">
-                  <div class="tab-btn">
-                    <span>全部</span>
+      <section class="article">
+        <!-- 文章標題-->
+        <div class="title-item">
+          <h2 class="svg-check"><span>文章</span></h2>
+        </div>
+        <div class="inner-container">
+          <div class="article-out">
+            <!-- 分類標籤按鈕-->
+            <div class="tab-sort card">
+              <div class="inner-container">
+                <input id="test-photo1" type="radio" name="tab" hidden="" checked="">
+                <input id="test-photo2" type="radio" name="tab" hidden="">
+                <input id="test-photo3" type="radio" name="tab" hidden="">
+                <input id="test-photo4" type="radio" name="tab" hidden="">
+                <div class="tab-sort-nav fxdc">
+                  <label for="test-photo1">
+                    <div class="tab-btn"><span>全部</span></div>
+                  </label>
+                  <label for="test-photo2">
+                    <div class="tab-btn"><span>熱門文章</span></div>
+                  </label>
+                  <label for="test-photo3">
+                    <div class="tab-btn"><span>最新文章</span></div>
+                  </label>
+                  <label for="test-photo4">
+                    <div class="tab-btn"><span>建議閱讀</span></div>
+                  </label>
+                  <div class="search">
+                    <input id="search" type="text" name="搜尋" placeholder="搜尋文章"><i class="fa-solid fa-magnifying-glass"></i>
                   </div>
-                </label>
-                <label for="test-photo2">
-                  <div class="tab-btn">
-                    <span>熱門文章</span>
-                  </div>
-                </label>
-                <label for="test-photo3">
-                  <div class="tab-btn">
-                    <span>最新文章</span>
-                  </div>
-                </label>
-                <label for="test-photo4">
-                  <div class="tab-btn">
-                    <span>建議閱讀</span>
-                  </div>
-                </label>
-                <div class="search">
-                  <input type="search" name="搜尋" id="search" placeholder="搜尋文章">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+            <div class="main-article">
+              <!-- 文章清單-->
+              <div class="problem-card-list">
+                <div class="problem-card"><a href="./article.html">
+                    <h3>如何選擇最適合您需求的電腦</h3></a>
+                  <p>獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>                  然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。</p><a class="bottom-link turn-next-btn" href="#">閱讀更多</a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="main-article">
-            <!-- 文章清單 -->
-            <div class="problem-card-list">
-              <div class="problem-card">
-                <a href="#">
-                  <h3>如何選擇最適合您需求的電腦</h3>
-                </a>
-                <p>
-                  獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。<br>
-                  然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
-                </p>
-                <a href="#" class="bottom-link turn-next-btn">閱讀更多</a>
-              </div>
+        </div>
+      </section>
+      <!-- 頁尾-->
+      <footer>
+        <div class="footer-wrap inner-container">
+          <div class="top"><a class="dark-logo" href="./index.html">
+              <picture>
+                <source media="(min-width: 930px)" srcset="./images/logo/logo_long_dark.png"><img src="./images/logo/logo_dark.png" alt="電腦夥伴 | Computer Partner">
+              </picture></a>
+            <div class="right"> 
+              <ul class="txt-link"><span>電腦夥伴 | Computer Partner</span>
+                <li><a href="./index.html#answer"><i class="fa-solid fa-check"></i> 如何開始</a></li>
+                <li><a href="./custom-setting.html"><i class="fa-solid fa-check"></i> 自訂需求</a></li>
+                <li><a href="./ad-product.html"><i class="fa-solid fa-check"></i> 建議商品</a></li>
+                <li><a href="./problems.html"><i class="fa-solid fa-check"></i> 常見問題</a></li>
+                <li><a href="./contact.html"><i class="fa-solid fa-check"></i> 聯絡我們</a></li>
+                <!-- <li><a href="#">注意事項</a></li>-->
+              </ul>
+              <ul><span>免責聲明</span>
+                <div class="disclaimer">
+                  <li> <i class="fa-solid fa-star-of-life"></i>產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
+                </div><span>關注我們</span>
+                <div class="icon-link">
+                  <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+              </ul>
             </div>
-  
           </div>
-
-
-        </div>
-
-      </div>
-    </section>
-    <!-- 頁尾 -->
-    <footer>
-      <div class="footer-wrap">
-        <div class="inner-container">
-          <div class="top">
-              <a href="./index.html">
-                <div class="dark-logo"><img src="./images/logo/logo_light.png" alt="logo_light"></div>
-              </a>
-              <div class="right">
-                <ul>
-                  <span>電腦夥伴 | Computer Partner</span>
-                  <li><a href="./index.html#answer"><i class="fa-solid fa-check"></i> 如何開始</a></li>
-                  <li><a href="./custom-setting.html"><i class="fa-solid fa-check"></i> 自訂需求</a></li>
-                  <li><a href="./ad-product.html"><i class="fa-solid fa-check"></i> 建議商品</a></li>
-                  <li><a href="./problems.html"><i class="fa-solid fa-check"></i> 常見問題</a></li>
-                  <li><a href="./contact.html"><i class="fa-solid fa-check"></i> 聯絡我們</a></li>
-                  <!-- <li><a href="#">注意事項</a></li> -->
-                </ul>
-                <ul>
-                  <span>免責聲明</span>
-                  <div class="disclaimer">
-                    <li>* 產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
-                  </div>
-                  <span>關注我們</span>
-                  <div class="icon-link">
-                    <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                  </div>
-                </ul>
-              </div>
-            </div>
-        </div>
-        <div class="bottom">
-          <div class="inner-container">
-            本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。
+          <div class="bottom">
+            <div class="inner-container">本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。</div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
-</body>
-
+      </footer>
+    </div>
+  </body>
 </html>

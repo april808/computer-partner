@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method 選項</title>
+    <link rel="icon" href="./images/logo/logo_light.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/method.css">
+    <link rel="stylesheet" href="./css/tab.css">
+    <!-- rSlider 套件 CSS-->
+    <link rel="stylesheet" href="https://slawomir-zaziablo.github.io/range-slider/css/rSlider.min.css">
+    <!-- swiperjs  套件 CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- 套件CSS 樣式修改-->
+    <link rel="stylesheet" href="./css/js-plugin.css">
+    <!-- Demo styles-->
+    <style>
+      html,
+      body {
+      position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="array">這裡放陣列</div>
+    <section class="next-page">
+      <!-- 首頁 下一層->簡介-->
+      <div class="inner-container">
+        <div class="about">
+          <div class="about-card out-bxshin">
+            <h2>如何選擇最適合您需求的電腦</h2>
+            <p>
+              獲得一台新電腦是一種令人興奮的體驗。
+              然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。
+              如果您希望在選購電腦時
+              <mark>做出明智的決策</mark>，您來對地方了。
+               以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+            </p>
+            <div class="final turn-next-btn" id="start_btn">立即開始</div>
+          </div>
+        </div>
+      </div>
+      <!-- 首頁 下一層->開始選項-->
+      <form id="form" action="">
+        <div class="question-1 inner-container">
+          <div class="title-item">
+            <h3 class="svg-check"><span>方法1</span><span>確定您的需求</span></h3>
+          </div>
+          <div class="method-grid method-block">
+            <div class="method-input">
+              <div class="form-card-out" id="first-form-card">
+                <div class="form-card-inner">
+                  <!-- swiper 套件範圍-->
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <!-- 問題1-->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是否打算在電腦上完成大量辦公室工作？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input id="radio1-1" type="radio" required="" name="use_form1" value="是">
+                            <label for="radio1-1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>是</span>
+                              </div>
+                            </label>
+                            <input id="radio1-2" type="radio" required="" name="use_form1" value="否">
+                            <label for="radio1-2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題2-->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是否喜歡游戲併計劃將大部分電腦時間花在玩最新最好的遊戲上？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input id="radio2-1" type="radio" required="" name="use_form2" value="是">
+                            <label for="radio2-1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>是</span>
+                              </div>
+                            </label>
+                            <input id="radio2-2" type="radio" required="" name="use_form2" value="否">
+                            <label for="radio2-2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題3-->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是藝術家還是音樂家？您希望使用電腦來創建圖像、音樂或視頻嗎？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input id="radio3-1" type="radio" required="" name="use_form3" value="是">
+                            <label for="radio3-1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>是</span>
+                              </div>
+                            </label>
+                            <input id="radio3-2" type="radio" required="" name="use_form3" value="否">
+                            <label for="radio3-2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題4-->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您的電腦會被家庭中的每個人使用嗎？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input id="radio4-1" type="radio" required="" name="use_form4" value="是">
+                            <label for="radio4-1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>是</span>
+                              </div>
+                            </label>
+                            <input id="radio4-2" type="radio" required="" name="use_form4" value="否">
+                            <label for="radio4-2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 問題5-->
+                      <div class="card form-card swiper-slide">
+                        <div class="txt">
+                          <div class="card-container">
+                            <p>您是否打算在客廳使用電腦作為娛樂中心？</p>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                          <div class="card-container">
+                            <input id="radio5-1" type="radio" required="" name="use_form5" value="是">
+                            <label for="radio5-1">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>是</span>
+                              </div>
+                            </label>
+                            <input id="radio5-2" type="radio" required="" name="use_form5" value="否">
+                            <label for="radio5-2">
+                              <div class="btn-switch">
+                                <div class="bg-circle">
+                                  <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </div><span>否</span>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next control-btn next"></div>
+                  <div class="swiper-button-prev control-btn prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+            <div id="q1_alert"></div>
+          </div>
+          <div class="method-1-bg"><img src="./images/method/method_1_bg.png" alt="方法一背景圖"></div>
+        </div>
+        <div class="question-2 inner-container">
+          <div class="title-item">
+            <h3 class="svg-check"><span>方法2</span><span>筆記型電腦 vs. 桌上型電腦</span></h3>
+          </div>
+          <div class="method-block method-grid">
+            <div class="method-input">
+              <input id="option3" type="radio" name="use_place" value="PC">
+              <label class="card" for="option3">
+                <div class="btn-switch bg-0 lg">
+                  <div class="bg-circle">
+                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="method-input_img"><img src="./images/method/method_2_pc.png" alt="桌機選項"></div>
+                </div>
+                <div class="txt">
+                  <div class="card-container">
+                    <div class="txt-group">
+                      <div class="h5">桌上型電腦</div>
+                      <p>桌上型電腦功能強大，能處理複雜任務。處理性能出色但價格較高，需要更多工作空間。</p>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <input id="option4" type="radio" name="use_place" value="laptop">
+              <label class="card" for="option4">
+                <div class="btn-switch bg-0 lg">
+                  <div class="bg-circle">
+                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="method-input_img"><img src="./images/method/method_2_laptop.png" alt="筆電選項"></div>
+                </div>
+                <div class="txt">
+                  <div class="card-container">
+                    <div class="txt-group">
+                      <div class="h5">筆記型電腦</div>
+                      <p>筆記型電腦適合學生和辦公室工作人員使用，移動方便。遊戲性能較差，功能有限，需注意電池壽命對移動性的影響。</p>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="method-2-blob1"><img src="./images/method/method_2_blob1.png" alt="方法二背景blob1"></div>
+          <div class="method-2-blob2"><img src="./images/method/method_2_blob2.png" alt="方法二背景blob2"></div>
+        </div>
+        <div class="question-3 inner-container">
+          <div class="title-item">
+            <h3 class="svg-check"><span>方法3</span><span>選擇適合的操作系統</span></h3>
+          </div>
+          <div class="method-block method-grid">
+            <div class="method-input">
+              <input id="radio7-1" type="radio" name="use_system" value="Windows">
+              <label class="card" for="radio7-1">
+                <div class="btn-switch bg-0 lg">
+                  <div class="bg-circle">
+                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="method-input_img"><i class="fa-brands fa-windows logo_system_img"></i></div>
+                </div>
+                <div class="txt bgset">
+                  <div class="card-container">
+                    <div class="txt-group">
+                      <div class="h5">Windows</div>
+                      <ul>
+                        <li>市佔率高：Windows 是廣泛使用的操作系統之一，適用於家庭和商業環境。</li>
+                        <li>軟體支援豐富：擁有大量應用程式和遊戲選擇的軟體生態系統。</li>
+                        <li>使用者友好：提供直覺的介面和易於上手的操作方式，適合初學者和普通用戶。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <input id="radio7-2" type="radio" name="use_system" value="Mac OS">
+              <label class="card" for="radio7-2">
+                <div class="btn-switch bg-0 lg">
+                  <div class="bg-circle">
+                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="method-input_img"><i class="fa-brands fa-apple logo_system_img"></i></div>
+                </div>
+                <div class="txt bgset">
+                  <div class="card-container">
+                    <div class="txt-group">
+                      <div class="h5">Mac OS</div>
+                      <ul>
+                        <li>整合性和優質硬體：MacOS 僅在 Apple 自家硬體上運行，確保穩定性和效能。</li>
+                        <li>優質的用戶體驗：注重直覺且美觀的介面設計，流暢的操作和強大的內建軟體。</li>
+                        <li>對創意和多媒體工作的支援：在設計、多媒體和創意領域廣受歡迎，提供專業級軟體和工具。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <input id="radio7-3" type="radio" name="use_system" value="Linux">
+              <label class="card" for="radio7-3">
+                <div class="btn-switch bg-0 lg">
+                  <div class="bg-circle">
+                    <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.15137 14.5017L13.394 22.7444L31.0019 5.13647" stroke="#F24405" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="method-input_img"><i class="fa-brands fa-linux logo_system_img"></i></div>
+                </div>
+                <div class="txt bgset">
+                  <div class="card-container">
+                    <div class="txt-group">
+                      <div class="h5">Linux</div>
+                      <ul>
+                        <li>開放原始碼和自由性：自由修改和分發的開放原始碼操作系統。</li>
+                        <li>多樣性和靈活性：提供眾多發行版，每個都有獨特的特點和用途，適合各種需求。</li>
+                        <li>安全性和穩定性：以開放原始碼的監控和全球開發者社群的支援聞名。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="method-3-blob"><img src="./images/method/method_3_blob.png" alt="方法二背景blob1"></div>
+          <div class="method-3-bg"><img src="./images/method/method_3_bg.png" alt="方法二背景"></div>
+        </div>
+        <div class="question-4 inner-container">
+          <div class="title-item">
+            <h3 class="svg-check"><span>方法4</span><span>檢查你的預算</span></h3>
+          </div>
+          <div class="method-input">
+            <div class="card form-range" style="margin-bottom: 20px">
+              <div class="btn-group">
+                <div class="card-container">
+                  <div class="slider-container">
+                    <input class="slider" id="rangeSlider" type="text" value="預算" name="use_range">
+                  </div>
+                </div>
+              </div>
+              <div class="txt">
+                <div class="card-container">
+                  <p>
+                    筆記型電腦的價格範圍在台幣可以從幾千元到數十萬元不等，具體價格取決於品牌、規格和功能。
+                    較基本的筆記型電腦通常在幾千元到一萬多元之間，而高階筆記型電腦則可以達到數十萬元。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="method-4-blob"><img src="./images/method/method_4_blob.png" alt="方法四背景圖"></div>
+        </div>
+      </form>
+      <!-- 首頁 下一層->介紹電腦和結論-->
+      <div class="question-5">
+        <div class="svg-fromTo-bg"><img src="./images/method/method_fromTo-bg.svg" alt="方法五-介紹電腦和結論背景"></div>
+        <div class="inner-container">
+          <div class="title-item">
+            <h3 class="svg-check"><span>方法5</span><span>研究電腦的基本規格</span></h3>
+          </div>
+          <div class="method-about">
+            <div class="about-card out-bxshin">
+              <p>在進行產品比較時，了解基本規格將非常有幫助。這樣您可以清楚知道產品的核心特點，並進行有效比較。諸如處理器、內存、儲存空間、顯示屏和連接埠等基本規格都是關鍵因素。通過這樣的了解，您可以做出明智的選擇，確保滿足您的需求，並找到最符合預算的產品。</p>
+            </div>
+          </div>
+          <div class="method-input">
+            <!-- Tab頁籤-->
+            <div class="tab-container">
+              <input id="test-photo1" type="radio" name="tab" hidden="">
+              <input id="test-photo2" type="radio" name="tab" hidden="">
+              <input id="test-photo3" type="radio" name="tab" hidden="" checked="">
+              <input id="test-photo4" type="radio" name="tab" hidden="">
+              <input id="test-photo5" type="radio" name="tab" hidden="">
+              <div class="tab-nav">
+                <label for="test-photo1">
+                  <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/memorychip.svg" alt="記憶體 icon"><span>記憶體</span></div>
+                </label>
+                <label for="test-photo2">
+                  <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/hdd.svg" alt="硬碟 icon"><span>硬碟</span></div>
+                </label>
+                <label for="test-photo3">
+                  <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/cpu.svg" alt="CPU icon"><span>中央</span><span>處理器</span></div>
+                </label>
+                <label for="test-photo4">
+                  <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/gpu.svg" alt="GPU icon"><span>顯示卡</span></div>
+                </label>
+                <label for="test-photo5">
+                  <div class="tab-btn tab-bg"><img class="custom-svg-img" src="./images/svg-icon/tv.svg" alt="TV icon"><span>螢幕</span></div>
+                </label>
+              </div>
+              <div class="tab-content tab-content-photo1 bxsh-first">
+                <div class="tab-content-group">
+                  <div class="txt">
+                    <h4>記憶體（RAM）</h4>
+                    <p>
+                      RAM/內存 – 這是程序用來保存臨時信息的專用存儲器。如果您沒有足夠的 RAM，您會發現程序運行緩慢甚至崩潰。8 GB 是 RAM
+                      的一個很好的基準數字，儘管遊戲玩家和圖形設計師會希望至少是它的兩倍。
+                    </p><a class="turn-next-btn" href="#">閱讀更多</a>
+                  </div>
+                </div>
+                <div class="tab-content-img"><img src="./images/question-5/liam-briese-lYxQ5F9xBDM-unsplash.jpg" alt="RAM"></div>
+              </div>
+              <div class="tab-content tab-content-photo2 bxsh-first">
+                <div class="tab-content-group">
+                  <div class="txt">
+                    <h4>硬碟驅動器（HDD或SSD）</h4>
+                    <p>硬碟 - 這是您計算機的存儲空間。存儲以千兆字節 (GB) 為單位。您的所有文檔、程序、照片、視頻和音樂都將使用此空間。一般來說，存儲空間越多越好，儘管普通用戶可以輕鬆使用 500 GB。</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                  </div>
+                </div>
+                <div class="tab-content-img"><img src="./images/question-5/denny-muller-1qL31aacAPA-unsplash.jpg" alt="硬碟驅動器（HDD或SSD）"></div>
+              </div>
+              <div class="tab-content tab-content-photo3 bxsh-first">
+                <div class="tab-content-group">
+                  <div class="txt">
+                    <h4>中央處理器（CPU）</h4>
+                    <p>
+                      CPU – 這是計算機的處理器，是讓您的計算機運行的原因。有兩個主要製造商 - 英特爾和 AMD。AMD
+                      通常比英特爾便宜一點，性能相當，但會犧牲一些質量和支持。由於市場變化頻繁，請務必研究您計劃購買的
+                      CPU。
+                    </p><a class="turn-next-btn" href="#">閱讀更多</a>
+                  </div>
+                </div>
+                <div class="tab-content-img"><img src="./images/question-5/luan-gjokaj-nsr4hePZGYI-unsplash.jpg" alt="CPU"></div>
+              </div>
+              <div class="tab-content tab-content-photo4 bxsh-first">
+                <div class="tab-content-group">
+                  <div class="txt">
+                    <h4>顯示卡（GPU）</h4>
+                    <p>顯卡 — 如果您不運行遊戲或進行 3D 開發，您很可能不需要擔心您的顯卡。但是，如果您是遊戲愛好者，那麼顯卡是計算機的重要組成部分。</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                  </div>
+                </div>
+                <div class="tab-content-img"><img src="./images/question-5/timur-garifov - HlaGdSiC-g-unsplash.jpg" alt="顯示卡（GPU）"></div>
+              </div>
+              <div class="tab-content tab-content-photo5 bxsh-first">
+                <div class="tab-content-group">
+                  <div class="txt">
+                    <h4>顯示器(monitor)</h4>
+                    <p>挑選螢幕尺寸前，請先考慮放置螢幕的桌面大小、視線角度以及眼睛距離螢幕的舒適程度，醫師建議與電腦螢幕距離應把握在45～60公分以上或更遠，且以眼睛平視為基準，向下約10～20度的俯角為彈性幅度，大螢幕不可超過一定範圍，假設眼睛或頭部要特地挪動，螢幕就算太大。</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                  </div>
+                </div>
+                <div class="tab-content-img"><img src="./images/question-5/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="顯示器"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 首頁 下一層->結尾，跳轉按鈕-->
+      </div>
+      <div class="question-final">
+        <div class="final-group">
+          <div class="exclamation">
+            <svg width="78" height="249" viewBox="0 0 78 249" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M77.691 209.398C77.691 230.729 60.3369 248.083 39.0061 248.083C17.6753 248.083 0.321289 230.729 0.321289 209.398C0.321289 188.067 17.6753 170.713 39.0061 170.713C60.3369 170.713 77.691 188.067 77.691 209.398ZM4.79906 12.6852L11.3755 144.214C11.6845 150.39 16.7822 155.239 22.9664 155.239H55.0458C61.2301 155.239 66.3278 150.39 66.6368 144.214L73.2132 12.6852C73.5444 6.05611 68.2596 0.5 61.6223 0.5L16.39 0.5C9.75265 0.5 4.46782 6.05611 4.79906 12.6852Z" fill="white" fill-opacity="0.8"></path>
+            </svg>
+          </div>
+          <div class="avatars"><img src="./images/avatars/Avatars-final.png" alt="Avatars"></div>
+          <div class="turn-next-btn final h3" id="end_btn">評估您的需求</div>
+        </div>
+      </div>
+    </section>
+    <!-- rSlider 套件 JS-->
+    <script src="https://slawomir-zaziablo.github.io/range-slider/js/rSlider.min.js"></script>
+    <!-- Swiper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- this webpage JS-->
+    <script src="./js/script.js"></script>
+    <script src="./js/swiper1-5.js"></script>
+    <script>
+      // 載入檔案時去抓SVG檔換色
+      svg_icon('.custom-svg-img','currentColor');
+    </script>
+  </body>
+</html>

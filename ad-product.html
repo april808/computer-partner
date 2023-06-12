@@ -1,278 +1,231 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>聯絡我們</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/card.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/ad-product.css">
-  <!--  文字連結 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <!-- font-awesome -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
-  <!-- rSlider 套件 -->
-  <link rel="stylesheet" href="./range-slider-master/css/rSlider.min.css">
-  <style>
-  </style>
-</head>
-
-<body>
-  <div class="cpout-container">
-    <div class="inner-container">
-      <header class="top-navbar otherpage">
-        <div class="navbar-wrap">
-          <h1 class="logo">
-            <a href="./index.html">
-              <img src="./images/logo/logo_long.png" alt="電腦夥伴 | Computer Partner">
-            </a>
-          </h1>
-          <nav class="navigation">
-            <ul>
-              <li><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a></li>
-              <li><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a>
-              </li>
-              <li><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a></li>
-              <li><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a></li>
-              <li><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></li>
-            </ul>
-          </nav>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建議商品</title>
+    <link rel="icon" href="./images/logo/logo_light.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/ad-product.css">
+  </head>
+  <body>
+    <div class="out-container">
+      <input id="menu-switch" type="checkbox" name="">
+      <header class="main-header inner-container">
+        <div class="logo"><a href="./index.html">
+            <picture>
+              <source media="(min-width: 930px)" srcset="./images/logo/logo_long_light.png">
+              <source media="(min-width: 768px)" srcset="./images/logo/logo_e.svg"><img src="./images/logo/logo_e.svg" alt="電腦夥伴 | Computer Partner">
+            </picture></a></div>
+        <label class="hb" for="menu-switch"><span></span><span></span><span></span></label>
+        <nav class="main-nav"><a href="./index.html#answer"><i class="fa-solid fa-star-of-life"></i><span>如何開始</span></a><a href="./custom-setting.html"><i class="fa-solid fa-screwdriver-wrench"></i><span>自訂需求</span></a><a href="./ad-product.html"><i class="fa-solid fa-magnifying-glass"></i><span>建議商品</span></a><a href="./problems.html"><i class="fa-solid fa-circle-question"></i><span>常見問題</span></a><a href="./contact.html"><i class="fa-solid fa-envelopes-bulk"></i><span>聯絡我們</span></a></nav>
       </header>
+      <section class="ad-product">
+        <!-- 建議商品-->
+        <div class="title-item">
+          <h2 class="svg-check"><span>建議商品</span></h2>
+        </div>
+        <div class="inner-container"><a href="./item.html">
+            <div class="turn-next-btn">單一商品</div></a>
+          <!-- 產品清單-->
+          <div class="about-product">
+            <div class="product-list">
+              <div class="product-item bxsh-first">
+                <div class="tag h5">筆電</div>
+                <div class="item-img"><img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15"></div>
+                <div class="group">
+                  <h5 class="h2">ASUS Vivobook Pro 15</h5>
+                  <table class="des">
+                    <tbody>
+                      <tr>
+                        <td>型號</td>
+                        <td>K6500ZH</td>
+                      </tr>
+                      <tr>
+                        <td>處理器</td>
+                        <td>Intel® Core™ i5-12500H</td>
+                      </tr>
+                      <tr>
+                        <td>顯示卡</td>
+                        <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
+                      </tr>
+                      <tr>
+                        <td>記憶體</td>
+                        <td>16GB LPDDR5</td>
+                      </tr>
+                      <tr>
+                        <td>儲存空間</td>
+                        <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
+                      </tr>
+                      <tr>
+                        <td>螢幕</td>
+                        <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
+                      </tr>
+                      <tr>
+                        <td>電池</td>
+                        <td>50WHrs，3S1P，3 芯鋰離子電池</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="price h2">NT$ 40,900</div>
+                </div>
+              </div>
+              <div class="txt">
+                <div class="about">
+                  <div class="title bxsh">
+                    <h3 class="svg-star"><span>2023</span><span>  熱門商品</span></h3>
+                  </div>
+                  <h4>遊戲電腦：</h4>
+                  <p>ASUS Vivobook Pro 15:這是一款配置強大、性能出色、外觀時尚的筆記本電腦，非常適合遊戲愛好者使用</p><a class="turn-next-btn" href="#">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-list oder-rl">
+              <div class="product-item bxsh-first">
+                <div class="tag h5">筆電</div>
+                <div class="item-img"><img src="./images/product/S500TD.png" alt="ASUS Vivobook Pro 15"></div>
+                <div class="group">
+                  <h5 class="h2">ASUS Performance Desktop</h5>
+                  <table class="des">
+                    <tbody>
+                      <tr>
+                        <td>型號</td>
+                        <td>S500TD</td>
+                      </tr>
+                      <tr>
+                        <td>處理器</td>
+                        <td>Intel® Core™ i5-10400</td>
+                      </tr>
+                      <tr>
+                        <td>顯示卡</td>
+                        <td>NVIDIA® GeForce® GTX 1650 4GB GDDR6</td>
+                      </tr>
+                      <tr>
+                        <td>記憶體</td>
+                        <td>16GB DDR4 U-DIMM</td>
+                      </tr>
+                      <tr>
+                        <td>儲存空間</td>
+                        <td>512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD</td>
+                      </tr>
+                      <tr>
+                        <td>螢幕</td>
+                        <td>15.6吋光影點亮屏幕 (1920x1080 Full HD)</td>
+                      </tr>
+                      <tr>
+                        <td>電池</td>
+                        <td>90W電源適配器</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="price h2">NT $21,990</div>
+                </div>
+              </div>
+              <div class="txt">
+                <div class="about">
+                  <div class="title bxsh"></div>
+                  <h4>辦公電腦：</h4>
+                  <ul>
+                    <li>Lenovo ThinkPad X1 Carbon：這是一款輕巧、高效、性能出色的筆記本電腦，非常適合商務人士和學生使用。</li>
+                    <li>Dell OptiPlex 3080：這是一款性能穩定、配置豐富的桌面電腦，非常適合辦公室和家庭使用。</li>
+                  </ul><a class="turn-next-btn" href="#">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-list">
+              <div class="product-item bxsh-first">
+                <div class="tag h5">筆電</div>
+                <div class="item-img"><img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15"></div>
+                <div class="group">
+                  <h5 class="h2">ASUS Vivobook Pro 15</h5>
+                  <table class="des">
+                    <tbody>
+                      <tr>
+                        <td>型號</td>
+                        <td>K6500ZH</td>
+                      </tr>
+                      <tr>
+                        <td>處理器</td>
+                        <td>Intel® Core™ i5-12500H</td>
+                      </tr>
+                      <tr>
+                        <td>顯示卡</td>
+                        <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
+                      </tr>
+                      <tr>
+                        <td>記憶體</td>
+                        <td>16GB LPDDR5</td>
+                      </tr>
+                      <tr>
+                        <td>儲存空間</td>
+                        <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
+                      </tr>
+                      <tr>
+                        <td>螢幕</td>
+                        <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
+                      </tr>
+                      <tr>
+                        <td>電池</td>
+                        <td>50WHrs，3S1P，3 芯鋰離子電池</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="price h2">NT$ 40,900</div>
+                </div>
+              </div>
+              <div class="txt">
+                <div class="about">
+                  <div class="title bxsh"></div>
+                  <h4>辦公電腦：</h4>
+                  <ul>
+                    <li>Lenovo ThinkPad X1 Carbon：這是一款輕巧、高效、性能出色的筆記本電腦，非常適合商務人士和學生使用。</li>
+                    <li>Dell OptiPlex 3080：這是一款性能穩定、配置豐富的桌面電腦，非常適合辦公室和家庭使用。</li>
+                  </ul><a class="turn-next-btn" href="#">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 頁尾-->
+      <footer>
+        <div class="footer-wrap inner-container">
+          <div class="top"><a class="dark-logo" href="./index.html">
+              <picture>
+                <source media="(min-width: 930px)" srcset="./images/logo/logo_long_dark.png"><img src="./images/logo/logo_dark.png" alt="電腦夥伴 | Computer Partner">
+              </picture></a>
+            <div class="right"> 
+              <ul class="txt-link"><span>電腦夥伴 | Computer Partner</span>
+                <li><a href="./index.html#answer"><i class="fa-solid fa-check"></i> 如何開始</a></li>
+                <li><a href="./custom-setting.html"><i class="fa-solid fa-check"></i> 自訂需求</a></li>
+                <li><a href="./ad-product.html"><i class="fa-solid fa-check"></i> 建議商品</a></li>
+                <li><a href="./problems.html"><i class="fa-solid fa-check"></i> 常見問題</a></li>
+                <li><a href="./contact.html"><i class="fa-solid fa-check"></i> 聯絡我們</a></li>
+                <!-- <li><a href="#">注意事項</a></li>-->
+              </ul>
+              <ul><span>免責聲明</span>
+                <div class="disclaimer">
+                  <li> <i class="fa-solid fa-star-of-life"></i>產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
+                </div><span>關注我們</span>
+                <div class="icon-link">
+                  <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="inner-container">本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。</div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <section class="ad-product">
-      <!-- 建議商品 -->
-      <div class="title-item">
-        <h2 class="svg-check">
-          <span>建議商品</span>
-        </h2>
-      </div>
-      <div class="inner-container">
-        <!-- 產品清單 -->
-        <div class="about-product">
-
-          <div class="product-list">
-            <div class="product-item bxsh-first">
-              <div class="tag h5">筆電</div>
-              <div class="item-img">
-                <img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15">
-              </div>
-              <div class="group">
-
-                <h5 class="h2">ASUS Vivobook Pro 15</h5>
-                <table class="des">
-                  <tr>
-                    <td>型號</td>
-                    <td>K6500ZH</td>
-                  </tr>
-                  <tr>
-                    <td>處理器</td>
-                    <td>Intel® Core™ i5-12500H</td>
-                  </tr>
-                  <tr>
-                    <td>顯示卡</td>
-                    <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
-                  </tr>
-                  <tr>
-                    <td>記憶體</td>
-                    <td>16GB LPDDR5</td>
-                  </tr>
-                  <tr>
-                    <td>儲存空間</td>
-                    <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
-                  </tr>
-                  <tr>
-                    <td>螢幕</td>
-                    <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
-                  </tr>
-                  <tr>
-                    <td>電池</td>
-                    <td>50WHrs，3S1P，3 芯鋰離子電池</td>
-                  </tr>
-                </table>
-                <div class="price h2">NT$ 40,900</div>
-              </div>
-            </div>
-            <div class="txt">
-              <div class="about">
-                <div class="title bxsh">
-                  <h3 class="svg-star">
-                    <span>2023</span>
-                    <span>  熱門商品</span>
-                  </h3>
-                </div>
-                <h4>遊戲電腦：</h4>
-                <p>
-                  ASUS Vivobook Pro 15:這是一款配置強大、性能出色、外觀時尚的筆記本電腦，非常適合遊戲愛好者使用</p>
-                <a href="#" class="turn-next-btn">閱讀更多</a>
-              </div>
-            </div>
-          </div>
-          <div class="product-list oder-rl">
-            <div class="product-item bxsh-first">
-              <div class="tag h5">筆電</div>
-              <div class="item-img">
-                <img src="./images/product/S500TD.png" alt="ASUS Vivobook Pro 15">
-              </div>
-              <div class="group">
-
-                <h5 class="h2">ASUS Performance Desktop</h5>
-                <table class="des">
-                  <tr>
-                    <td>型號</td>
-                    <td>S500TD</td>
-                  </tr>
-                  <tr>
-                    <td>處理器</td>
-                    <td>Intel® Core™ i5-10400</td>
-                  </tr>
-                  <tr>
-                    <td>顯示卡</td>
-                    <td>NVIDIA® GeForce® GTX 1650 4GB GDDR6</td>
-                  </tr>
-                  <tr>
-                    <td>記憶體</td>
-                    <td>16GB DDR4 U-DIMM</td>
-                  </tr>
-                  <tr>
-                    <td>儲存空間</td>
-                    <td>512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD</td>
-                  </tr>
-                  <tr>
-                    <td>螢幕</td>
-                    <td>15.6吋光影點亮屏幕 (1920x1080 Full HD)</td>
-                  </tr>
-                  <tr>
-                    <td>電池</td>
-                    <td>90W電源適配器</td>
-                  </tr>
-                </table>
-                <div class="price h2">NT $21,990</div>
-              </div>
-            </div>
-            <div class="txt">
-              <div class="about">
-                <div class="title bxsh">
-                </div>
-                <h4>辦公電腦：</h4>
-                <ul>
-                  <li>Lenovo ThinkPad X1 Carbon：這是一款輕巧、高效、性能出色的筆記本電腦，非常適合商務人士和學生使用。
-                  </li>
-                  <li>Dell OptiPlex 3080：這是一款性能穩定、配置豐富的桌面電腦，非常適合辦公室和家庭使用。</li>
-                </ul>
-                <a href="#" class="turn-next-btn">閱讀更多</a>
-              </div>
-            </div>
-          </div>
-          <div class="product-list">
-            <div class="product-item bxsh-first">
-              <div class="tag h5">筆電</div>
-              <div class="item-img">
-                <img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15">
-              </div>
-              <div class="group">
-
-                <h5 class="h2">ASUS Vivobook Pro 15</h5>
-                <table class="des">
-                  <tr>
-                    <td>型號</td>
-                    <td>K6500ZH</td>
-                  </tr>
-                  <tr>
-                    <td>處理器</td>
-                    <td>Intel® Core™ i5-12500H</td>
-                  </tr>
-                  <tr>
-                    <td>顯示卡</td>
-                    <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
-                  </tr>
-                  <tr>
-                    <td>記憶體</td>
-                    <td>16GB LPDDR5</td>
-                  </tr>
-                  <tr>
-                    <td>儲存空間</td>
-                    <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
-                  </tr>
-                  <tr>
-                    <td>螢幕</td>
-                    <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
-                  </tr>
-                  <tr>
-                    <td>電池</td>
-                    <td>50WHrs，3S1P，3 芯鋰離子電池</td>
-                  </tr>
-                </table>
-                <div class="price h2">NT$ 40,900</div>
-              </div>
-            </div>
-            <div class="txt">
-              <div class="about">
-                <div class="title bxsh">
-                </div>
-                <h4>辦公電腦：</h4>
-                <ul>
-                  <li>Lenovo ThinkPad X1 Carbon：這是一款輕巧、高效、性能出色的筆記本電腦，非常適合商務人士和學生使用。
-                  </li>
-                  <li>Dell OptiPlex 3080：這是一款性能穩定、配置豐富的桌面電腦，非常適合辦公室和家庭使用。</li>
-                </ul>
-                <a href="#" class="turn-next-btn">閱讀更多</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- 頁尾 -->
-    <footer>
-      <div class="footer-wrap">
-        <div class="inner-container">
-          <div class="top">
-              <a href="./index.html">
-                <div class="dark-logo"><img src="./images/logo/logo_light.png" alt="logo_light"></div>
-              </a>
-              <div class="right">
-                <ul>
-                  <span>電腦夥伴 | Computer Partner</span>
-                  <li><a href="./index.html#answer"><i class="fa-solid fa-check"></i> 如何開始</a></li>
-                  <li><a href="./custom-setting.html"><i class="fa-solid fa-check"></i> 自訂需求</a></li>
-                  <li><a href="./ad-product.html"><i class="fa-solid fa-check"></i> 建議商品</a></li>
-                  <li><a href="./problems.html"><i class="fa-solid fa-check"></i> 常見問題</a></li>
-                  <li><a href="./contact.html"><i class="fa-solid fa-check"></i> 聯絡我們</a></li>
-                  <!-- <li><a href="#">注意事項</a></li> -->
-                </ul>
-                <ul>
-                  <span>免責聲明</span>
-                  <div class="disclaimer">
-                    <li>* 產品照僅供參考，規格與售價依實際經銷商販售為準。</li>
-                  </div>
-                  <span>關注我們</span>
-                  <div class="icon-link">
-                    <li><a href="#"><i class="fa-brands fa-blogger-b"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                  </div>
-                </ul>
-              </div>
-            </div>
-        </div>
-        <div class="bottom">
-          <div class="inner-container">
-            本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-</body>
-
+  </body>
 </html>

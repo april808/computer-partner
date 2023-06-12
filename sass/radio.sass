@@ -1,0 +1,157 @@
+$color_primary: rgba(160, 227, 242, 1)
+$color_secondary: rgba(242, 159, 5, 1)
+$color_red: rgba(242, 68, 5, 1)
+$color_info: rgba(201, 189, 242, 1)
+$color_dark: rgba(96, 90, 140, 1)
+
+$color_primary_minus1: rgba(205, 235, 242, 1)
+$color_primary_add1: rgba(122, 203, 221, 1)
+
+$color_secondary-light: lighten($color_secondary,20)
+
+$color_dark-add1: rgba(70, 64, 116, 1)
+
+$color_bg: #f5f5f5
+$color_white: rgba(#fff,.8)
+$color_black: #000
+$color_black_20: rgba(0,0,0,.2)
+
+// 文字描述背景
+$txt_bgset: linear-gradient(180deg, rgba($color_primary_minus1, 0.7) -100%, transparent 100%), rgba($color_primary_minus1, 0)
+
+//外陰影 
+$first-page-bxsh: 0px 4px 30px rgba(0, 0, 0, .1)
+
+//打勾長度
+$stroke-line: 38px
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin bdrs($r:50%)
+  border-radius: $r
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin abCenter($l:50%,$t:$l)
+  position: absolute
+  left: $l
+  top: $t
+  transform: translate(-50%,-50%)
+@mixin reCenter($l:50%,$t:$l)
+  position: relative
+  left: $l
+  top: $t
+  transform: translate(-50%,-50%)
+
+input[type="radio"]
+  display: none
+  & + label
+    cursor: pointer
+input[type="radio"]:checked + label
+  & .btn-switch
+    background: $color_primary_add1
+    color: $color_white
+    svg
+      stroke-dashoffset: 0px
+      transition: .5s
+      & path
+        transition: 0s
+        stroke: $color_red
+
+.btn-group
+  background-color: $color_primary_minus1
+  padding: 16px 0
+  min-height: 70px
+  z-index: 1
+  label
+    padding: 0 10px
+.btn-switch
+  position: relative
+   /* grey-10 */
+  background: #F1F1F1
+  /* 自動編排
+  +flexCenter
+  +bdrs(calc(42px / 2))
+  transition: .5s
+  span
+    flex-shrink: 1
+    width: calc(102px - 42px)
+    text-align: center
+  & .bg-circle
+    flex-shrink: 0
+    align-self: start
+    position: relative
+    +size(42px)
+    +bdrs
+    /* grey-10 */
+    background: #F1F1F1
+    /* 邊框 設定
+    border: 5px solid rgba(122, 203, 221, 1)
+    box-sizing: border-box
+    & svg
+      +abCenter(70%,50%)
+      transition: .3s
+      stroke-dasharray: $stroke-line
+      stroke-dashoffset: $stroke-line
+      & path
+        transition: .3s
+        stroke: #F1F1F1
+
+.btn-switch.lg
+  +bdrs(var(--innerbdrs) var(--innerbdrs)  0 0)
+  & .bg-circle
+    position: absolute
+    left: 0
+    top: 0
+    transform: translate(20px,20px) scale(1.3)
+.btn-switch.sm
+  +bdrs(calc(42px / 2))
+  span
+    min-width: calc(102px - 42px)
+  & .bg-circle
+    +size(30px)
+    /* 邊框 設定
+    border: 5px solid rgba(122, 203, 221, 1)
+.btn-switch.bg-0
+  background-color: transparent
+
+// 跳轉按鈕-----------------------------------------------------------------
+.turn-next-btn
+  /* 自動編排*/
+  +flexCenter
+  align-self: start
+  gap: 10px
+  padding: 5px 20px
+  color: $color_white
+  /* 輔助
+  background: $color_primary_add1
+  /* 主色+1
+  border: 0px solid #7ACBDD
+
+  /* 色塊投影
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), var(--bxsh-width) 0px #7ACBDD
+  backdrop-filter: blur(4px)
+  isolation: isolate
+  border-radius: 32px
+  transition: .5s
+  cursor: pointer
+  &:hover
+    background-color: $color_secondary
+    
+  &:active
+    transition: .3s
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px $color_primary_add1
+
+.turn-next-btn.final
+  background: #F29F05
+  border: 0
+  font-size: 18px
+  transition: .5s
+  cursor: pointer
+  &:hover
+    background: $color_red
