@@ -139,8 +139,7 @@ section.contact-us .form-submit {
 section.contact-us .form-submit .turn-next-btn {
   padding: 10px 40px;
 }
-
-input, textarea {
+section.contact-us input, section.contact-us textarea {
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -158,66 +157,68 @@ input, textarea {
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+section.contact-us input::-webkit-input-placeholder, section.contact-us textarea::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
-input::-moz-placeholder, textarea::-moz-placeholder {
+section.contact-us input::-moz-placeholder, section.contact-us textarea::-moz-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+section.contact-us input:-ms-input-placeholder, section.contact-us textarea:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+section.contact-us input::-ms-input-placeholder, section.contact-us textarea::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
-input::placeholder, textarea::placeholder {
+section.contact-us input::placeholder, section.contact-us textarea::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
-input:focus, textarea:focus {
+section.contact-us input:focus, section.contact-us textarea:focus {
   outline: 3px solid #fcc661;
   background-color: rgba(255, 255, 255, 0.8);
 }
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+section.contact-us input:focus::-webkit-input-placeholder, section.contact-us textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+section.contact-us input:focus::-moz-placeholder, section.contact-us textarea:focus::-moz-placeholder {
   color: transparent;
 }
-input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+section.contact-us input:focus:-ms-input-placeholder, section.contact-us textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
-input:focus::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
+section.contact-us input:focus::-ms-input-placeholder, section.contact-us textarea:focus::-ms-input-placeholder {
   color: transparent;
 }
-input:focus::placeholder, textarea:focus::placeholder {
+section.contact-us input:focus::placeholder, section.contact-us textarea:focus::placeholder {
   color: transparent;
 }
-input:focus i, textarea:focus i {
+section.contact-us input:focus i, section.contact-us textarea:focus i {
   color: #fcc661;
 }
 
-section.contact-us.inner-container .mailbody {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-section.contact-us.inner-container .user-block {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-section.contact-us.inner-container .logo-block {
-  width: 25%;
-  border-radius: 0px 20px 0px 50px;
-}
-section.contact-us.inner-container .logo-block p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (min-width: 768px) {
+  .mailbody {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .user-block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .logo-block {
+    width: 25%;
+    border-radius: 0px 20px 0px 50px;
+  }
+  .logo-block p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }

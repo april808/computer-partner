@@ -156,33 +156,34 @@ section.contact-us
     .turn-next-btn
       padding: 10px 40px
 
-input,textarea
-  width: 100%
-  appearance: none
-  transition: border-color 0.5s ease
-  background: rgba(255, 255, 255, 0.1)
-  border-radius: 0.3em
-  // border: none
-  border: 1px solid rgba(255, 255, 255, 0.3)
-  padding: 0.5em 1em
-  line-height: 20px
-  margin: 10px 0
-  outline: 3px solid transparent
-  font-size: 18px
-  transition: color .3s, background-color .3s
-  &::placeholder
-      color: rgba(0, 0, 0, 0.3)
-  &:focus
-    outline: 3px solid $color_secondary-light
-    background-color: rgba($color_white,.8)
+  input,textarea
+    width: 100%
+    appearance: none
+    transition: border-color 0.5s ease
+    background: rgba(255, 255, 255, 0.1)
+    border-radius: 0.3em
+    // border: none
+    border: 1px solid rgba(255, 255, 255, 0.3)
+    padding: 0.5em 1em
+    line-height: 20px
+    margin: 10px 0
+    outline: 3px solid transparent
+    font-size: 18px
+    transition: color .3s, background-color .3s
     &::placeholder
-      color: transparent
-    i
-      color: $color_secondary-light
+        color: rgba(0, 0, 0, 0.3)
+    &:focus
+      outline: 3px solid $color_secondary-light
+      background-color: rgba($color_white,.8)
+      &::placeholder
+        color: transparent
+      i
+        color: $color_secondary-light
 
 section.contact-us.inner-container
   // background-color: red
-
+// 視窗大於
+@media screen and (min-width: 768px)
   section.contact-us.inner-container
     // background-color: gold
   .mailbody
