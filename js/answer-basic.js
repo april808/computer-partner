@@ -35,7 +35,7 @@ function startAnswer() {
   // 當最後的按鈕點下後，在傳最後一次資料
   let end_btn = document.getElementById('end_btn');
   end_btn.addEventListener('click', function () {
-    let range = qstObject.qstItem[qstObject.qstItem.length - 1];
+    let range = qstObject.qstItem.find((qst) => qst.name === 'use_range');
     console.log('range.name', range.name); //use_range
     range.value = rangeVals;
     range.isChecked = true;

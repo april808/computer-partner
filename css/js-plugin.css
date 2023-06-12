@@ -94,12 +94,8 @@
 }
 
 #array {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: gold;
-  opacity: 1;
-  z-index: 999;
+  position: absolute;
+  bottom: 0;
 }
 
 .disabled_swiper_button {

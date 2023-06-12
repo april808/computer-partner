@@ -231,12 +231,6 @@ h3.svg-check::after {
   background-color: transparent;
   height: 4px;
 }
-.des-table .tr:first-of-type td {
-  padding-top: 15px;
-}
-.des-table .tr:last-of-type td {
-  padding-bottom: 10px;
-}
 .des-table .td {
   padding: 6px;
 }

@@ -6,19 +6,24 @@ let rangeVals = ['1萬', '10萬']; // 假設有初始值
 
 
 // 觸發開關
-const startBtn = new el_item('#start_btn');
-startBtn.addCls('auto');
-const cusTable = new el_item('#right-cus-table');
-cusTable.addCls('auto');
+const newStartBtn = new el_item('#start_btn');
+newStartBtn.addCls('auto');
+const newCusTable = new el_item('#right-cus-table');
+newCusTable.addCls('auto');
 
-const formContent = new el_item('#form');
-formContent.addCls('hidden').hidden = true;
+const newFormContent = new el_item('#form');
+newFormContent.addCls('hidden').hidden = true;
 
-const endBtn = new el_item('#end_btn');
-endBtn.addCls('auto');
+const newEndBtn = new el_item('#end_btn');
+newEndBtn.addCls('auto');
 
+const newbestAdvice = new el_item('#best-advice');
+newbestAdvice.addCls('hidden').hidden = true;
+
+
+
+rSliderInit();// range 預算套件執行
 function init() {
-  rSliderInit();// range 預算套件執行
   //立即開始 #start_btn 點按後出現問答
   document.getElementById('start_btn').onclick = startAnswer;
 }
@@ -26,10 +31,10 @@ function init() {
 // 開始問答--------------------------------------------
 function startAnswer() {
   console.log('立即開始回答?', this.id);
-  startBtn.toggleHidden();
-  cusTable.toggleHidden();
-  formContent.toggleHidden();
-  // new el_item(`#form`).removeCls('hidden');
+  newStartBtn.toggleHidden();
+  newCusTable.toggleHidden();
+  newFormContent.toggleHidden();
+  new el_item(`#form`).removeCls('hidden');
 
   let form = document.getElementById('form');
   answerArray(form); //取出問題的 name 製作成陣列
@@ -38,7 +43,7 @@ function startAnswer() {
   // console.log(qstObject)
 
   let txt_array = document.querySelector('#array'); // 回答印出的地方
-  txt_array.textContent = "init";// 檢查觸發是否開始
+  txt_array.textContent = "您的回答紀錄";// 檢查觸發是否開始
 
   // 聆聽是否變動問卷
   form.addEventListener('change', function (e) {
@@ -49,15 +54,16 @@ function startAnswer() {
   // 當最後的按鈕點下後，在傳最後一次資料
   let end_btn = document.getElementById('end_btn');
   end_btn.addEventListener('click', function () {
-    let range = qstObject.qstItem[qstObject.qstItem.length - 1];
+    let range = qstObject.qstItem.find((qst) => qst.name === 'use_range');
     console.log('range.name', range.name); //use_range
     range.value = rangeVals;
     range.isChecked = true;
     console.log('qstObject', qstObject)
-    startBtn.toggleHidden();
-    formContent.toggleHidden();
+    newStartBtn.toggleHidden();
+    newFormContent.toggleHidden();
     setTimeout(() => {
-      cusTable.toggleHidden();
+      newCusTable.toggleHidden();
+      newbestAdvice.toggleHidden();
     }, 600)
   })
 }

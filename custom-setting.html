@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="./css/cus-table.css">
     <link rel="stylesheet" href="./css/problems.css">
+    <!-- rSlider 套件 CSS-->
+    <link rel="stylesheet" href="https://slawomir-zaziablo.github.io/range-slider/css/rSlider.min.css">
+    <!-- 套件CSS 樣式修改-->
+    <link rel="stylesheet" href="./css/js-plugin.css">
   </head>
   <body>
     <div class="out-container">
@@ -36,16 +40,12 @@
               <div class="budget-block asbxsh">
                 <div class="two-wrap">
                   <div class="avatars"><img src="./images/avatars/Avatars-final.png" alt="Avatars"></div>
-                  <div class="budget-group"><span class="h5">預算</span>
-                    <div class="search numper-group">
-                      <input id="search" type="text" name="搜尋" placeholder="輸入金額">
-                    </div>
-                  </div>
+                  <div class="budget-group"></div>
                 </div>
                 <div class="two-wrap edit-pan">
                   <div class="final turn-next-btn" id="start_btn"> <span class="h5">需求描述</span><i class="fa-solid fa-pen"></i></div>
                 </div>
-                <div id="array">這裡放陣列</div>
+                <div id="array"> </div>
               </div>
             </div>
             <div class="right-cus-table asbxsh" id="right-cus-table">
@@ -352,7 +352,7 @@
         </div>
       </section>
       <!-- 最佳建議-->
-      <section class="best-advice">
+      <section class="best-advice" id="best-advice">
         <div class="inner-container">
           <div class="title-item">
             <h3 class="svg-check"><span>最佳建議</span></h3>

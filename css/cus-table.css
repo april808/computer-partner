@@ -53,17 +53,12 @@ section span.budget-numper::before {
   white-space: nowrap;
 }
 .edit-pan i {
-  color: rgb(242, 159, 5);
   padding-top: 5px;
   cursor: pointer;
   padding-right: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.edit-pan:hover i {
-  color: rgb(242, 68, 5);
-}
-
 .cus-table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,6 +103,7 @@ section span.budget-numper::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 50%;
   padding: 30px 20px;
 }
 

@@ -190,8 +190,8 @@ img[alt*=背景] {
   transition: max-height 1s, -webkit-transform 1s;
   transition: transform 1s, max-height 1s;
   transition: transform 1s, max-height 1s, -webkit-transform 1s;
-  -webkit-transform: translateY(-2em);
-          transform: translateY(-2em);
+  -webkit-transform: translateY(5em);
+          transform: translateY(5em);
   max-height: 0px;
 }
 
@@ -204,5 +204,5 @@ img[alt*=背景] {
   transition: transform 1s, max-height 1s, -webkit-transform 1s;
   -webkit-transform: translateY(0em);
           transform: translateY(0em);
-  max-height: 1000px;
+  max-height: 2000px;
 }

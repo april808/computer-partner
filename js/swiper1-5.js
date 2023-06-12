@@ -16,14 +16,26 @@ const allQst = function (options) {
   }));
 }
 
+// 觸發開關
+const newStartBtn = new el_item('#start_btn');
+newStartBtn.addCls('auto');
+const newEndBtn = new el_item('#end_btn');
+newEndBtn.addCls('auto');
+const newbestAdvice = new el_item('#best-advice');
+newbestAdvice.addCls('hidden').hidden = true;
+
+// const newFormContent = new el_item('#form');
+// newFormContent.addCls('hidden').hidden = true;
+
 
 function init() {
   rSliderInit();// range 預算套件執行
   //立即開始 #start_btn 點按後出現問答
+  initSwiper();//把所有問題隱藏
   document.getElementById('start_btn').onclick = startAnswer;
-  new el_item(`#start_btn`)
-  .addCls('auto')
-  .addAni('transition-delay' , 's')
+  newStartBtn
+    .addCls('auto')
+    .addAni('transition-delay', 's')
 }
 
 
@@ -31,17 +43,14 @@ function init() {
 // 主要操作的class項目
 const all_qst = [".question-1", ".question-2", ".question-3", ".question-4", ".question-5", ".question-final"];
 
-// initSwiper();
+
 
 function initSwiper() {
-  // for (let i = 0; i < all_qst.length; i++) {
-  //   // 事先將指定的項目在畫面中消失
-  //   let qstList = new qst(all_qst[i]);
-  //   qstList.qst_item.classList.add('hidden');
-  // }
-  //立即開始 #start_btn 點按後出現問答
-  // document.getElementById('start_btn').onclick = start_answer;
-
+  for (let i = 0; i < all_qst.length; i++) {
+    // 事先將指定的項目在畫面中消失
+    let qstList = new el_item(all_qst[i]);
+    qstList.addCls('hidden').hidden = true;
+  }
 }
 
 // 取得方法1的5個問題陣列-------------並觸發翻頁
@@ -57,6 +66,7 @@ function getRadio1_5(firstFiveItems, txt_array, checked_array, swiper) {
       .alertText(`<span>方法1 項目完成!</span>`)
       .addCls('ani_end')
       .addAni('animation', 'ani_s 0.3s 1');
+    new el_item('.question-2').removeCls('hidden').addCls('auto').hidden = false;
     return;
   } else {
     // 觸發點按事件後，確認當下的按鈕有沒有值
@@ -109,7 +119,9 @@ function getRadio1_5(firstFiveItems, txt_array, checked_array, swiper) {
 // 開始問答--------------------------------------------
 function startAnswer() {
   console.log('立即開始回答?', this.id);
-  new el_item(`#start_btn`).toggleHidden()
+  new el_item(`#start_btn`).toggleHidden();
+  new el_item('.question-1').removeCls('hidden').addCls('auto').hidden = false;
+  console.log('new el_item(.question-1', new el_item('.question-1'))
 
   answerArray(form); //取出問題的 name 製作成陣列
 
@@ -127,17 +139,38 @@ function startAnswer() {
     let firstFiveItems = qstObject.qstItem.slice(0, 5);
     // console.log('firstFiveItems',firstFiveItems,swiper)
     getRadio1_5(firstFiveItems, txt_array, checked_array, swiper); // 將 qstObject 和 swiper 作為參數傳遞
+
+    console.log('e', e.target.name)
+
+    if (e.target.name == 'use_place') {
+      new el_item('.question-3').removeCls('hidden').addCls('auto').hidden = false;
+    }
+
+    if (e.target.name == 'use_system') {
+      new el_item('.question-4').removeCls('hidden').addCls('auto').hidden = false;
+
+      setTimeout(()=>{
+        new el_item('.question-5').removeCls('hidden').addCls('auto').hidden = false;
+      }, 600)
+
+      setTimeout(()=>{
+        new el_item('.question-final').removeCls('hidden').addCls('auto').hidden = false;
+      }, 1200)
+
+    }
   });
 
   // 當最後的按鈕點下後，傳最後一次資料
   let end_btn = document.getElementById('end_btn');
   end_btn.addEventListener('click', function () {
-    let range = qstObject.qstItem[qstObject.qstItem.length - 1];
+    let range = qstObject.qstItem.find((qst) => qst.name === 'use_range');
     console.log('range.name', range.name); //use_range
     range.value = rangeVals;
     range.isChecked = true;
     txt_array.textContent += rangeVals;
     console.log('qstObject', qstObject)
+    newEndBtn.toggleHidden();
+    newbestAdvice.toggleHidden();
   })
 }
 
@@ -194,11 +227,9 @@ function answerArray(form) {
 function rSliderInit() {
   rangeSlider = new rSlider({
     target: '#rangeSlider',
-    values: ['1萬', '2萬', '3萬', '4萬', '5萬', '6萬', '7萬', '8萬', '9萬', '10萬',
-      '11萬', '12萬', '13萬', '14萬', '15萬', '16萬', '17萬', '18萬', '19萬', '20萬'
-    ],
+    values: ['1萬', '2萬', '3萬', '4萬', '5萬', '6萬', '7萬', '8萬', '9萬', '10萬'],
     range: true,
-    set: ['1萬', '20萬'],
+    set: ['1萬', '10萬'],
     onChange: (newRangeVals) => {
       console.log(newRangeVals);
       rangeVals = newRangeVals; // 更新全域變數 rangeVals 的值

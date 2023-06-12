@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="./css/ad-product.css">
+    <link rel="stylesheet" href="./grid.css">
   </head>
   <body>
     <div class="out-container">
@@ -27,53 +28,108 @@
       <section class="ad-product">
         <!-- 建議商品-->
         <div class="title-item">
-          <h2 class="svg-check"><span>建議商品</span></h2>
+          <h2 class="svg-check"><span>建議商品</span></h2><a href="./item.html"></a>
         </div>
-        <div class="inner-container"><a href="./item.html">
-            <div class="turn-next-btn">單一商品</div></a>
-          <!-- 產品清單-->
-          <div class="about-product">
-            <div class="product-list">
-              <div class="product-item bxsh-first">
-                <div class="tag h5">筆電</div>
+        <div class="inner-container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-2">
+            <div class="col about-product">
+              <div class="txt">
+                <div class="about">
+                  <div class="title bxsh">
+                    <h3 class="svg-star"><span>2023</span><span>  熱門商品</span></h3>
+                  </div>
+                  <h4>遊戲電腦：</h4>
+                  <p>ASUS Vivobook Pro 15:這是一款配置強大、性能出色、外觀時尚的筆記本電腦，非常適合遊戲愛好者使用</p><a class="turn-next-btn" href="./item.html">了解更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="col product-item bxsh-first">
+              <div class="table-row">
                 <div class="item-img"><img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15"></div>
                 <div class="group">
                   <h5 class="h2">ASUS Vivobook Pro 15</h5>
-                  <table class="des">
-                    <tbody>
-                      <tr>
-                        <td>型號</td>
-                        <td>K6500ZH</td>
-                      </tr>
-                      <tr>
-                        <td>處理器</td>
-                        <td>Intel® Core™ i5-12500H</td>
-                      </tr>
-                      <tr>
-                        <td>顯示卡</td>
-                        <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
-                      </tr>
-                      <tr>
-                        <td>記憶體</td>
-                        <td>16GB LPDDR5</td>
-                      </tr>
-                      <tr>
-                        <td>儲存空間</td>
-                        <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
-                      </tr>
-                      <tr>
-                        <td>螢幕</td>
-                        <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
-                      </tr>
-                      <tr>
-                        <td>電池</td>
-                        <td>50WHrs，3S1P，3 芯鋰離子電池</td>
-                      </tr>
-                    </tbody>
-                  </table>
                   <div class="price h2">NT$ 40,900</div>
                 </div>
               </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead> 
+                    <tr>
+                      <th class="fixed-column">型號</th>
+                      <th>處理器</th>
+                      <th>顯示卡</th>
+                      <th>記憶體</th>
+                      <th>儲存空間</th>
+                      <th>螢幕</th>
+                      <th>電池</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fixed-column">K6500ZH</td>
+                      <td>Intel® Core™ i5-12500H</td>
+                      <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
+                      <td>16GB LPDDR5</td>
+                      <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
+                      <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
+                      <td>50WHrs，3S1P，3 芯鋰離子電池</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row row-cols-1">
+            <div class="col">
+              <h2 class="svg-check"><span>相關商品</span></h2>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="table-wrapper">
+                  <table>
+                    <thead> 
+                      <tr>
+                        <th class="fixed-column">名稱</th>
+                        <th>型號</th>
+                        <th>處理器</th>
+                        <th>顯示卡</th>
+                        <th>記憶體</th>
+                        <th>儲存空間</th>
+                        <th>螢幕</th>
+                        <th>電池</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fixed-column"><img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15"> ASUS Vivobook Pro 15</td>
+                        <td>K6500ZH</td>
+                        <td>Intel® Core™ i5-12500H</td>
+                        <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
+                        <td>16GB LPDDR5</td>
+                        <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
+                        <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
+                        <td>50WHrs，3S1P，3 芯鋰離子電池</td>
+                      </tr>
+                      <tr>
+                        <td class="fixed-column"><img src="./images/product/S500TD.png" alt="ASUS Vivobook Pro 15"> ASUS Performance Desktop</td>
+                        <td>S500TD</td>
+                        <td>Intel® Core™ i5-10400</td>
+                        <td>NVIDIA® GeForce® GTX 1650 4GB GDDR6</td>
+                        <td>16GB DDR4 U-DIMM</td>
+                        <td>512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD</td>
+                        <td>15.6吋光影點亮屏幕 (1920x1080 Full HD)</td>
+                        <td>90W電源適配器</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-2">
+            <div class="col about-product">
               <div class="txt">
                 <div class="about">
                   <div class="title bxsh">
@@ -84,108 +140,39 @@
                 </div>
               </div>
             </div>
-            <div class="product-list oder-rl">
-              <div class="product-item bxsh-first">
-                <div class="tag h5">筆電</div>
-                <div class="item-img"><img src="./images/product/S500TD.png" alt="ASUS Vivobook Pro 15"></div>
-                <div class="group">
-                  <h5 class="h2">ASUS Performance Desktop</h5>
-                  <table class="des">
-                    <tbody>
-                      <tr>
-                        <td>型號</td>
-                        <td>S500TD</td>
-                      </tr>
-                      <tr>
-                        <td>處理器</td>
-                        <td>Intel® Core™ i5-10400</td>
-                      </tr>
-                      <tr>
-                        <td>顯示卡</td>
-                        <td>NVIDIA® GeForce® GTX 1650 4GB GDDR6</td>
-                      </tr>
-                      <tr>
-                        <td>記憶體</td>
-                        <td>16GB DDR4 U-DIMM</td>
-                      </tr>
-                      <tr>
-                        <td>儲存空間</td>
-                        <td>512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD</td>
-                      </tr>
-                      <tr>
-                        <td>螢幕</td>
-                        <td>15.6吋光影點亮屏幕 (1920x1080 Full HD)</td>
-                      </tr>
-                      <tr>
-                        <td>電池</td>
-                        <td>90W電源適配器</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="price h2">NT $21,990</div>
-                </div>
-              </div>
-              <div class="txt">
-                <div class="about">
-                  <div class="title bxsh"></div>
-                  <h4>辦公電腦：</h4>
-                  <ul>
-                    <li>Lenovo ThinkPad X1 Carbon：這是一款輕巧、高效、性能出色的筆記本電腦，非常適合商務人士和學生使用。</li>
-                    <li>Dell OptiPlex 3080：這是一款性能穩定、配置豐富的桌面電腦，非常適合辦公室和家庭使用。</li>
-                  </ul><a class="turn-next-btn" href="#">閱讀更多</a>
-                </div>
-              </div>
-            </div>
-            <div class="product-list">
-              <div class="product-item bxsh-first">
-                <div class="tag h5">筆電</div>
+            <div class="col product-item bxsh-first">
+              <div class="table-row">
                 <div class="item-img"><img src="./images/product/K6500ZH.png" alt="ASUS Vivobook Pro 15"></div>
                 <div class="group">
                   <h5 class="h2">ASUS Vivobook Pro 15</h5>
-                  <table class="des">
-                    <tbody>
-                      <tr>
-                        <td>型號</td>
-                        <td>K6500ZH</td>
-                      </tr>
-                      <tr>
-                        <td>處理器</td>
-                        <td>Intel® Core™ i5-12500H</td>
-                      </tr>
-                      <tr>
-                        <td>顯示卡</td>
-                        <td>NVIDIA® GeForce® GTX 1650 Max Q</td>
-                      </tr>
-                      <tr>
-                        <td>記憶體</td>
-                        <td>16GB LPDDR5</td>
-                      </tr>
-                      <tr>
-                        <td>儲存空間</td>
-                        <td>512GB M.2 NVMe™ PCIe® 4.0 Performance SSD</td>
-                      </tr>
-                      <tr>
-                        <td>螢幕</td>
-                        <td>15.6 吋, FHD (1920 x 1080) 16:9 窄邊框</td>
-                      </tr>
-                      <tr>
-                        <td>電池</td>
-                        <td>50WHrs，3S1P，3 芯鋰離子電池</td>
-                      </tr>
-                    </tbody>
-                  </table>
                   <div class="price h2">NT$ 40,900</div>
                 </div>
               </div>
-              <div class="txt">
-                <div class="about">
-                  <div class="title bxsh"></div>
-                  <h4>辦公電腦：</h4>
-                  <ul>
-                    <li>Lenovo ThinkPad X1 Carbon：這是一款輕巧、高效、性能出色的筆記本電腦，非常適合商務人士和學生使用。</li>
-                    <li>Dell OptiPlex 3080：這是一款性能穩定、配置豐富的桌面電腦，非常適合辦公室和家庭使用。</li>
-                  </ul><a class="turn-next-btn" href="#">閱讀更多</a>
-                </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead> 
+                    <tr>
+                      <th class="fixed-column">型號</th>
+                      <th>處理器</th>
+                      <th>顯示卡</th>
+                      <th>記憶體</th>
+                      <th>儲存空間</th>
+                      <th>螢幕</th>
+                      <th>電池</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fixed-column">S500TD</td>
+                      <td>Intel® Core™ i5-10400</td>
+                      <td>NVIDIA® GeForce® GTX 1650 4GB GDDR6</td>
+                      <td>16GB DDR4 U-DIMM</td>
+                      <td>512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD</td>
+                      <td>15.6吋光影點亮屏幕 (1920x1080 Full HD)</td>
+                      <td>90W電源適配器</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
