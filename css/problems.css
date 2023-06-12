@@ -162,7 +162,8 @@ input:focus::placeholder {
           flex-direction: column;
   gap: 10px;
 }
-.problem-card p {
+
+.ellipsis p {
   /* 2行 超出部分隱藏 ellipsis ... */
   display: -webkit-box;
   -webkit-box-orient: vertical;

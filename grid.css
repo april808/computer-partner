@@ -11,6 +11,10 @@ html{
     padding-left: var(--gs-gap);
     padding-right: var(--gs-gap);
 }
+.g-2 .col{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .row{
     display: flex;
     flex-wrap: wrap;

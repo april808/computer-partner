@@ -1,12 +1,4 @@
 @charset "UTF-8";
-.about, .question-final {
-  min-height: 100vh;
-}
-
-.question-1, .question-2, .question-3, .question-4, .question-5 {
-  min-height: 700px;
-}
-
 /* 大標介紹樣式 */
 .about {
   /* 自動編排 */

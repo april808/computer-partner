@@ -183,6 +183,10 @@ img[alt*=背景] {
   pointer-events: none;
 }
 
+.next-page {
+  height: content-fit;
+}
+
 .hidden {
   pointer-events: none;
   opacity: 0;
