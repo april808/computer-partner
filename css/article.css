@@ -2,6 +2,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
 }
 .article-out .tab-sort-nav.fxdc {
   -webkit-box-orient: vertical;
@@ -24,4 +25,14 @@
 }
 .tab-sort.card .search {
   padding-left: 0;
+}
+
+.article-out h5 span {
+  color: rgb(122, 203, 221);
+}
+.article-out h4 {
+  color: rgb(242, 159, 5);
+}
+.article-out p {
+  color: #7B7B7B;
 }
