@@ -7,6 +7,42 @@
           justify-content: center;
 }
 
+.title.bxsh .g-2 .col {
+  padding: 20px;
+}
+.title-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.title-name h4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+}
+.col.make {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.col.make .item-img {
+  max-width: 200px;
+}
+
 .box {
   width: 900px;
   aspect-ratio: 600/450;
