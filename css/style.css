@@ -44,7 +44,9 @@ body {
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 2px;
+  line-height: 1.8em;
   color: rgb(70, 64, 116);
+  vertical-align: top;
 }
 
 button, input {
@@ -60,6 +62,7 @@ img {
 
 h2, .h2 {
   font-size: 32px;
+  line-height: 1.3em;
 }
 
 h3, .h3 {

@@ -1,0 +1,161 @@
+$color_primary: rgba(160, 227, 242, 1)
+$color_secondary: rgba(242, 159, 5, 1)
+$color_red: rgba(242, 68, 5, 1)
+$color_info: rgba(201, 189, 242, 1)
+$color_dark: rgba(96, 90, 140, 1)
+
+$color_primary_minus1: rgba(205, 235, 242, 1)
+$color_primary_add1: rgba(122, 203, 221, 1)
+
+$color_secondary-light: lighten($color_secondary,20)
+
+$color_dark-add1: rgba(70, 64, 116, 1)
+
+$color_bg: #f5f5f5
+$color_white: rgba(#fff,.8)
+$color_black: rgba(0,0,0,.8)
+$color_black_20: rgba(0,0,0,.2)
+
+// 首頁錯位單位
+$move-left: 144px
+$left-navbar: 220px
+
+//外陰影 
+$first-page-bxsh: 0px 4px 30px rgba(0, 0, 0, .1)
+
+//打勾長度
+$stroke-line: 38px
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin bdrs($r:50%)
+  border-radius: $r
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin abCenter($l:50%,$t:$l)
+  position: absolute
+  left: $l
+  top: $t
+  transform: translate(-50%,-50%)
+
+
+
+
+// 標題樣式
+.title.bxsh
+  // width: 30%
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fff
+  border-radius: 10px
+  box-sizing: border-box
+  margin-bottom: 80px
+
+  /* 熱門標題 */
+  box-shadow: inset -10px 10px 0px #7ACBDD
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+
+.bxsh h3
+  &.svg-star
+    padding: 10px 0px 10px 15px
+    & + span
+      margin-right: -8px
+    &::before
+      content: url(../images/svg/svg-star.svg)
+      width: 60px
+      height: 57px
+      background-color: #fff
+      position: relative
+      right: 5px
+      top: 5px
+
+
+.product-list.oder-rl
+  .txt
+    // order: -1
+
+// 產品項目
+.about-product
+  .product-list
+    margin-bottom: 80px
+    display: flex
+    justify-content: start
+    flex-direction: row
+    flex-wrap: nowrap
+  .txt
+    background-color: $color_primary_minus1
+
+    .about
+      padding: 20px
+      display: flex
+      justify-content: center
+      flex-direction: column
+      gap: 20px
+  ul
+    list-style-type: square
+
+.product-item
+  background-color: rgba(255,255,255,0)
+  .item-img
+    min-width: 400px
+    max-height: 400px
+    aspect-ratio: 1.3/1
+  table
+    $pd: 30px
+    // margin: 20px 0
+    background-color: transparent
+    td
+      &:first-of-type
+        background-color: $color_primary
+.table-wrapper
+  .fixed-column
+    max-width: 300px
+
+
+// 表格製作-------------------------------------------------
+.card:has(.table-wrapper)
+  background-color: transparent
+  overflow: hidden
+  border: 0
+// 主打商品
+.about-product
+  .product-item
+
+.table-wrapper
+  .tr:hover .fixed-column
+    background-color: red!important
+
+// 黏住---------------------------------------
+
+.table-wrapper
+  overflow-x: auto
+  max-width: 100%
+
+  table
+    width: max-content
+    min-width: 100%
+    border-collapse: collapse
+
+  thead th
+    position: sticky
+    left: 0
+    background-color: #fff
+    z-index: 1
+
+  tbody td
+    padding: 8px
+    border-bottom: 1px solid #fff
+    border-right: 1px solid #fff
+
+  .fixed-column
+    position: sticky
+    left: 0
+    z-index: 2
+    background-color: $color_primary_add1

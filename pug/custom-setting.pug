@@ -1,0 +1,533 @@
+doctype html
+html(lang='zh-Hant')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 自訂需求
+    link(rel='icon' href='./images/logo/logo_light.png')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/header.css')
+    link(rel='stylesheet' href='./css/footer.css')
+    //- 自訂需求使用樣式連結
+    link(rel='stylesheet' href='./css/card.css')
+    link(rel='stylesheet' href='./css/cus-table.css')
+    link(rel='stylesheet' href='./css/problems.css')
+    // rSlider 套件 CSS
+    link(rel='stylesheet' href='https://slawomir-zaziablo.github.io/range-slider/css/rSlider.min.css')
+    // 套件CSS 樣式修改
+    link(rel='stylesheet' href='./css/js-plugin.css')
+  body
+    .out-container
+      input#menu-switch(type='checkbox' name='')
+      header.main-header.inner-container
+        .logo
+          a(href='./index.html')
+            picture
+              source(media='(min-width: 930px)' srcset='./images/logo/logo_long_light.png')
+              source(media='(min-width: 768px)' srcset='./images/logo/logo_e.svg')
+              img(src='./images/logo/logo_e.svg' alt='電腦夥伴 | Computer Partner')
+        label.hb(for='menu-switch')
+          span
+          span
+          span
+        nav.main-nav
+          a(href='./index.html#answer')
+            i.fa-solid.fa-star-of-life
+            span 如何開始
+          a(href='./custom-setting.html')
+            i.fa-solid.fa-screwdriver-wrench
+            span 自訂需求
+          a(href='./ad-product.html')
+            i.fa-solid.fa-magnifying-glass
+            span 建議商品
+          a(href='./problems.html')
+            i.fa-solid.fa-circle-question
+            span 常見問題
+          a(href='./contact.html')
+            i.fa-solid.fa-envelopes-bulk
+            span 聯絡我們
+      
+      // 建議規格表格
+      section.cus-table-out
+        .inner-container
+          .title-item
+            h2.svg-check
+              span 自訂需求
+          .cus-table
+            .left-cus-table
+              .budget-block.asbxsh
+                .two-wrap
+                  .avatars
+                    img(src='./images/avatars/Avatars-final.png' alt='Avatars')
+                  .budget-group
+                    //- span.h5 預算
+                    //- .search.numper-group
+                      //- input#search(type='text' name='搜尋' placeholder='輸入金額')
+                .two-wrap.edit-pan
+                  //- .turn-next-btn
+                  //-     span.h5 需求描述
+                  //-     i.fa-solid.fa-pen
+                  #start_btn.final.turn-next-btn 
+                    span.h5 需求描述
+                    i.fa-solid.fa-pen
+                #array 
+            #right-cus-table.right-cus-table.asbxsh
+              .row-block
+                .edit-pan
+                  span.h5 建議規格
+                  // <i class="fa-solid fa-pen"></i>
+              ul.answer-txt-group.body-bold.pc-part.worksoft
+                .item-pc-part
+                  li.answer-txt
+                    img.custom-svg(src='./images/svg-icon/cpu.svg' alt='中央處理器icon')
+                    span 中央
+                    span 處理器
+                  .item-bar-group
+                    .item-bar
+                      .value.p80
+                    .range-text
+                      span
+                        | 入門
+                        sub 基本
+                      span
+                        | 中階
+                        sub 多任務
+                      span
+                        | 高階
+                        sub 專業繪圖
+                      span
+                        | 旗艦
+                        sub 數十億次/秒
+                .item-pc-part
+                  li.answer-txt
+                    img.custom-svg(src='./images/svg-icon/memorychip.svg' alt='記憶體icon')
+                    span 記憶體
+                  .item-bar-group
+                    .item-bar
+                      .value.p40
+                    .range-text
+                      span
+                        | 基本
+                        sub 標準
+                      span
+                        | 中階
+                        sub 提升效能
+                      span
+                        | 高階
+                        sub 高性能
+                      span
+                        | 伺服器
+                        sub 高可靠性
+                .item-pc-part
+                  li.answer-txt
+                    img.custom-svg(src='./images/svg-icon/HDD.svg' alt='硬碟icon')
+                    span 硬碟
+                  .item-bar-group
+                    .item-bar
+                      .value.p80
+                    .range-text
+                      span
+                        | HDD 
+                        sub 傳統
+                      span
+                        | SSD 
+                        sub 提升效能
+                      span
+                        | NAS 
+                        sub 企業
+                .item-pc-part
+                  li.answer-txt
+                    img.custom-svg(src='./images/svg-icon/battery.svg' alt='電源供應器icon')
+                    span 電源
+                    span 供應器
+                  .item-bar-group
+                    .item-bar
+                      .value.p50
+                    .range-text
+                      span
+                        | 低
+                        sub 基本
+                      span
+                        | 中
+                        sub 主流
+                      span
+                        | 高
+                        sub 伺服器
+                .item-pc-part
+                  li.answer-txt
+                    img.custom-svg(src='./images/svg-icon/TV.svg' alt='螢幕icon')
+                    span 螢幕
+                  .item-bar-group
+                    .item-bar
+                      .value.p50
+                    .range-text
+                      span
+                        | TN 
+                        sub 快速反應
+                      span
+                        | VA 
+                        sub 高對比
+                      span
+                        | IPS 
+                        sub 廣視角、準確色彩
+                .item-pc-part
+                  li.answer-txt
+                    img.custom-svg(src='./images/svg-icon/gpu.svg' alt='顯示卡icon')
+                    span 顯示卡
+                  .item-bar-group
+                    .item-bar
+                      .value.p40
+                    .range-text
+                      span
+                        | 入門
+                        sub 基本性能
+                      span
+                        | 中階
+                        sub 中等遊戲
+                      span
+                        | 高階
+                        sub 強大處理
+                      span
+                        | 專業
+                        sub 專業領域
+            form#form(action="").inner-container
+              // 問題1
+              .row
+                .txt.card-container
+                  p 您是否打算在電腦上完成大量辦公室工作？
+              .btn-group
+                .card-container.row
+                  input#radio1-1(type='radio' required='' name='use_form1' value='是')
+                  label(for='radio1-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 是
+                  input#radio1-2(type='radio' required='' name='use_form1' value='否')
+                  label(for='radio1-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 否
+              // 問題2
+              .row
+                .txt.card-container
+                    p 您是否喜歡游戲併計劃將大部分電腦時間花在玩最新最好的遊戲上？
+              .btn-group
+                .card-container.row
+                  input#radio2-1(type='radio' required='' name='use_form2' value='是')
+                  label(for='radio2-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 是
+                  input#radio2-2(type='radio' required='' name='use_form2' value='否')
+                  label(for='radio2-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 否
+              // 問題3
+              .row
+                .txt.card-container
+                    p 您是藝術家還是音樂家？您希望使用電腦來創建圖像、音樂或視頻嗎？
+              .btn-group
+                .card-container.row
+                  input#radio3-1(type='radio' required='' name='use_form3' value='是')
+                  label(for='radio3-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 是
+                  input#radio3-2(type='radio' required='' name='use_form3' value='否')
+                  label(for='radio3-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 否
+              // 問題4
+              .row
+                .txt.card-container
+                    p 您的電腦會被家庭中的每個人使用嗎？
+              .btn-group
+                .card-container.row
+                  input#radio4-1(type='radio' required='' name='use_form4' value='是')
+                  label(for='radio4-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 是
+                  input#radio4-2(type='radio' required='' name='use_form4' value='否')
+                  label(for='radio4-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 否
+              // 問題5
+              .row
+                .txt.card-container
+                    p 您是否打算在客廳使用電腦作為娛樂中心？
+              .btn-group
+                .card-container.row
+                  input#radio5-1(type='radio' required='' name='use_form5' value='是')
+                  label(for='radio5-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 是
+                  input#radio5-2(type='radio' required='' name='use_form5' value='否')
+                  label(for='radio5-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span 否
+              // .question-2
+              .row
+                .txt.card-container
+                  p 筆記型電腦 vs. 桌上型電腦
+              .btn-group
+                .card-container.row
+                  input#radio6-1(type='radio' name='use_place' value='PC')
+                  label(for='radio6-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      
+                      span
+                        | 桌上型電腦
+                        i.fa-solid.fa-computer
+                  input#radio6-2(type='radio' name='use_place' value='laptop')
+                  label(for='radio6-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      
+                      span
+                        | 筆記型電腦
+                        i.fa-solid.fa-laptop
+
+              //- .question-3
+              .row
+                .txt.card-container
+                  p 選擇適合的操作系統
+              .btn-group
+                .card-container.row
+                  input#radio7-1(type='radio' name='use_system' value='Windows')
+                  label(for='radio7-1')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span
+                        | Windows
+                        i.fa-brands.fa-windows.logo_system_img
+                  input#radio7-2(type='radio' name='use_system' value='Mac OS')
+                  label(for='radio7-2')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span
+                        | Mac OS
+                        i.fa-brands.fa-apple.logo_system_img
+                  input#radio7-3(type='radio' name='use_system' value='Linux')
+                  label(for='radio7-3')
+                    .btn-switch.sm
+                      .bg-circle
+                        svg(width='36' height='28' viewBox='0 0 36 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M5.15137 14.5017L13.394 22.7444L31.0019 5.13647' stroke='#F24405' stroke-width='9' stroke-linecap='round' stroke-linejoin='round')
+                      span
+                        | Linux
+                        .fa-brands.fa-linux.logo_system_img
+              //- .question-4
+              .row
+                .txt.card-container
+                  p 檢查你的預算
+              .btn-group.form-range(style='margin-bottom: 20px')
+                .card-container
+                  .slider-container
+                    input#rangeSlider.slider(type='text' value='預算' name='use_range')
+              .row 
+                #end_btn.final.turn-next-btn 查看報表
+      // 最佳建議
+      section.best-advice#best-advice
+        .inner-container
+          .title-item
+            h3.svg-check
+              span 最佳建議
+          .product-list
+            .product-item.card
+              .tag.h5 筆電
+              .item-img
+                img(src='./images/product/K6500ZH.png' alt='ASUS Vivobook Pro 15')
+              p.h4 ASUS Vivobook Pro 15
+              .product-item-more.turn-next-btn 查看更多
+              .des-table
+                .tr
+                  .td 型號
+                  .td K6500ZH
+                .tr
+                  .td 處理器
+                  .td Intel® Core™ i5-12500H
+                .tr
+                  .td 顯示卡
+                  .td NVIDIA® GeForce® GTX 1650 Max Q
+                .tr
+                  .td 記憶體
+                  .td 16GB LPDDR5
+                .tr
+                  .td 儲存空間
+                  .td 512GB M.2 NVMe™ PCIe® 4.0 Performance SSD
+                .tr
+                  .td 螢幕
+                  .td 15.6 吋, FHD (1920 x 1080) 16:9 窄邊框
+                .tr
+                  .td 電池
+                  .td 50WHrs，3S1P，3 芯鋰離子電池
+              .price.h2 NT$ 40,900
+            .product-item.card
+              .tag.h5 桌機
+              .item-img
+                img(src='./images/product/S500TD.png' alt='ASUS Vivobook Pro 15')
+              p.h4 ASUS Performance Desktop
+              .product-item-more.turn-next-btn 查看更多
+              .des-table
+                .tr
+                  .td 型號
+                  .td S500TD
+                .tr
+                  .td 處理器
+                  .td Intel® Core™ i5-10400
+                .tr
+                  .td 顯示卡
+                  .td NVIDIA® GeForce® GTX 1650 4GB GDDR6
+                .tr
+                  .td 記憶體
+                  .td 16GB DDR4 U-DIMM
+                .tr
+                  .td 儲存空間
+                  .td 512GB / 1TB PCIe® NVMe™ Gen3 x4 SSD
+                .tr
+                  .td 螢幕
+                  .td 15.6吋光影點亮屏幕 (1920x1080 Full HD)
+                .tr
+                  .td 電池
+                  .td 90W電源適配器
+              .price.h2 NT $21,990
+      // 常見問題
+      section.common-problem
+        .inner-container
+          .title-item
+            h3.svg-check
+              span 常見問題
+          // 文章清單
+          .problem-card-list
+            .problem-card
+              a(href='./article.html')
+                h3 如何選擇最適合您需求的電腦
+              p
+                | 獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。
+                br
+                |               然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+              a.bottom-link.turn-next-btn(href='#') 閱讀更多
+            .problem-card
+              a(href='./article.html')
+                h3 如何選擇最適合您需求的電腦
+              p
+                | 獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。
+                br
+                |               然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+              a.bottom-link.turn-next-btn(href='#') 閱讀更多
+            .problem-card
+              a(href='./article.html')
+                h3 如何選擇最適合您需求的電腦
+              p
+                | 獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。
+                br
+                |               然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+              a.bottom-link.turn-next-btn(href='#') 閱讀更多
+            .problem-card
+              a(href='./article.html')
+                h3 如何選擇最適合您需求的電腦
+              p
+                | 獲得一台新電腦是一種令人興奮的體驗。全新技術的承諾是難以抗拒的。
+                br
+                |               然而，大量的選擇也可能讓您望而生畏，不知道如何選擇合適的產品。如果您希望在選購電腦時做出明智的決策，您來對地方了。以下是我們的幾點建議，可以幫助您了解如何選擇最適合您需求的電腦。
+              a.bottom-link.turn-next-btn(href='#') 閱讀更多
+      // 頁尾
+      footer
+        .footer-wrap.inner-container
+          .top
+              a.dark-logo(href='./index.html')
+                picture
+                  source(media='(min-width: 930px)' srcset='./images/logo/logo_long_dark.png')
+                  
+                  img(src='./images/logo/logo_dark.png' alt='電腦夥伴 | Computer Partner')
+              .right 
+                ul.txt-link
+                  span 電腦夥伴 | Computer Partner
+                  li
+                    a(href='./index.html#answer')
+                      i.fa-solid.fa-check
+                      |  如何開始
+                  li
+                    a(href='./custom-setting.html')
+                      i.fa-solid.fa-check
+                      |  自訂需求
+                  li
+                    a(href='./ad-product.html')
+                      i.fa-solid.fa-check
+                      |  建議商品
+                  li
+                    a(href='./problems.html')
+                      i.fa-solid.fa-check
+                      |  常見問題
+                  li
+                    a(href='./contact.html')
+                      i.fa-solid.fa-check
+                      |  聯絡我們
+                  // <li><a href="#">注意事項</a></li>
+                ul
+                  span 免責聲明
+                  .disclaimer
+                    li 
+                      i.fa-solid.fa-star-of-life
+                      | 產品照僅供參考，規格與售價依實際經銷商販售為準。
+                  span 關注我們
+                  .icon-link
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-blogger-b
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-facebook-f
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-instagram
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-line
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-youtube
+          .bottom
+            .inner-container
+              | 本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。
+      // rSlider 套件 JS
+    script(src='https://slawomir-zaziablo.github.io/range-slider/js/rSlider.min.js')
+    // this webpage JS
+    script(src='./js/script.js')
+    script(src='./js/answer-basic-cus.js')

@@ -1,0 +1,191 @@
+doctype html
+html(lang='zh-Hant')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 單一商品頁面
+    link(rel='icon' href='./images/logo/logo_light.png')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/header.css')
+    link(rel='stylesheet' href='./css/footer.css')
+    //- 單一商品頁面樣式連結
+    link(rel='stylesheet' href='./css/card.css')
+    link(rel='stylesheet' href='./css/ad-product.css')
+    link(rel='stylesheet' href='./css/article.css')
+    link(rel='stylesheet' href='./css/problems.css')
+    link(rel='stylesheet' href='./css/item.css')
+  body
+    .out-container
+      input#menu-switch(type='checkbox' name='')
+      header.main-header.inner-container
+        .logo
+          a(href='./index.html')
+            picture
+              source(media='(min-width: 930px)' srcset='./images/logo/logo_long_light.png')
+              source(media='(min-width: 768px)' srcset='./images/logo/logo_e.svg')
+              img(src='./images/logo/logo_e.svg' alt='電腦夥伴 | Computer Partner')
+        label.hb(for='menu-switch')
+          span
+          span
+          span
+        nav.main-nav
+          a(href='./index.html#answer')
+            i.fa-solid.fa-star-of-life
+            span 如何開始
+          a(href='./custom-setting.html')
+            i.fa-solid.fa-screwdriver-wrench
+            span 自訂需求
+          a(href='./ad-product.html')
+            i.fa-solid.fa-magnifying-glass
+            span 建議商品
+          a(href='./problems.html')
+            i.fa-solid.fa-circle-question
+            span 常見問題
+          a(href='./contact.html')
+            i.fa-solid.fa-envelopes-bulk
+            span 聯絡我們
+      section.inner-container
+        // 單一商品頁面
+      section.common-problem
+        // 商品細節
+        .title-item
+          h2.svg-check
+            span 商品細節
+        .inner-container
+          .title.bxsh
+            .row.row-cols-1.g-2
+              .col
+                .row.row-cols-1.row-cols-md-3
+                    .col
+                      .item-img
+                        img(src='./images/product/K6500ZH.png' alt='ASUS Vivobook Pro 15')
+                    .col.title-name
+                      h4 ASUS Vivobook Pro 15
+                      h5.txt 型號  K6500ZH
+
+                    .col.make
+                      .item-img
+                        img(src='./images/make/asus.jpg' alt='製造廠商')
+                      h5 製造廠商  ASUS
+              .col
+                .row.row-cols-1.row-cols-md-3
+                  .col-6
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 型號
+                      .col-9 K6500ZH
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 處理器
+                      .col-9 Intel® Core™ i5-12500H
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 顯示卡
+                      .col-9 NVIDIA® GeForce® GTX 1650 Max Q
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 記憶體
+                      .col-9 16GB LPDDR5
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 儲存空間
+                      .col-9 512GB M.2 NVMe™ PCIe® 4.0 Performance SSD
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 螢幕
+                      .col-9 15.6 吋, FHD (1920 x 1080) 16:9 窄邊框
+                    .row.row-cols-1.row-cols-md-2
+                      h5.col-3 電池
+                      .col-9 50WHrs，3S1P，3 芯鋰離子電池
+                  .col-3
+                    .row.row-cols-1
+                      h5.col 保固時長
+                      .col 2年
+                      h5.col 維修廠
+                      .col No.56, Jipmer Campus, Puducherry - 605009
+                  .col-3
+                    .row.row-cols-1
+                      h4.col 售價
+                      .col.price.h2 NT$ 40,900
+                    
+          .title-item
+            h3.svg-check
+              span 銷售地點
+        // 分類標籤按鈕
+        .tab-sort
+          .inner-container
+            input#test-photo1(type='radio' name='tab' hidden='' checked='')
+            input#test-photo2(type='radio' name='tab' hidden='')
+            input#test-photo3(type='radio' name='tab' hidden='')
+            input#test-photo4(type='radio' name='tab' hidden='')
+            .tab-sort-nav
+              .group
+                label(for='test-photo1')
+                  .tab-btn
+                    span 北北基
+                label(for='test-photo2')
+                  .tab-btn
+                    span 桃竹苗
+                label(for='test-photo3')
+                  .tab-btn
+                    span 中彰投
+                label(for='test-photo4')
+                  .tab-btn
+                    span 雲嘉南
+        .inner-iframe
+          .box
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.3667453551575!2d121.22301827602028!3d24.953633941521613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682248fcfa49d7%3A0x57e0b78df52b3c96!2z5Lit5aOi54Gr6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684824959541!5m2!1szh-TW!2stw', width='600', height='450', style='border:0;', allowfullscreen='', loading='lazy', referrerpolicy='no-referrer-when-downgrade')
+      // 頁尾
+      footer
+        .footer-wrap.inner-container
+          .top
+              a.dark-logo(href='./index.html')
+                picture
+                  source(media='(min-width: 930px)' srcset='./images/logo/logo_long_dark.png')
+                  
+                  img(src='./images/logo/logo_dark.png' alt='電腦夥伴 | Computer Partner')
+              .right 
+                ul.txt-link
+                  span 電腦夥伴 | Computer Partner
+                  li
+                    a(href='./index.html#answer')
+                      i.fa-solid.fa-check
+                      |  如何開始
+                  li
+                    a(href='./custom-setting.html')
+                      i.fa-solid.fa-check
+                      |  自訂需求
+                  li
+                    a(href='./ad-product.html')
+                      i.fa-solid.fa-check
+                      |  建議商品
+                  li
+                    a(href='./problems.html')
+                      i.fa-solid.fa-check
+                      |  常見問題
+                  li
+                    a(href='./contact.html')
+                      i.fa-solid.fa-check
+                      |  聯絡我們
+                  // <li><a href="#">注意事項</a></li>
+                ul
+                  span 免責聲明
+                  .disclaimer
+                    li 
+                      i.fa-solid.fa-star-of-life
+                      | 產品照僅供參考，規格與售價依實際經銷商販售為準。
+                  span 關注我們
+                  .icon-link
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-blogger-b
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-facebook-f
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-instagram
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-line
+                    li
+                      a(href='#')
+                        i.fa-brands.fa-youtube
+          .bottom
+            .inner-container
+              | 本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。

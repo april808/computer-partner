@@ -1,0 +1,57 @@
+
+.inner-iframe
+  display: flex
+  justify-content: center
+  background-color: #fff
+  
+.title.bxsh
+  .g-2 .col
+    padding: 20px
+  .col
+
+
+.title-name
+  // background-color: gold
+  display: flex
+  flex-direction: column
+  h4
+    padding-top: 20px
+    padding-bottom: 20px
+    height: 100%
+  .txt
+.col.make
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  .item-img
+    max-width: 200px
+
+.box
+  width: 900px
+  // background-color: #f00
+  aspect-ratio: 600/450
+  position: relative
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.col-3,.col-9
+  padding: 10px
+@media screen and (min-width:768px)
+  .row.row-cols-1.row-cols-md-3
+    // background-color: red
+@media screen and (max-width:767px)
+  .row.row-cols-1.row-cols-md-2
+    .col-3,.col-9
+      width: 100%
+      text-align: center
+  .row.row-cols-1.row-cols-md-3
+    // background-color: gold
+    .col-6,.col-3
+      width: 100%
+      text-align: center

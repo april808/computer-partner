@@ -1,0 +1,177 @@
+$color_primary: rgba(160, 227, 242, 1)
+$color_secondary: rgba(242, 159, 5, 1)
+$color_red: rgba(242, 68, 5, 1)
+$color_info: rgba(201, 189, 242, 1)
+$color_dark: rgba(96, 90, 140, 1)
+
+$color_primary_add1: rgba(122, 203, 221, 1)
+
+$color_dark-add1: rgba(70, 64, 116, 1)
+
+$color_bg: #f5f5f5
+$color_white: rgba(#fff,.8)
+$color_black: #000
+$color_black_20: rgba(0,0,0,.2)
+
+// 首頁錯位單位
+$left-navbar: 300px
+$left-navbar-innerbtn-w: 100px
+$move-left: calc(150px + 5px)
+// $move-left: $left-navbar - (($left-navbar - $left-navbar-innerbtn-w / 2) )
+
+//外陰影 
+$first-page-bxsh: 0px 4px 30px rgba(0, 0, 0, .1)
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin bdrs($r:50%)
+  border-radius: $r
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin abCenter($l:50%,$t:$l)
+  position: absolute
+  left: $l
+  top: $t
+  transform: translate(-50%,-50%)
+
+/* 自適應控制 導覽列切換--------------------------
+header
+  z-index: 9
+.main-header
+  display: flex
+  justify-content: space-between
+  padding: 10px
+  position: relative
+
+.logo img
+  max-height: 40px
+  vertical-align: middle
+
+#menu-switch
+  display: none
+.main-nav
+  display: flex
+.main-nav a
+  color: #fff
+  text-decoration: none
+  +flexCenter
+  gap: 30px
+  transition: color .3s
+
+@media screen and (max-width: 1023px)
+  .main-nav a + a
+    border-top: 1px solid $color_black_20
+
+  #menu-switch:checked + .main-header .main-nav
+    pointer-events: auto
+    opacity: 1
+    height: calc(60px*8)
+    transition: opacity .5s, height .3s
+    // animation: fade-in 1s ease-out forwards
+
+  .main-nav
+    // 隱藏
+    // display: none
+    pointer-events: none
+    opacity: 0
+    height: calc(60px * 4)
+    transition: opacity .3s .1s, height .8s
+
+    display: flex
+    flex-direction: column
+
+    position: absolute
+    width: 100%
+    background-color: $color_dark
+    left: 0
+    top: 100%
+    a
+      flex: 1
+    a:hover
+      color: $color_secondary
+
+  .hb
+    width: 40px
+    height: 40px
+    background-color: transparent
+    position: relative
+
+    span
+      width: 84%
+      height: 4px
+      background-color: $color_dark
+      position: absolute
+      margin: auto
+      left: 0
+      right: 0
+      rotate: 0deg
+      +bdrs(4px)
+
+      &:nth-child(1)
+        top: 8px
+        transition: top .5s .5s, rotate .5s
+
+      &:nth-child(2)
+        top: 18px
+        transition: opacity .5s .5s
+        opacity: 1
+
+      &:nth-child(3)
+        top: 28px
+        transition: top .5s .5s, rotate .5s
+
+  #menu-switch:checked + .main-header .hb span
+    &:nth-child(1)
+      top: 18px
+      rotate: 45deg
+      transition: top .5s, rotate .5s .5s
+
+    &:nth-child(2)
+      transition: opacity .1s .5s
+      opacity: 0
+
+    &:nth-child(3)
+      top: 18px
+      rotate: -45deg
+      transition: top .5s, rotate .5s .5s
+
+  @keyframes fade-in
+    to
+      opacity: 1
+      height: calc(100vh - 60px)
+
+@media screen and (min-width: 1024px)
+  .hb
+    // 隱藏
+    // display: none
+    pointer-events: none
+    opacity: 0
+  .logo
+    min-width: 208px
+    flex-grow: 0
+    margin-right: 5%
+  .main-header
+    padding: 0px
+    // height: var(--top-nav-height)
+  .main-nav,.logo
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .main-nav
+    width: 100%
+    display: flex
+    justify-content: space-between
+  .main-nav a
+    display: flex
+    flex-direction: column
+    padding: 10px 25px
+    gap: 8px
+    color: $color_dark
+  .main-nav a:hover
+    color: $color_secondary
