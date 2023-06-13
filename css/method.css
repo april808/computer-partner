@@ -12,6 +12,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  margin-top: 15%;
 }
 .about h2 {
   margin-bottom: 35px;
@@ -336,7 +337,6 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 50px;
-  line-height: 180%;
 }
 
 .question-final {

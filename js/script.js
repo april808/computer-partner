@@ -26,6 +26,11 @@ class el_item {
     return this; // 返回 this，以實現鏈式調用
   }
 
+  removeAni(property) {
+    this.el.style[property] = ''; // 將指定屬性的值設為空字符串
+    return this; // 返回 this，以實現鏈式調用
+  }
+
   toggleHidden() {
     this.hidden = !this.hidden;
     if (this.hidden) {

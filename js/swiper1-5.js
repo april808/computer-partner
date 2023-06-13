@@ -24,6 +24,9 @@ newEndBtn.addCls('auto');
 const newbestAdvice = new el_item('#best-advice');
 newbestAdvice.addCls('hidden').hidden = true;
 
+const newAbout= new el_item('.about');
+  newAbout.addAni('margin-bottom','-300px')
+
 // const newFormContent = new el_item('#form');
 // newFormContent.addCls('hidden').hidden = true;
 
@@ -35,7 +38,7 @@ function init() {
   document.getElementById('start_btn').onclick = startAnswer;
   newStartBtn
     .addCls('auto')
-    .addAni('transition-delay', 's')
+    .addAni('transition-delay', 's');
 }
 
 
@@ -122,6 +125,7 @@ function startAnswer() {
   new el_item(`#start_btn`).toggleHidden();
   new el_item('.question-1').removeCls('hidden').addCls('auto').hidden = false;
   console.log('new el_item(.question-1', new el_item('.question-1'))
+  newAbout.removeAni('margin-bottom')
 
   answerArray(form); //取出問題的 name 製作成陣列
 
